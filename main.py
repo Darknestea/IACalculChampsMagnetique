@@ -1,28 +1,26 @@
 from constants import *
-from data_preprocessing import get_data, get_pretraining_data, get_training_data
+from constants import (
+    MODE,
+    SAVE_PATH,
+    PRETRAINING_DATASET,
+    TRAINING_DATASET,
+    PRETRAINED_MODEL_NAME,
+    TRAINED_MODEL_NAME,
+)
+from data_preprocessing import get_pretraining_data, get_training_data
 from model_loader import new_model, load_model, save_model
+from record_model_performances import record_pretrained_model, record_trained_model
+from training_model import train
+from utils import main_specific_tasks
 
-MODE = MODE_TRAINING_FULL
-SAVE_PATH = './saves/'
-PRETRAINING_DATASET = None
-TRAINING_DATASET = None
-PRETRAINED_MODEL_NAME = None
-TRAINED_MODEL_NAME = None
-
-
-
-if __name__ == '__main__':
+if __name__ == "__main__":
+    main_specific_tasks('real')
 
     if MODE | MODE_PRETRAINING:
-        x_train, y_train, x_test, y_test = get_pretraining_data(PRETRAINING_DATASET)
-        model = new_model()
-        pretrained_model = pretrain(model, x_train, y_train)
-        record_pretrained_model(pretrained_model, x_test, y_test)
-        save_model(pretrained_model, SAVE_PATH, PRETRAINED_MODEL_NAME)
-
+        # Do pretraining from Command to field
+        pass
     else:
         pretrained_model = load_model(SAVE_PATH, PRETRAINED_MODEL_NAME)
-
 
     if MODE | MODE_REAL_TRAINING:
         x_train, y_train, x_test, y_test = get_training_data(TRAINING_DATASET)
