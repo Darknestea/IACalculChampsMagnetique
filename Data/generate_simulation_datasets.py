@@ -4,8 +4,10 @@ from nytche import Microscope
 
 from utils import main_specific_tasks
 
+from matplotlib.pyplot import plot, show
 
-def generate_simulation_datasets():
+
+def test_microscope():
     microscope = Microscope("i2tem.cbor")
     print([item[0] for item in microscope.lenses.items()])
     print([item[0] for item in microscope.biprisms.items()])
@@ -21,6 +23,27 @@ def generate_simulation_datasets():
 
     print(microscope._z)
     print(microscope.acc_voltage)
+
+    lenses = [item for item in microscope.lenses.items()]
+
+    one_field = lenses[0][1]._potential.currents
+    print(one_field)
+
+    current = 4.0
+    print([lenses[0][1]._potential.ahw(current)])
+
+    potentials = [lens[1]._potential.ahw(current) for lens in lenses[0:2]]
+    potentials += [lens[1]._potential.ahw for lens in lenses[2:]]
+    plot(range(len(potentials[0])), potentials[0])
+    show()
+
+
+def generate_microscope_parameters_dataset():
+    pass
+
+
+def generate_simulation_datasets():
+    microscope = Microscope("i2tem.cbor")
 
 
 if __name__ == "__main__":
