@@ -24,4 +24,6 @@ def load_model(path, name):
 
 
 def save_model(model, path):
+    print(path)
+    print(f"\\{current_extension()}\\{model.name}.h5")
     model.save(path + f"\\{current_extension()}\\{model.name}.h5")

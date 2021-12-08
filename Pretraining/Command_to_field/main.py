@@ -14,6 +14,7 @@ def pretrain_command_to_field():
     pretrained_model = new_model()
     pretrain(pretrained_model, x_train, y_train)
     record_pretrained_model(pretrained_model, x_test, y_test)
+    print(SAVE_PATH)
     save_model(pretrained_model, SAVE_PATH)
 
 

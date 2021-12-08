@@ -25,7 +25,7 @@ if __name__ == "__main__":
     if MODE | MODE_REAL_TRAINING:
         x_train, y_train, x_test, y_test = get_training_data(TRAINING_DATASET)
         trained_model = train(pretrained_model, x_train, y_train)
-        save_model(trained_model, SAVE_PATH, TRAINED_MODEL_NAME)
+        save_model(trained_model, SAVE_PATH)
         record_trained_model(trained_model, x_test, y_test)
 
     else:

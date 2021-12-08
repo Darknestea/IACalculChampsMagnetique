@@ -3,7 +3,7 @@ from dataclasses import dataclass
 import os
 
 # Parameters
-SAVE_PATH = os.path.dirname(os.path.realpath(__file__)) + ",\\Models\\",
+SAVE_PATH = os.path.dirname(os.path.realpath(__file__)) + "\\Models\\"
 PRETRAINING_DATASET = None
 TRAINING_DATASET = None
 PRETRAINED_MODEL_NAME = None
@@ -427,7 +427,7 @@ def current_extension():
     return EXTENSION
 
 
-def set_run_session(extension, filename=SAVE_PATH[0] + "run_counter.dat"):
+def set_run_session(extension, filename=SAVE_PATH + "run_counter.dat"):
     global EXTENSION
     EXTENSION = extension
     with open(filename, "a+") as f:
