@@ -1,6 +1,6 @@
 from constants import (
     PRETRAINING_DATASET,
-    SAVE_PATH, EXTENSION, RUN_SESSION
+    EXTENSION, RUN_SESSION, SAVE_MODEL_PATH
 )
 from data_preprocessing import get_pretraining_data
 from model_loader import new_model, save_model
@@ -14,8 +14,8 @@ def pretrain_command_to_field():
     pretrained_model = new_model()
     pretrain(pretrained_model, x_train, y_train)
     record_pretrained_model(pretrained_model, x_test, y_test)
-    print(SAVE_PATH)
-    save_model(pretrained_model, SAVE_PATH)
+    print(SAVE_MODEL_PATH)
+    save_model(pretrained_model, SAVE_MODEL_PATH)
 
 
 if __name__ == "__main__":
