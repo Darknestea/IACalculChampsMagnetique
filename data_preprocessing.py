@@ -82,7 +82,7 @@ def get_cleaned_configuration(filename, save_path=SAVE_CLEAN_CONFIGURATION_PATH,
         default = parse_yaml_config(file)[0]
         if full:
             df = add_default_configuration(df, default)
-    return df
+    return df, default
 
 def get_dummy_pretraining_data():
     return (

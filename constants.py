@@ -75,6 +75,8 @@ MU_PARAM_P2 =           12
 
 MU_PARAM_OBJ =          13
 
+MU_PARAM_LENSES = range(MU_PARAM_C1, MU_PARAM_OBJ+1)
+
 MU_PARAM_BPC =          14
 MU_PARAM_BPC_X =        15
 MU_PARAM_BPC_Y =        16
@@ -96,6 +98,9 @@ MU_PARAM_BP2_A =        29
 MU_PARAM_BP2_V =        30
 MU_PARAM_BP2_P =        31
 
+
+MU_PARAM_BIPRISMS = range(MU_PARAM_BPC, MU_PARAM_BP2_P+1, 6)
+
 MU_PARAM_APP_CO =       32
 MU_PARAM_APP_CO_X =     33
 MU_PARAM_APP_CO_Y =     34
@@ -111,6 +116,8 @@ MU_PARAM_APP_OB_Y =     40
 MU_PARAM_APP_SA =       41
 MU_PARAM_APP_SA_X =     42
 MU_PARAM_APP_SA_Y =     43
+
+MU_PARAM_APPERTURES = range(MU_PARAM_APP_CO, MU_PARAM_APP_SA_Y+1, 3)
 
 MU_PARAM_DEF_GH_X =     44
 MU_PARAM_DEF_GH_Y =     45
@@ -187,6 +194,8 @@ MU_PARAM_DEF_IA_Y =     103
 MU_PARAM_DEF_PA_X =     104
 MU_PARAM_DEF_PA_Y =     105
 
+MU_PARAM_DEFLECTORS = range(MU_PARAM_DEF_GH_X, MU_PARAM_DEF_PA_Y+1, 2)
+
 MU_PARAM_SAMPLE =       106
 
 MU_PARAM_REF_PLANE =    107
@@ -201,6 +210,21 @@ MU_EMISSION_CURRENT =   111
 
 MU_PARAM_LAST =         112
 
+
+# Offsets
+
+MU_OFFSET_BP = 0
+MU_OFFSET_BP_X = 1
+MU_OFFSET_BP_Y = 2
+MU_OFFSET_BP_A = 3
+MU_OFFSET_BP_V = 4
+MU_OFFSET_BP_P = 5
+
+MU_OFFSET_APP = 0
+MU_OFFSET_APP_X = 1
+MU_OFFSET_APP_Y = 2
+
+
 MU_PARAMS = range(MU_PARAM_LAST)
 MU_USEFUL_PARAMS = [i for i in range(MU_PARAM_V0, MU_PARAM_OBJ+1)]
 MU_USEFUL_PARAMS += [i for i in range(MU_PARAM_APP_CO, MU_PARAM_SAMPLE)]
@@ -214,6 +238,27 @@ MU_REDUCED_PARAMS = [
         MU_PARAM_I3,
         MU_PARAM_P1,
         MU_PARAM_P2
+    ]
+MU_NYTCHE_PARAMS = [
+        MU_PARAM_C1,
+        MU_PARAM_C2,
+        MU_PARAM_C3,
+        MU_PARAM_OBJ,
+        MU_PARAM_I1,
+        MU_PARAM_I2,
+        MU_PARAM_I3,
+        MU_PARAM_P1,
+        MU_PARAM_P2,
+        MU_PARAM_BPC_V,
+        MU_PARAM_BPC_P,
+        MU_PARAM_BP1_V,
+        MU_PARAM_BP1_P,
+        MU_PARAM_BP2_V,
+        MU_PARAM_BP2_P,
+        MU_PARAM_APP_OB,
+        MU_PARAM_APP_SA,
+        MU_PARAM_APP_CO,
+        MU_PARAM_APP_ST
     ]
 
 MU_PARAM_NAMES = [
@@ -361,136 +406,136 @@ MU_PARAM_NAMES = [
     "MU_EMISSION_CURRENT"
 ]
 
-MU_PARAM_RANGES = [
-    (0.00665630645849, 0.00665630645849),
-    (-0.6, -0.6),
-
-    (60000, 300000),
-    "MU_PARAM_V1",
-    "MU_PARAM_RATIO",
-
-    "MU_PARAM_C1",
-    "MU_PARAM_C2",
-    "MU_PARAM_C3",
-
-    "MU_PARAM_I1",
-    "MU_PARAM_I2",
-    "MU_PARAM_I3",
-
-    "MU_PARAM_P1",
-    "MU_PARAM_P2",
-
-    "MU_PARAM_OBJ",
-
-    "MU_PARAM_BPC",
-    "MU_PARAM_BPC_X",
-    "MU_PARAM_BPC_Y",
-    "MU_PARAM_BPC_A",
-
-    "MU_PARAM_BP1",
-    "MU_PARAM_BP1_X",
-    "MU_PARAM_BP1_Y",
-    "MU_PARAM_BP1_A",
-
-    "MU_PARAM_BP2",
-    "MU_PARAM_BP2_X",
-    "MU_PARAM_BP2_Y",
-    "MU_PARAM_BP2_A",
-
-    "MU_PARAM_APP_CO",
-    "MU_PARAM_APP_CO_X",
-    "MU_PARAM_APP_CO_Y",
-
-    "MU_PARAM_APP_ST",
-    "MU_PARAM_APP_ST_X",
-    "MU_PARAM_APP_ST_Y",
-
-    "MU_PARAM_APP_OB",
-    "MU_PARAM_APP_OB_X",
-    "MU_PARAM_APP_OB_Y",
-
-    "MU_PARAM_APP_SA",
-    "MU_PARAM_APP_SA_X",
-    "MU_PARAM_APP_SA_Y",
-
-    "MU_PARAM_SAMPLE",
-
-    "MU_PARAM_DEF_GH_X",
-    "MU_PARAM_DEF_GH_Y",
-    "MU_PARAM_DEF_GHX_R",
-    "MU_PARAM_DEF_GHX_Z",
-    "MU_PARAM_DEF_GHY_R",
-    "MU_PARAM_DEF_GHY_Z",
-
-    "MU_PARAM_DEF_GT_X",
-    "MU_PARAM_DEF_GT_Y",
-    "MU_PARAM_DEF_GTX_R",
-    "MU_PARAM_DEF_GTX_Z",
-    "MU_PARAM_DEF_GTY_R",
-    "MU_PARAM_DEF_GTY_Z",
-    "MU_PARAM_DEF_GA_X",
-    "MU_PARAM_DEF_GA_Y",
-
-    "MU_PARAM_DEF_CS3_X",
-    "MU_PARAM_DEF_CS3_Y",
-    "MU_PARAM_DEF_CS3X_R",
-    "MU_PARAM_DEF_CS3X_Z",
-    "MU_PARAM_DEF_CS3Y_R",
-    "MU_PARAM_DEF_CS3Y_Z",
-
-    "MU_PARAM_DEF_CS_X",
-    "MU_PARAM_DEF_CS_Y",
-    "MU_PARAM_DEF_CSX_R",
-    "MU_PARAM_DEF_CSX_Z",
-    "MU_PARAM_DEF_CSY_R",
-    "MU_PARAM_DEF_CSY_Z",
-
-    "MU_PARAM_DEF_BH_X",
-    "MU_PARAM_DEF_BH_Y",
-    "MU_PARAM_DEF_BHU_X",
-    "MU_PARAM_DEF_BHU_Y",
-    "MU_PARAM_DEF_BHX_R",
-    "MU_PARAM_DEF_BHX_Z",
-    "MU_PARAM_DEF_BHY_R",
-    "MU_PARAM_DEF_BHY_Z",
-
-    "MU_PARAM_DEF_BT_X",
-    "MU_PARAM_DEF_BT_Y",
-    "MU_PARAM_DEF_BTU_X",
-    "MU_PARAM_DEF_BTU_Y",
-    "MU_PARAM_DEF_BTX_R",
-    "MU_PARAM_DEF_BTX_Z",
-    "MU_PARAM_DEF_BTY_R",
-    "MU_PARAM_DEF_BTY_Z",
-
-    "MU_PARAM_DEF_OS_X",
-    "MU_PARAM_DEF_OS_Y",
-    "MU_PARAM_DEF_OSX_R",
-    "MU_PARAM_DEF_OSX_Z",
-    "MU_PARAM_DEF_OSY_R",
-    "MU_PARAM_DEF_OSY_Z",
-
-    "MU_PARAM_DEF_OSP_X",
-    "MU_PARAM_DEF_OSP_Y",
-
-    "MU_PARAM_DEF_ISF_X",
-    "MU_PARAM_DEF_ISF_Y",
-    "MU_PARAM_DEF_ISFX_R",
-    "MU_PARAM_DEF_ISFX_Z",
-    "MU_PARAM_DEF_ISFY_R",
-    "MU_PARAM_DEF_ISFY_Z",
-
-    "MU_PARAM_DEF_IS_X",
-    "MU_PARAM_DEF_IS_Y",
-
-    "MU_PARAM_DEF_IA_X",
-    "MU_PARAM_DEF_IA_Y",
-
-    "MU_PARAM_DEF_PA_X",
-    "MU_PARAM_DEF_PA_Y",
-
-    "MU_PARAM_REF_PLANE",
-]
+# MU_PARAM_RANGES = [
+#     (0.00665630645849, 0.00665630645849),
+#     (-0.6, -0.6),
+#
+#     (60000, 300000),
+#     "MU_PARAM_V1",
+#     "MU_PARAM_RATIO",
+#
+#     "MU_PARAM_C1",
+#     "MU_PARAM_C2",
+#     "MU_PARAM_C3",
+#
+#     "MU_PARAM_I1",
+#     "MU_PARAM_I2",
+#     "MU_PARAM_I3",
+#
+#     "MU_PARAM_P1",
+#     "MU_PARAM_P2",
+#
+#     "MU_PARAM_OBJ",
+#
+#     "MU_PARAM_BPC",
+#     "MU_PARAM_BPC_X",
+#     "MU_PARAM_BPC_Y",
+#     "MU_PARAM_BPC_A",
+#
+#     "MU_PARAM_BP1",
+#     "MU_PARAM_BP1_X",
+#     "MU_PARAM_BP1_Y",
+#     "MU_PARAM_BP1_A",
+#
+#     "MU_PARAM_BP2",
+#     "MU_PARAM_BP2_X",
+#     "MU_PARAM_BP2_Y",
+#     "MU_PARAM_BP2_A",
+#
+#     "MU_PARAM_APP_CO",
+#     "MU_PARAM_APP_CO_X",
+#     "MU_PARAM_APP_CO_Y",
+#
+#     "MU_PARAM_APP_ST",
+#     "MU_PARAM_APP_ST_X",
+#     "MU_PARAM_APP_ST_Y",
+#
+#     "MU_PARAM_APP_OB",
+#     "MU_PARAM_APP_OB_X",
+#     "MU_PARAM_APP_OB_Y",
+#
+#     "MU_PARAM_APP_SA",
+#     "MU_PARAM_APP_SA_X",
+#     "MU_PARAM_APP_SA_Y",
+#
+#     "MU_PARAM_SAMPLE",
+#
+#     "MU_PARAM_DEF_GH_X",
+#     "MU_PARAM_DEF_GH_Y",
+#     "MU_PARAM_DEF_GHX_R",
+#     "MU_PARAM_DEF_GHX_Z",
+#     "MU_PARAM_DEF_GHY_R",
+#     "MU_PARAM_DEF_GHY_Z",
+#
+#     "MU_PARAM_DEF_GT_X",
+#     "MU_PARAM_DEF_GT_Y",
+#     "MU_PARAM_DEF_GTX_R",
+#     "MU_PARAM_DEF_GTX_Z",
+#     "MU_PARAM_DEF_GTY_R",
+#     "MU_PARAM_DEF_GTY_Z",
+#     "MU_PARAM_DEF_GA_X",
+#     "MU_PARAM_DEF_GA_Y",
+#
+#     "MU_PARAM_DEF_CS3_X",
+#     "MU_PARAM_DEF_CS3_Y",
+#     "MU_PARAM_DEF_CS3X_R",
+#     "MU_PARAM_DEF_CS3X_Z",
+#     "MU_PARAM_DEF_CS3Y_R",
+#     "MU_PARAM_DEF_CS3Y_Z",
+#
+#     "MU_PARAM_DEF_CS_X",
+#     "MU_PARAM_DEF_CS_Y",
+#     "MU_PARAM_DEF_CSX_R",
+#     "MU_PARAM_DEF_CSX_Z",
+#     "MU_PARAM_DEF_CSY_R",
+#     "MU_PARAM_DEF_CSY_Z",
+#
+#     "MU_PARAM_DEF_BH_X",
+#     "MU_PARAM_DEF_BH_Y",
+#     "MU_PARAM_DEF_BHU_X",
+#     "MU_PARAM_DEF_BHU_Y",
+#     "MU_PARAM_DEF_BHX_R",
+#     "MU_PARAM_DEF_BHX_Z",
+#     "MU_PARAM_DEF_BHY_R",
+#     "MU_PARAM_DEF_BHY_Z",
+#
+#     "MU_PARAM_DEF_BT_X",
+#     "MU_PARAM_DEF_BT_Y",
+#     "MU_PARAM_DEF_BTU_X",
+#     "MU_PARAM_DEF_BTU_Y",
+#     "MU_PARAM_DEF_BTX_R",
+#     "MU_PARAM_DEF_BTX_Z",
+#     "MU_PARAM_DEF_BTY_R",
+#     "MU_PARAM_DEF_BTY_Z",
+#
+#     "MU_PARAM_DEF_OS_X",
+#     "MU_PARAM_DEF_OS_Y",
+#     "MU_PARAM_DEF_OSX_R",
+#     "MU_PARAM_DEF_OSX_Z",
+#     "MU_PARAM_DEF_OSY_R",
+#     "MU_PARAM_DEF_OSY_Z",
+#
+#     "MU_PARAM_DEF_OSP_X",
+#     "MU_PARAM_DEF_OSP_Y",
+#
+#     "MU_PARAM_DEF_ISF_X",
+#     "MU_PARAM_DEF_ISF_Y",
+#     "MU_PARAM_DEF_ISFX_R",
+#     "MU_PARAM_DEF_ISFX_Z",
+#     "MU_PARAM_DEF_ISFY_R",
+#     "MU_PARAM_DEF_ISFY_Z",
+#
+#     "MU_PARAM_DEF_IS_X",
+#     "MU_PARAM_DEF_IS_Y",
+#
+#     "MU_PARAM_DEF_IA_X",
+#     "MU_PARAM_DEF_IA_Y",
+#
+#     "MU_PARAM_DEF_PA_X",
+#     "MU_PARAM_DEF_PA_Y",
+#
+#     "MU_PARAM_REF_PLANE",
+# ]
 
 MU_PARAM_YAML_NAMES = [
     "MU_PARAM_PHI",
