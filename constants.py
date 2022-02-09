@@ -23,11 +23,16 @@ MODE = MODE_TRAINING_FULL
 # Default
 
 SAVE_PATH = os.path.dirname(os.path.realpath(__file__)) + "\\"
-SAVE_MODEL_PATH = SAVE_PATH + "Models\\"
+
 SAVE_DATA_PATH = SAVE_PATH + "Data\\"
 SAVE_RAW_CONFIGURATION_PATH = SAVE_DATA_PATH + "Raw\\Configurations\\Raw\\"
 SAVE_YAML_CONFIGURATION_PATH = SAVE_DATA_PATH + "Raw\\Configurations\\Yaml\\"
 SAVE_CLEAN_CONFIGURATION_PATH = SAVE_DATA_PATH + "Cleaned\\Configurations\\"
+
+SAVE_MODEL_PATH = SAVE_PATH + "Models\\"
+IMAGE_TO_ELLIPSE_MODEL_PATH = SAVE_MODEL_PATH + "image_to_ellipse\\"
+
+ELLIPSES_PATH = "E:\\DaVinci\\Images"
 
 SUFFIX_CLEAN_CONFIGURATIONS_DF = '_configurations.csv'
 SUFFIX_CLEAN_CONFIGURATIONS_DEFAULT = '_default.yaml'
@@ -37,7 +42,10 @@ TRAINING_DATASET = None
 PRETRAINED_MODEL_NAME = None
 TRAINED_MODEL_NAME = None
 
+THRESHOLD_ELLIPSE_DETECTION = 40
+
 # Constants
+
 DUMMY_TRAIN_SIZE = 200
 DUMMY_TEST_SIZE = 50
 
@@ -50,6 +58,15 @@ POS_A = 2
 POS_B = 3
 POS_THETA = 4
 DUMMY_ELLIPSE_PARAMETERS_NUMBER = 5
+
+
+ELLIPSE_PARAMETER_NAMES = [
+    "X",
+    "Y",
+    "A",
+    "B",
+    "THETA"
+]
 
 
 RUN_SESSION = None
