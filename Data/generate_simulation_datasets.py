@@ -3,7 +3,7 @@ import numpy as np
 import pandas as pd
 
 from constants import MU_OFFSET_BP_P, MU_OFFSET_BP_V, MU_OFFSET_APP, MU_PARAM_YAML_NAMES, MU_REDUCED_PARAMS, \
-    MU_PARAM_LENSES, MU_NYTCHE_PARAMS, MU_PARAM_NAMES
+    MU_PARAM_LENSES, MU_NYTCHE_PARAMS, MU_PARAM_NAMES, MU_PARAM_BIPRISMS, MU_PARAM_APERTURES
 from data_preprocessing import get_cleaned_configuration
 
 
@@ -49,7 +49,7 @@ def set_biprism(name, values, microscope_sim):
     microscope_sim.biprisms[name].voltage = values[MU_OFFSET_BP_V]
 
 
-def set_diaphragm(name, values, microscope_sim):
+def set_aperture(name, values, microscope_sim):
     microscope_sim.apertures[name].diameter = (values[MU_OFFSET_APP])
 
 
@@ -82,8 +82,27 @@ def set_nytche_configuration(nytche_configuration, microscope_sim):
         yaml_name = MU_PARAM_YAML_NAMES[lens]
         value = nytche_configuration[1][name]
         set_lens(yaml_name, value, microscope_sim)
+
     # set biprism
-    # set diaphragms
+    for biprism in MU_PARAM_BIPRISMS:
+        if biprism not in MU_NYTCHE_PARAMS:
+            pass
+        name = MU_PARAM_NAMES[biprism]
+        yaml_name = MU_PARAM_YAML_NAMES[biprism]
+        print(f"Config :\n{nytche_configuration}")
+        values = nytche_configuration[1][name]
+        print(f"\nValues: {values}")
+        set_biprism(yaml_name, values, microscope_sim)
+
+    # set apertures
+    for aperture in MU_PARAM_APERTURES:
+        if aperture not in MU_NYTCHE_PARAMS:
+            pass
+        name = MU_PARAM_NAMES[aperture]
+        yaml_name = MU_PARAM_YAML_NAMES[aperture]
+        values = nytche_configuration[1][name]
+        set_aperture(yaml_name, values, microscope_sim)
+
     # set others
     pass
 
