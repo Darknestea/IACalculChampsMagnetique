@@ -32,7 +32,7 @@ SAVE_CLEAN_CONFIGURATION_PATH = SAVE_DATA_PATH + "Cleaned\\Configurations\\"
 SAVE_MODEL_PATH = SAVE_PATH + "Models\\"
 IMAGE_TO_ELLIPSE_MODEL_PATH = SAVE_MODEL_PATH + "image_to_ellipse\\"
 
-ELLIPSES_PATH = "E:\\DaVinci\\Images"
+ELLIPSES_PATH = "F:\\DaVinci\\Images"
 
 SUFFIX_CLEAN_CONFIGURATIONS_DF = '_configurations.csv'
 SUFFIX_CLEAN_CONFIGURATIONS_DEFAULT = '_default.yaml'
