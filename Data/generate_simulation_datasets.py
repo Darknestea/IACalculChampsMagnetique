@@ -3,7 +3,8 @@ import numpy as np
 import pandas as pd
 
 from constants import MU_OFFSET_BP_P, MU_OFFSET_BP_V, MU_OFFSET_APP, MU_PARAM_YAML_NAMES, MU_REDUCED_PARAMS, \
-    MU_PARAM_LENSES, MU_NYTCHE_PARAMS, MU_PARAM_NAMES, MU_PARAM_BIPRISMS, MU_PARAM_APERTURES
+    MU_PARAM_LENSES, MU_NYTCHE_PARAMS, MU_PARAM_NAMES, MU_PARAM_BIPRISMS, MU_PARAM_APERTURES, MU_OFFSET_BP_LAST, \
+    MU_OFFSET_AP_LAST, APERTURE_OPEN_DIAMETER, MU_PARAM_V0, MU_PARAM_V1
 from data_preprocessing import get_cleaned_configuration
 
 
@@ -44,13 +45,18 @@ def set_accelerator(name, values, microscope_sim):
     pass
 
 
-def set_biprism(name, values, microscope_sim):
-    microscope_sim.biprisms[name].is_on = values[MU_OFFSET_BP_P] < 0.5  # meaning == 0
-    microscope_sim.biprisms[name].voltage = values[MU_OFFSET_BP_V]
+def set_biprism(name, bp_p, bp_v, microscope_sim):
+    microscope_sim.biprisms[name].inserted = bp_p < 0.5  # meaning == 0
+    microscope_sim.biprisms[name].voltage = bp_v / 1000.
 
 
-def set_aperture(name, values, microscope_sim):
-    microscope_sim.apertures[name].diameter = (values[MU_OFFSET_APP])
+def set_aperture(name, ap_diam_index, microscope_sim):
+    if ap_diam_index == 0:
+        diam = APERTURE_OPEN_DIAMETER
+    else:
+        # Plus grand diamètre d'index 1 est l'élément 0 de la liste
+        diam = microscope_sim.apertures[name].diameters[ap_diam_index-1] * 1e-6
+    microscope_sim.apertures[name].diameter = diam
 
 
 def set_gun(name, values, microscope_sim):
@@ -73,6 +79,8 @@ def configurations_to_nytche(configurations):
 
 def set_nytche_configuration(nytche_configuration, microscope_sim):
     # set source
+    name = MU_PARAM_NAMES[MU_PARAM_V0]
+    microscope_sim.acc_voltage = nytche_configuration[1][name]
     # set lenses
     for lens in MU_PARAM_LENSES:
         if lens not in MU_NYTCHE_PARAMS:
@@ -81,27 +89,29 @@ def set_nytche_configuration(nytche_configuration, microscope_sim):
         name = MU_PARAM_NAMES[lens]
         yaml_name = MU_PARAM_YAML_NAMES[lens]
         value = nytche_configuration[1][name]
-        set_lens(yaml_name, value, microscope_sim)
+        set_lens(name=yaml_name, value=value, microscope_sim=microscope_sim)
 
     # set biprism
     for biprism in MU_PARAM_BIPRISMS:
-        if biprism not in MU_NYTCHE_PARAMS:
+        if all([b not in MU_NYTCHE_PARAMS for b in range(biprism, biprism + MU_OFFSET_BP_LAST)]):
             pass
-        name = MU_PARAM_NAMES[biprism]
+        name_v = MU_PARAM_NAMES[biprism + MU_OFFSET_BP_V]
+        name_p = MU_PARAM_NAMES[biprism + MU_OFFSET_BP_P]
         yaml_name = MU_PARAM_YAML_NAMES[biprism]
-        print(f"Config :\n{nytche_configuration}")
-        values = nytche_configuration[1][name]
-        print(f"\nValues: {values}")
-        set_biprism(yaml_name, values, microscope_sim)
+        bp_v, bp_p = nytche_configuration[1][name_v], nytche_configuration[1][name_p]
+        set_biprism(name=yaml_name, bp_v=bp_v, bp_p=bp_p, microscope_sim=microscope_sim)
 
     # set apertures
     for aperture in MU_PARAM_APERTURES:
-        if aperture not in MU_NYTCHE_PARAMS:
+        if all([a not in MU_NYTCHE_PARAMS for a in range(aperture, aperture + MU_OFFSET_AP_LAST)]):
             pass
-        name = MU_PARAM_NAMES[aperture]
+        name_diam = MU_PARAM_NAMES[aperture + MU_OFFSET_APP]
         yaml_name = MU_PARAM_YAML_NAMES[aperture]
-        values = nytche_configuration[1][name]
-        set_aperture(yaml_name, values, microscope_sim)
+        ap_diam_index = int(nytche_configuration[1][name_diam])
+        set_aperture(name=yaml_name, ap_diam_index=ap_diam_index, microscope_sim=microscope_sim)
+
+    #set deflectors
+
 
     # set others
     pass
@@ -111,8 +121,9 @@ def modify_nytche_secondary_configuration():
     pass
 
 
-def retrieve_nytche_secondary_information():
-    pass
+def retrieve_nytche_secondary_information(microscope_sim):
+    beam_tree = microscope_sim.beam()
+    return
 
 
 def generate_simulation_datasets():
@@ -122,7 +133,7 @@ def generate_simulation_datasets():
 
     for nytche_configuration in nytche_configurations.iterrows():
         set_nytche_configuration(nytche_configuration, microscope_sim)
-        retrieve_nytche_secondary_information()
+        retrieve_nytche_secondary_information(microscope_sim)
 
 
 if __name__ == "__main__":

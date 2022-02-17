@@ -7,7 +7,7 @@ import yaml
 from constants import DUMMY_MICROSCOPE_PARAMETERS_NUMBER, DUMMY_TRAIN_SIZE, \
     DUMMY_ELLIPSE_PARAMETERS_NUMBER, DUMMY_TEST_SIZE, MU_PARAMS, MU_REDUCED_PARAMS, SUFFIX_CLEAN_CONFIGURATIONS_DF, \
     SAVE_RAW_CONFIGURATION_PATH, SAVE_CLEAN_CONFIGURATION_PATH, SUFFIX_CLEAN_CONFIGURATIONS_DEFAULT, MU_PARAM_LAST, \
-    MU_PARAM_YAML_NAMES, MU_PARAM_SPECIAL_YAML_NAMES, MU_PARAM_SPECIAL_YAML_FUNCTIONS, MU_PARAM_NAMES, VERBOSE, \
+    MU_PARAM_YAML_NAMES, MU_SPECIAL_PARAM_YAML_NAMES, MU_PARAM_SPECIAL_YAML_FUNCTIONS, MU_PARAM_NAMES, VERBOSE, \
     VERBOSE_INFO
 
 
@@ -67,8 +67,8 @@ def update_configuration_yaml(configuration, key, value, yaml_conf):
                 configuration[index + i] = v
         else:
             configuration[index] = value
-    elif key in MU_PARAM_SPECIAL_YAML_NAMES:
-        special_index = MU_PARAM_SPECIAL_YAML_NAMES.index(key)
+    elif key in MU_SPECIAL_PARAM_YAML_NAMES:
+        special_index = MU_SPECIAL_PARAM_YAML_NAMES.index(key)
         real_value, index = MU_PARAM_SPECIAL_YAML_FUNCTIONS[special_index](value, yaml_conf)
         configuration[index] = real_value
     else:
@@ -83,6 +83,7 @@ def get_cleaned_configuration(filename, save_path=SAVE_CLEAN_CONFIGURATION_PATH,
         if full:
             df = add_default_configuration(df, default)
     return df, default
+
 
 def get_dummy_pretraining_data():
     return (

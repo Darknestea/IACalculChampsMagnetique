@@ -59,6 +59,14 @@ POS_B = 3
 POS_THETA = 4
 DUMMY_ELLIPSE_PARAMETERS_NUMBER = 5
 
+APERTURE_OPEN_DIAMETER = 1.
+
+SCREEN_POSITION = 2052.5
+SCREEN_POSITION_CORRECTED = SCREEN_POSITION + 433.45
+
+CAMERA_POSITION = 2150
+CAMERA_POSITION_CORRECTED = CAMERA_POSITION + 433.45
+
 
 ELLIPSE_PARAMETER_NAMES = [
     "X",
@@ -236,10 +244,12 @@ MU_OFFSET_BP_Y = 2
 MU_OFFSET_BP_A = 3
 MU_OFFSET_BP_V = 4
 MU_OFFSET_BP_P = 5
+MU_OFFSET_BP_LAST = 6
 
 MU_OFFSET_APP = 0
 MU_OFFSET_APP_X = 1
 MU_OFFSET_APP_Y = 2
+MU_OFFSET_AP_LAST = 3
 
 
 MU_PARAMS = range(MU_PARAM_LAST)
@@ -257,6 +267,7 @@ MU_REDUCED_PARAMS = [
         MU_PARAM_P2
     ]
 MU_NYTCHE_PARAMS = [
+        MU_PARAM_V0,
         MU_PARAM_C1,
         MU_PARAM_C2,
         MU_PARAM_C3,
@@ -576,40 +587,40 @@ MU_PARAM_YAML_NAMES = [
     "obj",
 
 
-    "bpc_pos",
+    "BPC",
     "bpc_x",
     "bpc_y",
     "bpc_rot",
     "bpc_voltage",
     "bpc_power",
 
-    "bp1_pos",
+    "BP1",
     "bp1_x",
     "bp1_y",
     "bp1_rot",
     "bp1_voltage",
     "bp1_power",
 
-    "bp2_pos",
+    "BP2",
     "bp2_x",
     "bp2_y",
     "bp2_rot",
     "bp2_voltage",
     "bp2_power",
 
-    "cond_ap",
+    "Cond Ap",
     "cond_ap_x",
     "cond_ap_y",
 
-    "stem_ap",
+    "STEM Ap",
     "stem_ap_x",
     "stem_ap_y",
 
-    "obj_ap",
+    "Obj Ap",
     "obj_ap_x",
     "obj_ap_y",
 
-    "sa_ap",
+    "SA Ap",
     "sa_ap_x",
     "sa_ap_y",
 
@@ -700,7 +711,11 @@ MU_PARAM_YAML_NAMES = [
     "emission_current"
 ]
 
-MU_PARAM_SPECIAL_YAML_NAMES = [
+MU_SPECIAL_PARAM_ACC_VOLTAGE = 0
+MU_SPECIAL_PARAM_EXT_VOLTAGE = 1
+MU_SPECIAL_PARAM_CTRL_VOLTAGE = 2
+
+MU_SPECIAL_PARAM_YAML_NAMES = [
     "acc_voltage",
     "extractor_voltage",
     "control_voltage"
