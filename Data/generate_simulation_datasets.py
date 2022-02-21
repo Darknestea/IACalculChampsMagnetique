@@ -1,10 +1,15 @@
+from os import mkdir
+from os.path import isdir
+
+import cv2
 from nytche import Microscope
 import numpy as np
 import pandas as pd
 
 from constants import MU_OFFSET_BP_P, MU_OFFSET_BP_V, MU_OFFSET_APP, MU_PARAM_YAML_NAMES, MU_REDUCED_PARAMS, \
     MU_PARAM_LENSES, MU_NYTCHE_PARAMS, MU_PARAM_NAMES, MU_PARAM_BIPRISMS, MU_PARAM_APERTURES, MU_OFFSET_BP_LAST, \
-    MU_OFFSET_AP_LAST, APERTURE_OPEN_DIAMETER, MU_PARAM_V0, MU_PARAM_V1
+    MU_OFFSET_AP_LAST, APERTURE_OPEN_DIAMETER, MU_PARAM_V0, MU_PARAM_V1, SCREEN_POSITION, SCREEN_SHAPE, SCREEN_CENTER, \
+    SAVE_CLEAN_SIMULATION_DATA_PATH
 from data_preprocessing import get_cleaned_configuration
 
 
@@ -55,7 +60,7 @@ def set_aperture(name, ap_diam_index, microscope_sim):
         diam = APERTURE_OPEN_DIAMETER
     else:
         # Plus grand diamètre d'index 1 est l'élément 0 de la liste
-        diam = microscope_sim.apertures[name].diameters[ap_diam_index-1] * 1e-6
+        diam = microscope_sim.apertures[name].diameters[ap_diam_index - 1] * 1e-6
     microscope_sim.apertures[name].diameter = diam
 
 
@@ -110,34 +115,57 @@ def set_nytche_configuration(nytche_configuration, microscope_sim):
         ap_diam_index = int(nytche_configuration[1][name_diam])
         set_aperture(name=yaml_name, ap_diam_index=ap_diam_index, microscope_sim=microscope_sim)
 
-    #set deflectors
-
+    # set deflectors
 
     # set others
-    pass
+    return
 
 
 def modify_nytche_secondary_configuration():
     pass
 
 
+# Get information on screen position
 def retrieve_nytche_secondary_information(microscope_sim):
     beam_tree = microscope_sim.beam()
-    return
+    beam_slice = beam_tree.find(SCREEN_POSITION)
+    circles = beam_slice.beam_nodes[0].cuts(SCREEN_POSITION)
+    screen_rotation = microscope_sim.larmor_angle(SCREEN_POSITION)
+    return circles, screen_rotation
 
 
 def generate_simulation_datasets():
     microscope_sim = Microscope("i2tem.cbor")
-    configurations, default = get_cleaned_configuration("Exp3log.txt", full=True)
+    configuration_file_name = "Exp3log.txt"
+    configurations, default = get_cleaned_configuration(configuration_file_name, full=True)
     nytche_configurations = configurations_to_nytche(configurations)
 
-    for nytche_configuration in nytche_configurations.iterrows():
+    data = np.zeros((len(list(nytche_configurations.iterrows())),) + SCREEN_SHAPE + (3,), dtype=float)
+
+    for i, nytche_configuration in enumerate(nytche_configurations.iterrows()):
         set_nytche_configuration(nytche_configuration, microscope_sim)
-        retrieve_nytche_secondary_information(microscope_sim)
+        circles, _ = retrieve_nytche_secondary_information(microscope_sim)
+        for circle in circles:
+            center_x = SCREEN_CENTER[0] + circle[0]
+            center_y = SCREEN_CENTER[1] + circle[1]
+            radius = circle[2]
+            data[i, :, :, :] = cv2.circle(img=data[i, :, :, :],
+                                          center=(int(center_x), int(center_y)),
+                                          radius=int(radius),
+                                          color=(255, 0, 0),
+                                          thickness=cv2.FILLED)
+    data = data[:, :, :, 0]
+    np.save(SAVE_CLEAN_SIMULATION_DATA_PATH + configuration_file_name.replace("log.txt", "_simulation_images.npy"), data)
+    image_directory_path = SAVE_CLEAN_SIMULATION_DATA_PATH + configuration_file_name.replace("log.txt", f"_simulation_images")
+    if not isdir(image_directory_path):
+        mkdir(image_directory_path)
+    for i in range(data.shape[0]):
+        cv2.imwrite(image_directory_path + f"\\{i}.png",
+                    data[i],
+                    )
 
 
 if __name__ == "__main__":
     # main_specific_tasks('generate_dataset', dirname(realpath(__file__)) + "\\run_counter.dat")
     generate_simulation_datasets()
     # test_microscope_sim())
-
