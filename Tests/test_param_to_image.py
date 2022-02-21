@@ -3,15 +3,14 @@ from os import listdir
 import cv2 as cv
 import matplotlib.pyplot as plt
 import numpy as np
-from keras import optimizers
 from keras.layers import Dense, Activation, BatchNormalization, Reshape, Dropout
 from keras.layers.convolutional import UpSampling2D, Conv2DTranspose
 from keras.models import Sequential, load_model
 from sklearn.model_selection import train_test_split
 
-from constants import ELLIPSES_PATH, MU_USEFUL_PARAMS, MU_PARAM_NAMES, IMAGE_TO_ELLIPSE_MODEL_PATH, \
-    SAVE_DATA_PATH
-from data_preprocessing import get_cleaned_configuration
+from Utils.constants import ELLIPSES_PATH, MU_USEFUL_PARAMS, MU_PARAM_NAMES, IMAGE_TO_ELLIPSE_MODEL_PATH, \
+    SAVE_DATA_PATH, SAVE_CLEAN_SIMULATION_DATA_PATH
+from Utils.DataPreprocessing.data_preprocessing import get_cleaned_configuration
 
 IMAGE_WIDTH = 28
 IMAGE_HEIGHT = 28
@@ -42,16 +41,16 @@ def load_images(number_sample):
     return normalize_image(y)
 
 
-def create_model(input_dim):
-    dim = 7
-    depth = 64*4
+def create_model(input_dim, output_width):
+    dim = int(output_width / 8)
+    depth = output_width * 2
     dropout = 0.9
 
     model = Sequential()
     model.add(Dense(32, input_shape=(input_dim,)))
     model.add(Activation('relu'))
 
-    model.add(Dense(100))
+    model.add(Dense(output_width))
     model.add(Activation('relu'))
 
     model.add(Dense(dim * dim * depth))
@@ -67,28 +66,30 @@ def create_model(input_dim):
     model.add(BatchNormalization(momentum=0.9))
     model.add(Activation('relu'))
 
-    model.add(UpSampling2D())
-
     model.add(Conv2DTranspose(int(depth / 4), 5, padding='same'))
     model.add(BatchNormalization(momentum=0.9))
     model.add(Activation('relu'))
+
+    model.add(UpSampling2D())
 
     model.add(Conv2DTranspose(int(depth / 8), 5, padding='same'))
     model.add(BatchNormalization(momentum=0.9))
     model.add(Activation('relu'))
 
+    model.add(UpSampling2D())
+
     model.add(Conv2DTranspose(1, 5, padding='same'))
     model.add(Activation('sigmoid'))
 
-    # Out: 28 x 28 grayscale image [0.0,1.0] per pix
-    model.add(Reshape((IMAGE_WIDTH, IMAGE_HEIGHT)))
+    # Out: grayscale image [0.0,1.0] per pix
+    model.add(Reshape((output_width, output_width)))
 
     model.compile(optimizer='adam', loss='mean_squared_error', metrics=['mean_squared_error'])
 
     return model
 
 
-def create_basic_model(input_dim):
+def create_basic_model(input_dim, output_width):
 
     model = Sequential()
     model.add(Dense(32, input_dim=input_dim))
@@ -97,22 +98,21 @@ def create_basic_model(input_dim):
     model.add(Dense(64))
     model.add(Activation('relu'))
 
-    model.add(Dense(28*28))
+    model.add(Dense(output_width*output_width))
     model.add(Activation('sigmoid'))
 
-    model.add(Reshape((28, 28)))
+    model.add(Reshape((output_width, output_width)))
 
     model.compile(optimizer='adam', loss='mse', metrics=['mse'])
 
     return model
 
 
-def test():
-    start_range = 3
-    end_range = 12
-    number_sample = 3600
-    y_path = SAVE_DATA_PATH + "Cleaned\\full_28_28_ellipse_dataset_test\\ellipses_as_array_test.npy"
+def test(simulation_data=False):
+    y_path = SAVE_DATA_PATH + "Cleaned\\Exp_28x28_ellipse\\simulated_beam.npy"
     model_path = IMAGE_TO_ELLIPSE_MODEL_PATH + "my_test_model.h5"
+
+    #Computed is valid only for
     already_computed = True
     already_trained = True
 
@@ -120,18 +120,28 @@ def test():
     already_trained = False
 
     # Load parameters
-    df, _ = get_cleaned_configuration("Exp3log.txt")
+    if simulation_data:
+        x = np.load(SAVE_CLEAN_SIMULATION_DATA_PATH + "Exp3_simulation_configurations.npy")[:, :9]
+        y_256 = np.load(SAVE_CLEAN_SIMULATION_DATA_PATH + "simulated_beam.npy")
+        y = np.zeros((y_256.shape[0], 128, 128), dtype=float)
+        for i in range(y.shape[0]):
+            y[i] = cv.resize(y_256[i], (128, 128))
 
-    df = df[[MU_PARAM_NAMES[param] for param in MU_USEFUL_PARAMS][start_range:end_range]]
-    x = df.to_numpy(dtype=float)[:number_sample]
-
-    if already_computed:
-        y = np.load(y_path)
     else:
-        # Load images
-        y = load_images(number_sample)
+        start_range = 3
+        end_range = 12
+        number_sample = 3600
+        df, _ = get_cleaned_configuration("Exp_3.txt")
 
-        np.save(y_path, y)
+        df = df[[MU_PARAM_NAMES[param] for param in MU_USEFUL_PARAMS][start_range:end_range]]
+        x = df.to_numpy(dtype=float)[:number_sample]
+
+        if already_computed:
+            y = np.load(y_path)
+        else:
+            # Load images
+            y = load_images(number_sample)
+            np.save(y_path, y)
 
     x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.2, random_state=42)
 
@@ -148,9 +158,9 @@ def test():
         model.summary()
     else:
         # Create model
-        model = create_model(end_range - start_range)
+        model = create_basic_model(x.shape[1], 128)
         model.summary()
-        history = model.fit(x_train, y_train, epochs=10, batch_size=360, validation_data=(x_test, y_test))
+        history = model.fit(x_train, y_train, epochs=50, batch_size=32, validation_data=(x_test, y_test))
         model.save(model_path)
 
         # Evaluate model
@@ -193,19 +203,19 @@ def denormalize_image(image):
 
 
 def test_network(y_is_x_dependant=True):
-    size = 3600
+    size = 36000
     x = np.random.random(size * 9).reshape(-1, 9)
     if y_is_x_dependant:
-        x2 = np.concatenate([x, x, x, np.zeros((size, 1))], axis=1)
-        y = x2.reshape(size, 1, 28) * x2.reshape(size, 28, 1)
+        x2 = np.concatenate([x, x, x, np.zeros((size, 5))], axis=1)
+        y = x2.reshape(size, 1, 32) * x2.reshape(size, 32, 1)
     else:
-        y = np.random.random(size * 28 * 28).reshape(size, 28, 28)
+        y = np.random.random(size * 32 * 32).reshape(size, 32, 32)
 
     x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.2, random_state=42)
 
-    model = create_model(9)
+    model = create_model(9, 32)
     model.summary()
-    history = model.fit(x_train, y_train, epochs=10, batch_size=64, validation_data=(x_test, y_test))
+    history = model.fit(x_train, y_train, epochs=15, batch_size=32, validation_data=(x_test, y_test))
 
     # Evaluate model
     plt.title('Loss')
@@ -230,4 +240,4 @@ def test_network(y_is_x_dependant=True):
 if __name__ == '__main__':
     # test_network(True)
     # load_images(5)
-    test()
+    test(True)

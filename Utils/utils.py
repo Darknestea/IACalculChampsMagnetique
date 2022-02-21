@@ -1,5 +1,5 @@
 import tensorflow as tf
-from constants import set_run_session, EXTENSION
+from Utils.constants import set_run_session
 
 
 # Main specific task

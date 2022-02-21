@@ -1,8 +1,7 @@
 import cv2 as cv
-import numpy as np
 import tensorflow as tf
 
-from constants import IMAGE_TO_ELLIPSE_MODEL_PATH
+from Utils.constants import IMAGE_TO_ELLIPSE_MODEL_PATH
 
 
 def ai_fit_ellipse_v0(path):

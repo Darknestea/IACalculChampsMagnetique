@@ -4,17 +4,15 @@ from os.path import isdir
 import cv2
 from nytche import Microscope
 import numpy as np
-import pandas as pd
 
-from constants import MU_OFFSET_BP_P, MU_OFFSET_BP_V, MU_OFFSET_APP, MU_PARAM_YAML_NAMES, MU_REDUCED_PARAMS, \
-    MU_PARAM_LENSES, MU_NYTCHE_PARAMS, MU_PARAM_NAMES, MU_PARAM_BIPRISMS, MU_PARAM_APERTURES, MU_OFFSET_BP_LAST, \
-    MU_OFFSET_AP_LAST, APERTURE_OPEN_DIAMETER, MU_PARAM_V0, MU_PARAM_V1, SCREEN_POSITION, SCREEN_SHAPE, SCREEN_CENTER, \
+from Utils.constants import MU_OFFSET_BP_P, MU_OFFSET_BP_V, MU_OFFSET_APP, MU_PARAM_YAML_NAMES, MU_PARAM_LENSES, MU_NYTCHE_PARAMS, MU_PARAM_NAMES, MU_PARAM_BIPRISMS, MU_PARAM_APERTURES, MU_OFFSET_BP_LAST, \
+    MU_OFFSET_AP_LAST, APERTURE_OPEN_DIAMETER, MU_PARAM_V0, SCREEN_POSITION, SCREEN_SHAPE, SCREEN_CENTER, \
     SAVE_CLEAN_SIMULATION_DATA_PATH
-from data_preprocessing import get_cleaned_configuration
+from Utils.DataPreprocessing.data_preprocessing import get_cleaned_configuration
 
 
 def test_microscope_sim():
-    microscope_sim = Microscope("i2tem.cbor")
+    microscope_sim = Microscope("../../Data/i2tem.cbor")
     # print([item[0] for item in microscope_sim.lenses.items()])
     # print([item[0] for item in microscope_sim.biprisms.items()])
     # print([item[0] for item in microscope_sim.apertures.items()])
@@ -135,8 +133,8 @@ def retrieve_nytche_secondary_information(microscope_sim):
 
 
 def generate_simulation_datasets():
-    microscope_sim = Microscope("i2tem.cbor")
-    configuration_file_name = "Exp3log.txt"
+    microscope_sim = Microscope("../../Data/i2tem.cbor")
+    configuration_file_name = "Exp_3.txt"
     configurations, default = get_cleaned_configuration(configuration_file_name, full=True)
     nytche_configurations = configurations_to_nytche(configurations)
 
@@ -155,13 +153,22 @@ def generate_simulation_datasets():
                                           color=(255, 0, 0),
                                           thickness=cv2.FILLED)
     data = data[:, :, :, 0]
-    np.save(SAVE_CLEAN_SIMULATION_DATA_PATH + configuration_file_name.replace("log.txt", "_simulation_images.npy"), data)
-    image_directory_path = SAVE_CLEAN_SIMULATION_DATA_PATH + configuration_file_name.replace("log.txt", f"_simulation_images")
+
+    mkdir(SAVE_CLEAN_SIMULATION_DATA_PATH)
+
+    np.save(SAVE_CLEAN_SIMULATION_DATA_PATH + configuration_file_name.replace("log.txt", "_simulation_images.npy"),
+            data)
+    np.save(SAVE_CLEAN_SIMULATION_DATA_PATH + configuration_file_name.replace("log.txt",
+                                                                              "_simulation_configurations.npy"),
+            configurations.to_numpy())
+
+    image_directory_path = SAVE_CLEAN_SIMULATION_DATA_PATH + configuration_file_name.replace("log.txt",
+                                                                                             f"_simulation_images")
     if not isdir(image_directory_path):
         mkdir(image_directory_path)
     for i in range(data.shape[0]):
         cv2.imwrite(image_directory_path + f"\\{i}.png",
-                    data[i],
+                    data[i]
                     )
 
 

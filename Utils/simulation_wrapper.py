@@ -1,5 +1,5 @@
 import numpy as np
-from constants import *
+from Utils.constants import *
 
 
 def complete(mu_param):

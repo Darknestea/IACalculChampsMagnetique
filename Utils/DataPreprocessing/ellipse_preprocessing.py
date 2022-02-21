@@ -3,18 +3,12 @@ from os.path import join
 
 import cv2 as cv
 import pandas as pd
-import matplotlib.pyplot as plt
-import numpy as np
-from numpy import mean
-from numpy.linalg import linalg
-from scipy import ndimage
 
-from Data.ellipseParametrisationMethods.AIFitEllipseV0 import ai_fit_ellipse_v0
-from Data.ellipseParametrisationMethods.lsqFitEllipse import lsq_fit_ellipse
-from Data.ellipseParametrisationMethods.naiveFitEllipseV1 import naive_fit_ellipse_v1
-from Data.ellipseParametrisationMethods.naiveFitEllipseV0 import naive_fit_ellipse_v0
-from constants import ELLIPSES_PATH, ELLIPSE_PARAMETER_NAMES, THRESHOLD_ELLIPSE_DETECTION, POS_X, POS_Y, POS_A, POS_B, \
-    POS_THETA, SAVE_DATA_PATH
+from Training.EllipseToParameters.Models.ai_fit_ellipse_v0 import ai_fit_ellipse_v0
+from Training.EllipseToParameters.Models.lsq_fit_ellipse import lsq_fit_ellipse
+from Training.EllipseToParameters.Models.naive_fit_ellipse_v1 import naive_fit_ellipse_v1
+from Training.EllipseToParameters.Models.naive_fit_ellipse_v0 import naive_fit_ellipse_v0
+from Utils.constants import ELLIPSES_PATH, ELLIPSE_PARAMETER_NAMES, SAVE_DATA_PATH
 
 ELLIPSES_FOLDER = ELLIPSES_PATH
 

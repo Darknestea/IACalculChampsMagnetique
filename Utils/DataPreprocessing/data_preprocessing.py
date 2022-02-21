@@ -1,11 +1,9 @@
-from typing import Tuple, List
-
 import numpy as np
 import pandas as pd
 import yaml
 
-from constants import DUMMY_MICROSCOPE_PARAMETERS_NUMBER, DUMMY_TRAIN_SIZE, \
-    DUMMY_ELLIPSE_PARAMETERS_NUMBER, DUMMY_TEST_SIZE, MU_PARAMS, MU_REDUCED_PARAMS, SUFFIX_CLEAN_CONFIGURATIONS_DF, \
+from Utils.constants import DUMMY_MICROSCOPE_PARAMETERS_NUMBER, DUMMY_TRAIN_SIZE, \
+    DUMMY_ELLIPSE_PARAMETERS_NUMBER, DUMMY_TEST_SIZE, MU_REDUCED_PARAMS, SUFFIX_CLEAN_CONFIGURATIONS_DF, \
     SAVE_RAW_CONFIGURATION_PATH, SAVE_CLEAN_CONFIGURATION_PATH, SUFFIX_CLEAN_CONFIGURATIONS_DEFAULT, MU_PARAM_LAST, \
     MU_PARAM_YAML_NAMES, MU_SPECIAL_PARAM_YAML_NAMES, MU_PARAM_SPECIAL_YAML_FUNCTIONS, MU_PARAM_NAMES, VERBOSE, \
     VERBOSE_INFO
@@ -130,7 +128,7 @@ def get_training_data(filename):
 
 
 if __name__ == "__main__":
-    # parse_raw_configuration("Exp3log.txt")
+    # parse_raw_configuration("Exp_3.txt")
     # with open(SAVE_CLEAN_CONFIGURATION_PATH + "Exp3log" + SUFFIX_CLEAN_CONFIGURATIONS_DEFAULT) as file:
     #     configurations = parse_yaml_config(file)
     #     for i, v in enumerate(configurations[0]):
@@ -138,5 +136,5 @@ if __name__ == "__main__":
     #             print(f"{MU_PARAM_NAMES[i]} is not set or null")
     # for i, name in enumerate(MU_PARAM_NAMES):
     #     print(f"{name}\n{MU_PARAM_YAML_NAMES[i]}\n")
-    print(get_cleaned_configuration("Exp3log.txt"))
+    print(get_cleaned_configuration("Exp_3.txt"))
     pass

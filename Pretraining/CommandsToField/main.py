@@ -1,12 +1,12 @@
-from constants import (
+from Utils.constants import (
     PRETRAINING_DATASET,
     EXTENSION, RUN_SESSION, SAVE_MODEL_PATH
 )
-from data_preprocessing import get_pretraining_data
-from model_loader import new_model, save_model
-from record_model_performances import record_pretrained_model
-from training_model import pretrain
-from utils import main_specific_tasks
+from Utils.DataPreprocessing.data_preprocessing import get_pretraining_data
+from Utils.model_loader import new_model, save_model
+from Utils.record_model_performances import record_pretrained_model
+from Training.training_model import pretrain
+from Utils.utils import main_specific_tasks
 
 
 def pretrain_command_to_field():

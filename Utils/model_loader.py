@@ -2,7 +2,7 @@ from keras import Sequential
 from keras.layers import Dense
 from keras.metrics import RootMeanSquaredError
 
-from constants import *
+from Utils.constants import *
 
 
 def new_model(name=None):
