@@ -124,7 +124,7 @@ def modify_nytche_secondary_configuration():
 
 
 # Get information on screen position
-def retrieve_nytche_secondary_information(microscope_sim):
+def retrieve_nytche_image_output(microscope_sim):
     beam_tree = microscope_sim.beam()
     beam_slice = beam_tree.find(SCREEN_POSITION)
     circles = beam_slice.beam_nodes[0].cuts(SCREEN_POSITION)
@@ -142,7 +142,7 @@ def generate_simulation_datasets():
 
     for i, nytche_configuration in enumerate(nytche_configurations.iterrows()):
         set_nytche_configuration(nytche_configuration, microscope_sim)
-        circles, _ = retrieve_nytche_secondary_information(microscope_sim)
+        circles, _ = retrieve_nytche_image_output(microscope_sim)
         for circle in circles:
             center_x = SCREEN_CENTER[0] + circle[0]
             center_y = SCREEN_CENTER[1] + circle[1]
