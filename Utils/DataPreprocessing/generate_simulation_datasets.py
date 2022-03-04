@@ -1,47 +1,17 @@
-from os import mkdir
-from os.path import isdir
-
 import cv2
-from nytche import Microscope
 import numpy as np
+import pandas as pd
+from nytche import Microscope
+from PIL import Image as pilim
 
-from Utils.constants import MU_OFFSET_BP_P, MU_OFFSET_BP_V, MU_OFFSET_APP, MU_PARAM_YAML_NAMES, MU_PARAM_LENSES, MU_NYTCHE_PARAMS, MU_PARAM_NAMES, MU_PARAM_BIPRISMS, MU_PARAM_APERTURES, MU_OFFSET_BP_LAST, \
-    MU_OFFSET_AP_LAST, APERTURE_OPEN_DIAMETER, MU_PARAM_V0, SCREEN_POSITION, SCREEN_SHAPE, SCREEN_CENTER, \
-    SAVE_CLEAN_SIMULATION_DATA_PATH
 from Utils.DataPreprocessing.data_preprocessing import get_cleaned_configuration
-
-
-def test_microscope_sim():
-    microscope_sim = Microscope("../../Data/i2tem.cbor")
-    # print([item[0] for item in microscope_sim.lenses.items()])
-    # print([item[0] for item in microscope_sim.biprisms.items()])
-    # print([item[0] for item in microscope_sim.apertures.items()])
-    # print([item[0] for item in microscope_sim.deflectors.items()])
-    # print([item[0] for item in microscope_sim.object_planes.items()])
-    # print([item[0] for item in microscope_sim.screens.items()])
-
-    # print(microscope_sim.state)
-    # print(microscope_sim.z_source)
-    # print(microscope_sim.z_start)
-    # print(microscope_sim.z_end)
-    #
-    # print(microscope_sim._z)
-    # print(microscope_sim.acc_voltage)
-    #
-    # lenses = [item for item in microscope_sim.lenses.items()]
-    #
-    # one_field = lenses[0][1]._potential.currents
-    # print(one_field)
-    #
-    # current = 4.0
-    # print([lenses[0][1]._potential.ahw(current)])
-    #
-    # potentials = [lens[1]._potential.ahw(current) for lens in lenses[0:2]]
-    # potentials += [lens[1]._potential.ahw for lens in lenses[2:]]
-    # plot(range(len(potentials[0])), potentials[0])
-    # show()
-
-    print([[i for i in item] for item in microscope_sim.biprisms.items()])
+from Utils.constants import MU_OFFSET_BP_P, MU_OFFSET_BP_V, MU_OFFSET_APP, MU_PARAM_YAML_NAMES, MU_PARAM_LENSES, \
+    MU_NYTCHE_PARAMS, MU_PARAM_NAMES, MU_PARAM_BIPRISMS, MU_PARAM_APERTURES, MU_OFFSET_BP_LAST, \
+    MU_OFFSET_AP_LAST, APERTURE_OPEN_DIAMETER, MU_PARAM_V0, SCREEN_POSITION, SCREEN_SHAPE, SCREEN_CENTER, \
+    SIMULATED_BEAM_SLICES, RAW_SIMULATED_BEAM_SLICES_PATH, \
+    CURRENT_EXPERIMENT, CBOR_FILE, ELLIPSE_PARAMETER_NAMES, ELLIPSE_PARAMETERS_BY_METHOD, \
+    ELLIPSE_PARAMETER_EXTRACTION_DEFAULT_METHOD, SIMULATED_TYPE
+from Utils.utils import gray_from_image, load_image
 
 
 def set_accelerator(name, values, microscope_sim):
@@ -132,47 +102,47 @@ def retrieve_nytche_image_output(microscope_sim):
     return circles, screen_rotation
 
 
-def generate_simulation_datasets():
-    microscope_sim = Microscope("../../Data/i2tem.cbor")
-    configuration_file_name = "Exp_3.txt"
-    configurations, default = get_cleaned_configuration(configuration_file_name, full=True)
+def clean_simulation_dataset(do_ellipse_parameter_extraction, experiment=CURRENT_EXPERIMENT):
+    microscope_sim = Microscope(CBOR_FILE())
+    configurations = get_cleaned_configuration(experiment, full=True)
     nytche_configurations = configurations_to_nytche(configurations)
+    image_directory_path = RAW_SIMULATED_BEAM_SLICES_PATH(experiment)
 
-    data = np.zeros((len(list(nytche_configurations.iterrows())),) + SCREEN_SHAPE + (3,), dtype=float)
+    data = np.zeros((len(list(nytche_configurations.iterrows())),) + SCREEN_SHAPE + (3,), dtype=np.uint8)
+
+    ellipses_data = None
+    if do_ellipse_parameter_extraction:
+        ellipses_data = np.zeros((nytche_configurations.shape[0], len(ELLIPSE_PARAMETER_NAMES)), dtype=float)
 
     for i, nytche_configuration in enumerate(nytche_configurations.iterrows()):
         set_nytche_configuration(nytche_configuration, microscope_sim)
+        # todo retrieve magnetic field
         circles, _ = retrieve_nytche_image_output(microscope_sim)
         for circle in circles:
-            center_x = SCREEN_CENTER[0] + circle[0]
-            center_y = SCREEN_CENTER[1] + circle[1]
-            radius = circle[2]
-            data[i, :, :, :] = cv2.circle(img=data[i, :, :, :],
-                                          center=(int(center_x), int(center_y)),
-                                          radius=int(radius),
-                                          color=(255, 0, 0),
-                                          thickness=cv2.FILLED)
+            # todo modify since the circles are the apertures and like this it fails if apertures are open
+            add_circle_to_data(circle, data, i)
+
+        pilim_img = pilim.fromarray(data[i])
+        pilim_img.save(image_directory_path + f"{i}.png")
+        if do_ellipse_parameter_extraction:
+            ellipses_data[i] = ELLIPSE_PARAMETER_EXTRACTION_DEFAULT_METHOD(data[i, :, :, 0])
+
     data = data[:, :, :, 0]
 
-    mkdir(SAVE_CLEAN_SIMULATION_DATA_PATH)
+    np.save(SIMULATED_BEAM_SLICES(experiment), data)
 
-    np.save(SAVE_CLEAN_SIMULATION_DATA_PATH + configuration_file_name.replace("log.txt", "_simulation_images.npy"),
-            data)
-    np.save(SAVE_CLEAN_SIMULATION_DATA_PATH + configuration_file_name.replace("log.txt",
-                                                                              "_simulation_configurations.npy"),
-            configurations.to_numpy())
-
-    image_directory_path = SAVE_CLEAN_SIMULATION_DATA_PATH + configuration_file_name.replace("log.txt",
-                                                                                             f"_simulation_images")
-    if not isdir(image_directory_path):
-        mkdir(image_directory_path)
-    for i in range(data.shape[0]):
-        cv2.imwrite(image_directory_path + f"\\{i}.png",
-                    data[i]
-                    )
+    if do_ellipse_parameter_extraction:
+        ellipses = pd.DataFrame(data=ellipses_data, columns=ELLIPSE_PARAMETER_NAMES)
+        file_path = ELLIPSE_PARAMETERS_BY_METHOD(experiment, ELLIPSE_PARAMETER_EXTRACTION_DEFAULT_METHOD, data_type=SIMULATED_TYPE)
+        ellipses.to_csv(file_path, index=False)
 
 
-if __name__ == "__main__":
-    # main_specific_tasks('generate_dataset', dirname(realpath(__file__)) + "\\run_counter.dat")
-    generate_simulation_datasets()
-    # test_microscope_sim())
+def add_circle_to_data(circle, data, i):
+    center_x = SCREEN_CENTER[0] + circle[0]
+    center_y = SCREEN_CENTER[1] + circle[1]
+    radius = circle[2]
+    data[i, :, :, :] = cv2.circle(img=data[i, :, :, :],
+                                  center=(int(center_x), int(center_y)),
+                                  radius=int(radius),
+                                  color=(255, 0, 0),
+                                  thickness=cv2.FILLED)

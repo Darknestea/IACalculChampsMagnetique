@@ -9,7 +9,7 @@ from keras.models import Sequential, load_model
 from sklearn.model_selection import train_test_split
 
 from Utils.constants import ELLIPSES_PATH, MU_USEFUL_PARAMS, MU_PARAM_NAMES, IMAGE_TO_ELLIPSE_MODEL_PATH, \
-    SAVE_DATA_PATH, SAVE_CLEAN_SIMULATION_DATA_PATH
+    DATA_PATH, SAVE_CLEAN_SIMULATION_DATA_PATH
 from Utils.DataPreprocessing.data_preprocessing import get_cleaned_configuration
 
 IMAGE_WIDTH = 28
@@ -109,7 +109,7 @@ def create_basic_model(input_dim, output_width):
 
 
 def test(simulation_data=False):
-    y_path = SAVE_DATA_PATH + "Cleaned\\Exp_28x28_ellipse\\simulated_beam.npy"
+    y_path = DATA_PATH + "Cleaned\\Exp_28x28_ellipse\\simulated_beam.npy"
     model_path = IMAGE_TO_ELLIPSE_MODEL_PATH + "my_test_model.h5"
 
     #Computed is valid only for

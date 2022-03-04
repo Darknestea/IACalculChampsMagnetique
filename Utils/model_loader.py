@@ -4,7 +4,6 @@ from keras.metrics import RootMeanSquaredError
 
 from Utils.constants import *
 
-
 def new_model(name=None):
     # TODO
 
@@ -24,6 +23,4 @@ def load_model(path, name):
 
 
 def save_model(model, path):
-    print(path)
-    print(f"\\{current_extension()}\\{model.name}.h5")
-    model.save(path + f"\\{current_extension()}\\{model.name}.h5")
+    model.save(path + f"\\{USER_ID}_{run_session()}\\{model.name}.h5")

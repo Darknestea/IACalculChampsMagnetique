@@ -18,17 +18,17 @@ THETA_MAX = np.pi
 
 @dataclass
 class Ellipse:
+    x: int
+    y: int
     a: float
     b: float
-    u: int
-    v: int
     theta: float
 
 
 # Return True if the point (x,y) is in the ellipse
 def is_xy_in_ellipse(x, y, ellipse):
-    return ((((x - ellipse.u) * np.cos(ellipse.theta) + (y - ellipse.v) * np.sin(ellipse.theta)) / ellipse.a) ** 2 +
-            ((((x - ellipse.u) * np.sin(ellipse.theta) - (y - ellipse.v) * np.cos(ellipse.theta)) / ellipse.b) ** 2)) \
+    return ((((x - ellipse.x) * np.cos(ellipse.theta) + (y - ellipse.y) * np.sin(ellipse.theta)) / ellipse.a) ** 2 +
+            ((((x - ellipse.x) * np.sin(ellipse.theta) - (y - ellipse.y) * np.cos(ellipse.theta)) / ellipse.b) ** 2)) \
            < 1
 
 
@@ -42,10 +42,10 @@ def image_from_ellipse(ellipse):
 def generate_random_ellipse():
     a = np.random.random() * A_MAX
     b = np.random.random() * B_MAX
-    u = np.random.randint(U_MAX)
-    v = np.random.randint(V_MAX)
+    x = np.random.randint(U_MAX)
+    y = np.random.randint(V_MAX)
     theta = np.random.random() * (THETA_MAX - THETA_MIN) + THETA_MIN
-    return Ellipse(a, b, u, v, theta)
+    return Ellipse(x, y, a, b, theta)
 
 
 def generate_set(dataset_size, im_size=IM_SIZE_DEFAULT, im_shape=IM_SHAPE_DEFAULT):

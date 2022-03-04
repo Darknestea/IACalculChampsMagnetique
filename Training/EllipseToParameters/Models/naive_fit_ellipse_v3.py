@@ -2,10 +2,7 @@ import cv2 as cv
 import numpy as np
 
 
-def naive_fit_ellipse_v3(path):
-    # read img
-    img = cv.imread(path)[:, 304:1744] #Img 1440*1080 since opencv is reversed
-
+def naive_fit_ellipse_v3(img):
     # convert to grayscale
     gray = cv.cvtColor(img, cv.COLOR_BGR2GRAY)
 

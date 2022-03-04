@@ -1,21 +1,23 @@
+from os.path import exists
+
 import numpy as np
 import pandas as pd
 import yaml
 
 from Utils.constants import DUMMY_MICROSCOPE_PARAMETERS_NUMBER, DUMMY_TRAIN_SIZE, \
-    DUMMY_ELLIPSE_PARAMETERS_NUMBER, DUMMY_TEST_SIZE, MU_REDUCED_PARAMS, SUFFIX_CLEAN_CONFIGURATIONS_DF, \
-    SAVE_RAW_CONFIGURATION_PATH, SAVE_CLEAN_CONFIGURATION_PATH, SUFFIX_CLEAN_CONFIGURATIONS_DEFAULT, MU_PARAM_LAST, \
+    DUMMY_TEST_SIZE, MU_REDUCED_PARAMS, \
+    MU_PARAM_LAST, \
     MU_PARAM_YAML_NAMES, MU_SPECIAL_PARAM_YAML_NAMES, MU_PARAM_SPECIAL_YAML_FUNCTIONS, MU_PARAM_NAMES, VERBOSE, \
-    VERBOSE_INFO
+    VERBOSE_INFO, EXPERIMENT_3, CONFIGURATIONS_TXT, CONFIGURATIONS_CSV, \
+    DUMMY_ELLIPSE_PARAMETERS_NUMBER, VERBOSE_ALL, CONFIGURATIONS_YAML, RAW_CONFIGURATIONS_CSV, CURRENT_EXPERIMENT
 
 
-def parse_raw_configuration(filename, path=SAVE_RAW_CONFIGURATION_PATH, save_path=SAVE_CLEAN_CONFIGURATION_PATH):
+# Parse a txt file to get a Dataframe
+def parse_txt(experiment_name):
     configurations = []
     finished = False
-
     number_params = len(MU_REDUCED_PARAMS)
-
-    with open(path + filename) as file:
+    with open(CONFIGURATIONS_TXT(experiment_name)) as file:
         while not finished:
             configuration = np.zeros(number_params)
             lines = [file.readline() for _ in MU_REDUCED_PARAMS]
@@ -26,7 +28,21 @@ def parse_raw_configuration(filename, path=SAVE_RAW_CONFIGURATION_PATH, save_pat
                 configuration[i] = float(line)
             configurations.append(configuration)
     df = pd.DataFrame(data=configurations, columns=[MU_PARAM_NAMES[index_p] for index_p in MU_REDUCED_PARAMS])
-    df.to_csv(save_path + filename.rsplit('.', 1)[0] + SUFFIX_CLEAN_CONFIGURATIONS_DF, index=False)
+    return df
+
+def get_csv_from_txt_and_one_yaml(experiment_name):
+    df = parse_txt(experiment_name)
+    with open(CONFIGURATIONS_YAML(experiment_name)) as file:
+        default = parse_yaml_config(file)[0]
+        df = add_default_configuration(df, default)
+    df.to_csv(RAW_CONFIGURATIONS_CSV(experiment_name), index=False)
+
+
+def get_csv_from_yaml(experiment_name):
+    with open(CONFIGURATIONS_YAML(experiment_name)) as file:
+        data = parse_yaml_config(file)
+        df = pd.DataFrame(data, columns=MU_PARAM_NAMES)
+    df.to_csv(RAW_CONFIGURATIONS_CSV(experiment_name), index=False)
 
 
 def add_default_configuration(df, default_configuration):
@@ -43,22 +59,24 @@ def add_default_configuration(df, default_configuration):
     return df
 
 
+# Parse a yaml file to form a numpy array
 def parse_yaml_config(file):
-    yaml_file = yaml.safe_load(file)
+    yaml_file = yaml.safe_load_all(file)
     configurations = []
     for yaml_conf in yaml_file:
         configuration = np.zeros(MU_PARAM_LAST)
-        for key, value in yaml_conf.items():
-            update_configuration_yaml(configuration, key, value, yaml_conf)
+        for key, value in yaml_conf[1].items():
+            update_configuration_yaml(configuration, key, value, yaml_conf[1])
         configurations.append(configuration)
 
     return np.array(configurations)
 
 
+# Parse single yaml configuration to a numpy format
 def update_configuration_yaml(configuration, key, value, yaml_conf):
     if key in MU_PARAM_YAML_NAMES:
         index = MU_PARAM_YAML_NAMES.index(key)
-        if VERBOSE | VERBOSE_INFO:
+        if VERBOSE & VERBOSE_INFO:
             print(f"{key} : {value} of type {type(value)}")
         if type(value) == list:
             for i, v in enumerate(value):
@@ -70,17 +88,35 @@ def update_configuration_yaml(configuration, key, value, yaml_conf):
         real_value, index = MU_PARAM_SPECIAL_YAML_FUNCTIONS[special_index](value, yaml_conf)
         configuration[index] = real_value
     else:
-        if VERBOSE | VERBOSE_INFO:
+        if VERBOSE & VERBOSE_INFO:
             print(f"{key} discarded")
 
 
-def get_cleaned_configuration(filename, save_path=SAVE_CLEAN_CONFIGURATION_PATH, full=True):
-    df = pd.read_csv(save_path + filename.rsplit('.', 1)[0] + SUFFIX_CLEAN_CONFIGURATIONS_DF)
-    with open(save_path + filename.rsplit('.', 1)[0] + SUFFIX_CLEAN_CONFIGURATIONS_DEFAULT) as file:
-        default = parse_yaml_config(file)[0]
-        if full:
-            df = add_default_configuration(df, default)
-    return df, default
+# Generate the cleaned configurations csv file
+def generate_clean_configurations(experiment_name=CURRENT_EXPERIMENT):
+    # Generate the raw configurations.csv if not existing
+    if not exists(RAW_CONFIGURATIONS_CSV(experiment_name)):
+        if exists(CONFIGURATIONS_YAML(experiment_name)):
+            # TODO replace by yaml only
+            get_csv_from_txt_and_one_yaml(experiment_name)
+        else:
+            print(
+                f"No {CONFIGURATIONS_YAML(experiment_name)} or {RAW_CONFIGURATIONS_CSV(experiment_name)} files found"
+            )
+            raise FileNotFoundError
+
+    # Duplicate it in the cleaned folder
+    df = pd.read_csv(RAW_CONFIGURATIONS_CSV(experiment_name))
+    df.to_csv(CONFIGURATIONS_CSV(experiment_name), index=False)
+
+
+# Get the configuration if full is set to True then all fields are fetched else only those not in default
+def get_cleaned_configuration(experiment_name=CURRENT_EXPERIMENT, full=True):
+    df = pd.read_csv(CONFIGURATIONS_CSV(experiment_name))
+    if not full:
+        # todo change to MU_USEFUL_PARAMS to get all the parameters or MU_NYTCHE_PARAM to get only those used by nytche
+        df = df[MU_REDUCED_PARAMS]
+    return df
 
 
 def get_dummy_pretraining_data():
@@ -127,14 +163,15 @@ def get_training_data(filename):
     return get_dummy_training_data()
 
 
-if __name__ == "__main__":
-    # parse_raw_configuration("Exp_3.txt")
-    # with open(SAVE_CLEAN_CONFIGURATION_PATH + "Exp3log" + SUFFIX_CLEAN_CONFIGURATIONS_DEFAULT) as file:
-    #     configurations = parse_yaml_config(file)
-    #     for i, v in enumerate(configurations[0]):
-    #         if v == 0:
-    #             print(f"{MU_PARAM_NAMES[i]} is not set or null")
-    # for i, name in enumerate(MU_PARAM_NAMES):
-    #     print(f"{name}\n{MU_PARAM_YAML_NAMES[i]}\n")
-    print(get_cleaned_configuration("Exp_3.txt"))
-    pass
+# if __name__ == "__main__":
+#     experiment = EXPERIMENT_3
+#     parse_raw_configuration(experiment)
+#     with open(DEFAULT_CONFIGURATION_CSV(experiment)) as file:
+#         configurations = parse_yaml_config(file)
+#         for i, v in enumerate(configurations[0]):
+#             if v == 0:
+#                 print(f"{MU_PARAM_NAMES[i]} is not set or null")
+#     for i, name in enumerate(MU_PARAM_NAMES):
+#         print(f"{name}\n{MU_PARAM_YAML_NAMES[i]}\n")
+#     print(get_cleaned_configuration(experiment))
+#     pass
