@@ -5,7 +5,8 @@ import numpy as np
 import pandas as pd
 
 from Utils.constants import CURRENT_EXPERIMENT, SCREEN_SHAPE, REAL_BEAM_SLICES, RAW_REAL_BEAM_SLICES_PATH, \
-    ELLIPSE_PARAMETER_NAMES, ELLIPSE_PARAMETER_EXTRACTION_DEFAULT_METHOD, ELLIPSE_PARAMETERS_BY_METHOD
+    ELLIPSE_PARAMETER_NAMES, ELLIPSE_PARAMETER_EXTRACTION_DEFAULT_METHOD, ELLIPSE_PARAMETERS_BY_METHOD, VERBOSE, \
+    VERBOSE_INFO
 from Utils.utils import load_image, gray_from_image, load_gray_image
 
 
@@ -14,6 +15,10 @@ def clean_real_dataset(do_ellipse_parameter_extraction, experiment=CURRENT_EXPER
     raw_beam_path = RAW_REAL_BEAM_SLICES_PATH(experiment)
 
     images = listdir(raw_beam_path)
+    if len(images) == 0:
+        if VERBOSE & VERBOSE_INFO:
+            print(f"There is no valid images in the {raw_beam_path} folder")
+        raise FileNotFoundError
 
     data = np.zeros((len(images),) + SCREEN_SHAPE, dtype=float)
 

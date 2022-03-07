@@ -38,20 +38,27 @@ def naive_fit_ellipse_v0_test(img):
 
 
 def naive_fit_ellipse_v0(gray):
-    from Utils.constants import ELLIPSE_PARAMETER_NAMES, ELLIPSE_X, ELLIPSE_Y, ELLIPSE_B, ELLIPSE_A, ELLIPSE_THETA
+    from Utils.constants import VERBOSE_DEBUG, VERBOSE, ELLIPSE_PARAMETER_NAMES, ELLIPSE_X, ELLIPSE_Y, ELLIPSE_B, ELLIPSE_A, ELLIPSE_THETA
+
+    ellipse = np.zeros(len(ELLIPSE_PARAMETER_NAMES), dtype=float)
 
     # threshold to binary and invert
     thresh = cv.threshold(gray, 40, 255, cv.THRESH_BINARY)[1]
 
     contours, hierarchy = cv.findContours(thresh, cv.RETR_TREE, cv.CHAIN_APPROX_SIMPLE)
 
+    if len(contours) == 0:
+        if VERBOSE & VERBOSE_DEBUG:
+            print("No contour")
+        return ellipse
+
     points = np.array([point[0] for point in
                        sorted([(len(contour), i, contour) for i, contour in enumerate(contours)], reverse=True)[0][2]])
 
-    ellipse = np.zeros(len(ELLIPSE_PARAMETER_NAMES), dtype=float)
-
     if len(points) <= 10:
         # No ellipses detected
+        if VERBOSE & VERBOSE_DEBUG:
+            print("Not enough point for an ellipse")
         return ellipse
 
     ((cent_x, cent_y), (width, height), angle) = cv.fitEllipse(points)

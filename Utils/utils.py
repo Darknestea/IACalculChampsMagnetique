@@ -2,7 +2,7 @@ import tensorflow as tf
 import cv2 as cv
 import numpy as np
 
-from Utils.constants import set_run_session
+from Utils.constants import set_run_session, SCREEN_SHAPE
 
 
 # Main specific task
@@ -23,9 +23,7 @@ def main_specific_tasks(filename=None):
 
 
 def load_image(image_path):
-    img = cv.cvLoadImage(image_path)
-    if img is None:
-        print(image_path)
+    img = cv.imread(image_path)
     return img[:, 304:1744]
 
 
@@ -34,4 +32,4 @@ def gray_from_image(img):
 
 
 def load_gray_image(image_path):
-    return gray_from_image(load_image(image_path))
+    return cv.resize(gray_from_image(load_image(image_path)), SCREEN_SHAPE)
