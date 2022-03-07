@@ -9,14 +9,13 @@ from keras.models import Sequential, load_model
 from sklearn.model_selection import train_test_split
 
 from Utils.constants import ELLIPSES_PATH, MU_USEFUL_PARAMS, MU_PARAM_NAMES, IMAGE_TO_ELLIPSE_MODEL_PATH, \
-    DATA_PATH
+    DATA_PATH, SAVE_CLEAN_SIMULATION_DATA_PATH
 from Utils.DataPreprocessing.data_preprocessing import get_cleaned_configuration
 
 IMAGE_WIDTH = 28
 IMAGE_HEIGHT = 28
 IMAGE_SHAPE = (IMAGE_HEIGHT, IMAGE_WIDTH)
 
-SAVE_CLEAN_SIMULATION_DATA_PATH = ""
 
 def load_images(number_sample):
     paths = listdir(ELLIPSES_PATH)
@@ -42,74 +41,8 @@ def load_images(number_sample):
     return normalize_image(y)
 
 
-def create_model(input_dim, output_width):
-    dim = int(output_width / 8)
-    depth = output_width * 2
-    dropout = 0.9
 
-    model = Sequential()
-    model.add(Dense(32, input_shape=(input_dim,)))
-    model.add(Activation('relu'))
-
-    model.add(Dense(output_width))
-    model.add(Activation('relu'))
-
-    model.add(Dense(dim * dim * depth))
-    model.add(BatchNormalization(momentum=0.9))
-    model.add(Activation('relu'))
-
-    model.add(Reshape((dim, dim, depth)))
-    model.add(Dropout(dropout))
-
-    model.add(UpSampling2D())
-
-    model.add(Conv2DTranspose(int(depth / 2), 5, padding='same'))
-    model.add(BatchNormalization(momentum=0.9))
-    model.add(Activation('relu'))
-
-    model.add(Conv2DTranspose(int(depth / 4), 5, padding='same'))
-    model.add(BatchNormalization(momentum=0.9))
-    model.add(Activation('relu'))
-
-    model.add(UpSampling2D())
-
-    model.add(Conv2DTranspose(int(depth / 8), 5, padding='same'))
-    model.add(BatchNormalization(momentum=0.9))
-    model.add(Activation('relu'))
-
-    model.add(UpSampling2D())
-
-    model.add(Conv2DTranspose(1, 5, padding='same'))
-    model.add(Activation('sigmoid'))
-
-    # Out: grayscale image [0.0,1.0] per pix
-    model.add(Reshape((output_width, output_width)))
-
-    model.compile(optimizer='adam', loss='mean_squared_error', metrics=['mean_squared_error'])
-
-    return model
-
-
-def create_basic_model(input_dim, output_width):
-
-    model = Sequential()
-    model.add(Dense(32, input_dim=input_dim))
-    model.add(Activation('relu'))
-
-    model.add(Dense(64))
-    model.add(Activation('relu'))
-
-    model.add(Dense(output_width*output_width))
-    model.add(Activation('sigmoid'))
-
-    model.add(Reshape((output_width, output_width)))
-
-    model.compile(optimizer='adam', loss='mse', metrics=['mse'])
-
-    return model
-
-
-def test(simulation_data=False):
+def train(simulation_data=False):
     y_path = DATA_PATH + "Cleaned\\Exp_28x28_ellipse\\simulated_beam.npy"
     model_path = IMAGE_TO_ELLIPSE_MODEL_PATH + "my_test_model.h5"
 
@@ -241,4 +174,4 @@ def test_network(y_is_x_dependant=True):
 if __name__ == '__main__':
     # test_network(True)
     # load_images(5)
-    test(True)
+    train(True)

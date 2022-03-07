@@ -9,7 +9,8 @@ from Utils.constants import DUMMY_MICROSCOPE_PARAMETERS_NUMBER, DUMMY_TRAIN_SIZE
     MU_PARAM_LAST, \
     MU_PARAM_YAML_NAMES, MU_SPECIAL_PARAM_YAML_NAMES, MU_PARAM_SPECIAL_YAML_FUNCTIONS, MU_PARAM_NAMES, VERBOSE, \
     VERBOSE_INFO, EXPERIMENT_3, CONFIGURATIONS_TXT, CONFIGURATIONS_CSV, \
-    DUMMY_ELLIPSE_PARAMETERS_NUMBER, VERBOSE_ALL, CONFIGURATIONS_YAML, RAW_CONFIGURATIONS_CSV, CURRENT_EXPERIMENT
+    DUMMY_ELLIPSE_PARAMETERS_NUMBER, VERBOSE_ALL, CONFIGURATIONS_YAML, RAW_CONFIGURATIONS_CSV, CURRENT_EXPERIMENT, \
+    USER_ID
 
 
 # Parse a txt file to get a Dataframe
@@ -29,6 +30,7 @@ def parse_txt(experiment_name):
             configurations.append(configuration)
     df = pd.DataFrame(data=configurations, columns=[MU_PARAM_NAMES[index_p] for index_p in MU_REDUCED_PARAMS])
     return df
+
 
 def get_csv_from_txt_and_one_yaml(experiment_name):
     df = parse_txt(experiment_name)
@@ -111,11 +113,11 @@ def generate_clean_configurations(experiment_name=CURRENT_EXPERIMENT):
 
 
 # Get the configuration if full is set to True then all fields are fetched else only those not in default
-def get_cleaned_configuration(experiment_name=CURRENT_EXPERIMENT, full=True):
-    df = pd.read_csv(CONFIGURATIONS_CSV(experiment_name))
+def get_cleaned_configuration(experiment_name=CURRENT_EXPERIMENT, user_id=USER_ID, session=None, full=True, parameters=MU_REDUCED_PARAMS):
+    df = pd.read_csv(CONFIGURATIONS_CSV(experiment_name, user_id, session))
     if not full:
         # todo change to MU_USEFUL_PARAMS to get all the parameters or MU_NYTCHE_PARAM to get only those used by nytche
-        df = df[MU_REDUCED_PARAMS]
+        df = df[parameters]
     return df
 
 

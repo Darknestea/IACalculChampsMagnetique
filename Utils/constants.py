@@ -35,11 +35,11 @@ EXPERIMENT_TEST2 = "test2"
 
 # Parameters
 
-CURRENT_EXPERIMENT = EXPERIMENT_TEST2
+CURRENT_EXPERIMENT = EXPERIMENT_TEST
 VERBOSE = VERBOSE_NONE
 MODE = MODE_TRAINING_FULL
 ELLIPSE_PARAMETER_EXTRACTION_DEFAULT_METHOD = naive_fit_ellipse_v0
-CLEANING_OPERATIONS_TO_PERFORM = (PERFORM_SIMULATION | PERFORM_ELLIPSE_PARAMETERS_EXTRACTION)
+CLEANING_OPERATIONS_TO_PERFORM = (PERFORM_REAL |PERFORM_SIMULATION | PERFORM_ELLIPSE_PARAMETERS_EXTRACTION)
 # Set to None if default folder should be used
 # SPECIFIC_REAL_BEAM_SLICES_FOLDER = "F:\\DaVinci\\Images"
 SPECIFIC_REAL_BEAM_SLICES_FOLDER = None
@@ -110,16 +110,18 @@ def RAW_PATH(experiment_name):
     return f"{RAW_DATA_PATH()}Exp_{experiment_name}\\"
 
 
-def CLEANED_PATH(experiment_name):
-    return f"{CLEAN_DATA_PATH()}Exp_{experiment_name}_{USER_ID}_{run_session()}\\"
+def CLEANED_PATH(experiment_name, user_id=USER_ID, session=None):
+    if not session:
+        session = RUN_SESSION
+    return f"{CLEAN_DATA_PATH()}Exp_{experiment_name}_{user_id}_{session}\\"
 
 
 def RAW_INFO_TXT(experiment_name):
     return f"{RAW_PATH(experiment_name)}info.txt"
 
 
-def CLEANED_INFO_TXT(experiment_name):
-    return f"{CLEANED_PATH(experiment_name)}info.txt"
+def CLEANED_INFO_TXT(experiment_name, user_id=USER_ID, session=None):
+    return f"{CLEANED_PATH(experiment_name, user_id, session)}info.txt"
 
 
 def RAW_GENERATED_ELLIPSES_PATH(experiment_name):
@@ -132,8 +134,10 @@ def RAW_REAL_BEAM_SLICES_PATH(experiment_name):
     return f"{RAW_PATH(experiment_name)}RealBeamSlices\\"
 
 
-def RAW_SIMULATED_BEAM_SLICES_PATH(experiment_name):
-    return f"{RAW_PATH(experiment_name)}SimulatedBeamSlices_{USER_ID}_{run_session()}\\"
+def RAW_SIMULATED_BEAM_SLICES_PATH(experiment_name, user_id=USER_ID, session=None):
+    if not session:
+        session = RUN_SESSION
+    return f"{RAW_PATH(experiment_name)}SimulatedBeamSlices_{user_id}_{session}\\"
 
 
 def CONFIGURATIONS_TXT(experiment_name):
@@ -148,36 +152,52 @@ def RAW_CONFIGURATIONS_CSV(experiment_name):
     return f"{RAW_PATH(experiment_name)}configurations.csv"
 
 
-def SIMULATED_BEAM_SLICES(experiment_name):
-    return f"{CLEANED_PATH(experiment_name)}simulated_beam_slices.npy"
+def SIMULATED_BEAM_SLICES(experiment_name, user_id=USER_ID, session=None):
+    return f"{CLEANED_PATH(experiment_name, user_id, session)}simulated_beam_slices.npy"
 
 
-def GENERATED_ELLIPSES(experiment_name):
-    return f"{CLEANED_PATH(experiment_name)}generated_ellipses.npy"
+def GENERATED_ELLIPSES(experiment_name, user_id=USER_ID, session=None):
+    return f"{CLEANED_PATH(experiment_name, user_id, session)}generated_ellipses.npy"
 
 
-def REAL_BEAM_SLICES(experiment_name):
-    return f"{CLEANED_PATH(experiment_name)}real_beam_slices.npy"
+def REAL_BEAM_SLICES(experiment_name, user_id=USER_ID, session=None):
+    return f"{CLEANED_PATH(experiment_name, user_id, session)}real_beam_slices.npy"
 
 
-def MAGNETIC_FIELDS(experiment_name):
-    return f"{CLEANED_PATH(experiment_name)}magnetic_fields.npy"
+def MAGNETIC_FIELDS(experiment_name, user_id=USER_ID, session=None):
+    return f"{CLEANED_PATH(experiment_name, user_id, session)}magnetic_fields.npy"
 
 
-def CONFIGURATIONS_CSV(experiment_name):
-    return f"{CLEANED_PATH(experiment_name)}configurations.csv"
+def CONFIGURATIONS_CSV(experiment_name, user_id=USER_ID, session=None):
+    return f"{CLEANED_PATH(experiment_name, user_id, session)}configurations.csv"
 
 
 def RAW_CONFIGURATIONS_RANGE_CSV(experiment_name):
     return f"{RAW_PATH(experiment_name)}configurations_range.csv"
 
 
-def ELLIPSES_PARAMETERS_PATH(experiment_name):
-    return f"{CLEANED_PATH(experiment_name)}EllipsesParameters\\"
+def ELLIPSES_PARAMETERS_PATH(experiment_name, user_id=USER_ID, session=None):
+    return f"{CLEANED_PATH(experiment_name, user_id, session)}EllipsesParameters\\"
 
 
-def ELLIPSE_PARAMETERS_GROUND_TRUTH(experiment_name):
-    return f"{ELLIPSES_PARAMETERS_PATH(experiment_name)}ground_truth.csv"
+def ELLIPSE_PARAMETERS_GROUND_TRUTH(experiment_name, user_id=USER_ID, session=None):
+    return f"{ELLIPSES_PARAMETERS_PATH(experiment_name, user_id, session)}ground_truth.csv"
+
+
+def RESULTS_PATH():
+    return ROOT_PATH + "Results\\"
+
+
+def MODEL_PATH(model_name):
+    return f"{RESULTS_PATH()}{model_name}\\"
+
+
+def MODEL(model_name):
+    return f"{MODEL_PATH(model_name)}{model_name}.h5"
+
+
+def MODEL_INFORMATION(model_name):
+    return f"{MODEL_PATH(model_name)}information_{model_name}.json"
 
 
 REAL_TYPE = 0
@@ -191,18 +211,21 @@ def ELLIPSE_PARAMETERS_BY_METHOD(experiment_name, method, data_type=REAL_TYPE):
     return f"{ELLIPSES_PARAMETERS_PATH(experiment_name)}{prefix}_{method.__name__}.csv"
 
 
-# SAVE_RAW_CONFIGURATION_PATH = DATA_PATH + "Raw\\Configurations\\Raw\\"
-# SAVE_YAML_CONFIGURATION_PATH = DATA_PATH + "Raw\\Configurations\\Yaml\\"
-# SAVE_CLEAN_CONFIGURATION_PATH = DATA_PATH + "Cleaned\\Configurations\\"
-# SAVE_CLEAN_SIMULATION_DATA_PATH = DATA_PATH + "Cleaned\\SimulationImages\\"
+EXPERIMENT_NAME_FIELD = "experiment_name"
+USER_ID_FIELD = "user_id"
+SESSION_FIELD = "session"
+TEST_SIZE_FIELD = "test_size"
+RANDOM_STATE_FIELD = "random_state"
+SUMMARY_FIELD = "summary"
+HISTORY_FIELD = "history"
+MODEL_NAME_FIELD = "model_name"
+MODEL_EVALUATION_FIELD = "evaluation"
 
+# todo remove
 SAVE_MODEL_PATH = ROOT_PATH + "Models\\"
 IMAGE_TO_ELLIPSE_MODEL_PATH = SAVE_MODEL_PATH + "image_to_ellipse\\"
 
 ELLIPSES_PATH = "F:\\DaVinci\\Images"
-#
-# SUFFIX_CLEAN_CONFIGURATIONS_DF = '_configurations.csv'
-# SUFFIX_CLEAN_CONFIGURATIONS_DEFAULT = '_default.yaml'
 
 
 # --- Hidden names
@@ -874,6 +897,7 @@ RUN_SESSION = None
 
 
 def run_session():
+    global RUN_SESSION
     return RUN_SESSION
 
 
