@@ -1,3 +1,7 @@
+from os import chdir
+from os.path import curdir, basename
+from pathlib import Path
+
 import tensorflow as tf
 import cv2 as cv
 import numpy as np
@@ -26,7 +30,11 @@ def main_specific_tasks(filename=None):
 
 
 def load_image(image_path):
-    img = cv.imread(image_path)
+    path = Path(image_path)
+    current_path = Path(curdir)
+    chdir(path.parent.absolute())
+    img = cv.imread(basename(path))
+    chdir(current_path)
     return img[:, 304:1744]
 
 
@@ -47,6 +55,14 @@ def denormalize_image(image):
 
 
 def normalize_by_column(data):
+    # TODO should change to be consistent for each value type
+    for j in range(data.shape[1]):
+        max_j = max(data[:, j])
+        min_j = min(data[:, j])
+        if min_j == max_j:
+            data[:, j] = 1.
+        else:
+            data[:, j] = (data[:, j] - min(data[:, j])) / (max(data[:, j])-min(data[:, j]))
     return data
 
 
@@ -64,3 +80,13 @@ def give_name(base_name):
 
 def get_model_name(base_name, user_id, session):
     return f"{base_name}_{user_id}_{session}"
+
+
+def get_model_summary(model):
+    summary_list = []
+    model.summary(print_fn=lambda s: summary_list.append(s))
+    return "\n".join(summary_list)
+
+
+def print_to_string(s):
+    return s

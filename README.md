@@ -1,7 +1,7 @@
-# AutoTEM
+# ShadowTEM
 
 This project tries to implement methods to partly automatize the configuration
-of a transmission electron microscope.
+of a transmission electron microscope and mimic its behavior using machine learning.
 
 
 ## Installation

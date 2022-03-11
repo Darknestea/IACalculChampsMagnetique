@@ -4,7 +4,7 @@ from os.path import exists
 from Utils.constants import RAW_PATH, RAW_REAL_BEAM_SLICES_PATH, RAW_SIMULATED_BEAM_SLICES_PATH, RAW_INFO_TXT, \
     EXPERIMENT_FROM_CONFIGURATION, EXPERIMENT_FROM_GENERATED_ELLIPSES, RAW_GENERATED_ELLIPSES_PATH, CONFIGURATIONS_TXT, \
     CONFIGURATIONS_YAML, CLEANED_PATH, ELLIPSES_PARAMETERS_PATH, VERBOSE_NONE, VERBOSE, CURRENT_EXPERIMENT, MODEL_PATH, \
-    RESULTS_PATH, DATA_PATH
+    RESULTS_PATH, DATA_PATH, MODEL_INFORMATION, MODEL
 
 # Small wrapper for mkdir
 from Utils.utils import main_specific_tasks
@@ -51,8 +51,10 @@ def create_cleaned_experiment_folders(name=CURRENT_EXPERIMENT):
 
 
 def create_model_folder(model):
-    create_folder(RESULTS_PATH())
     create_folder(MODEL_PATH(model.name))
+    model_path = MODEL(model.name)
+    model_information_path = MODEL_INFORMATION(model.name)
+    return model_path, model_information_path
 
 
 if __name__ == '__main__':

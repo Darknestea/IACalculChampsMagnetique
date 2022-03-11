@@ -39,7 +39,7 @@ CURRENT_EXPERIMENT = EXPERIMENT_TEST
 VERBOSE = VERBOSE_NONE
 MODE = MODE_TRAINING_FULL
 ELLIPSE_PARAMETER_EXTRACTION_DEFAULT_METHOD = naive_fit_ellipse_v0
-CLEANING_OPERATIONS_TO_PERFORM = (PERFORM_REAL |PERFORM_SIMULATION | PERFORM_ELLIPSE_PARAMETERS_EXTRACTION)
+CLEANING_OPERATIONS_TO_PERFORM = (PERFORM_REAL | PERFORM_SIMULATION | PERFORM_ELLIPSE_PARAMETERS_EXTRACTION)
 # Set to None if default folder should be used
 # SPECIFIC_REAL_BEAM_SLICES_FOLDER = "F:\\DaVinci\\Images"
 SPECIFIC_REAL_BEAM_SLICES_FOLDER = None
@@ -187,6 +187,7 @@ def ELLIPSE_PARAMETERS_GROUND_TRUTH(experiment_name, user_id=USER_ID, session=No
 def RESULTS_PATH():
     return ROOT_PATH + "Results\\"
 
+# TODO check which training method produced the result
 
 def MODEL_PATH(model_name):
     return f"{RESULTS_PATH()}{model_name}\\"
@@ -198,6 +199,12 @@ def MODEL(model_name):
 
 def MODEL_INFORMATION(model_name):
     return f"{MODEL_PATH(model_name)}information_{model_name}.json"
+
+
+def EXECUTE_RESULTS_IMAGES_PATH(model_name, experiment_name, number_of_sample, user_id=USER_ID, session=None):
+    if not session:
+        session = RUN_SESSION
+    return f"{MODEL_PATH(model_name)}{experiment_name}_{number_of_sample}_{user_id}_{session}\\"
 
 
 REAL_TYPE = 0
@@ -220,6 +227,7 @@ SUMMARY_FIELD = "summary"
 HISTORY_FIELD = "history"
 MODEL_NAME_FIELD = "model_name"
 MODEL_EVALUATION_FIELD = "evaluation"
+IMAGES_SHAPE_FIELD = "images_shape"
 
 # todo remove
 SAVE_MODEL_PATH = ROOT_PATH + "Models\\"

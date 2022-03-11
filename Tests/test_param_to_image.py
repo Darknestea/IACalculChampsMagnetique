@@ -8,15 +8,16 @@ from keras.layers.convolutional import UpSampling2D, Conv2DTranspose
 from keras.models import Sequential, load_model
 from sklearn.model_selection import train_test_split
 
-from Utils.constants import ELLIPSES_PATH, MU_USEFUL_PARAMS, MU_PARAM_NAMES, IMAGE_TO_ELLIPSE_MODEL_PATH, \
-    DATA_PATH
 from Utils.DataPreprocessing.data_preprocessing import get_cleaned_configuration
+from Utils.constants import ELLIPSES_PATH, MU_USEFUL_PARAMS, MU_PARAM_NAMES, IMAGE_TO_ELLIPSE_MODEL_PATH, \
+    DATA_PATH, CLEAN_DATA_PATH, EXPERIMENT_3
 
 IMAGE_WIDTH = 28
 IMAGE_HEIGHT = 28
 IMAGE_SHAPE = (IMAGE_HEIGHT, IMAGE_WIDTH)
 
-SAVE_CLEAN_SIMULATION_DATA_PATH = ""
+SAVE_CLEAN_SIMULATION_DATA_PATH = CLEAN_DATA_PATH() + "SimulationImages\\"
+
 
 def load_images(number_sample):
     paths = listdir(ELLIPSES_PATH)
@@ -110,7 +111,7 @@ def create_basic_model(input_dim, output_width):
 
 
 def test(simulation_data=False):
-    y_path = DATA_PATH + "Cleaned\\Exp_28x28_ellipse\\simulated_beam.npy"
+    y_path = DATA_PATH() + "Cleaned\\Exp_28x28_ellipse\\simulated_beam.npy"
     model_path = IMAGE_TO_ELLIPSE_MODEL_PATH + "my_test_model.h5"
 
     #Computed is valid only for
@@ -123,7 +124,7 @@ def test(simulation_data=False):
     # Load parameters
     if simulation_data:
         x = np.load(SAVE_CLEAN_SIMULATION_DATA_PATH + "Exp3_simulation_configurations.npy")[:, :9]
-        y_256 = np.load(SAVE_CLEAN_SIMULATION_DATA_PATH + "simulated_beam.npy")
+        y_256 = np.load(y_path)
         y = np.zeros((y_256.shape[0], 128, 128), dtype=float)
         for i in range(y.shape[0]):
             y[i] = cv.resize(y_256[i], (128, 128))
@@ -132,7 +133,7 @@ def test(simulation_data=False):
         start_range = 3
         end_range = 12
         number_sample = 3600
-        df, _ = get_cleaned_configuration("Exp_3.txt")
+        df = get_cleaned_configuration(EXPERIMENT_3, session=6)
 
         df = df[[MU_PARAM_NAMES[param] for param in MU_USEFUL_PARAMS][start_range:end_range]]
         x = df.to_numpy(dtype=float)[:number_sample]
@@ -241,4 +242,4 @@ def test_network(y_is_x_dependant=True):
 if __name__ == '__main__':
     # test_network(True)
     # load_images(5)
-    test(True)
+    test(False)
