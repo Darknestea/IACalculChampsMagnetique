@@ -15,7 +15,7 @@ Before anything create a _my_id.py_ file containing `MY_ID = "your_id"`, this wi
 - Choose an experiment name like `EXPERIMENT_TEST="test"` and place it in constants.py then set it as the active experiment _`ACTIVE_EXPERIMENT=EXPERIMENT_TEST`_
 - Create a raw folder _Exp_test_ using `create_raw_experiment_folders` main
 - Generate using _generate_configurations.py_ a _configurations.csv_ (or import from a _configuration.yaml_ file from a microscope run) and place it in _Raw/Exp_your_experiment_name_
-- If you generated the file, on the microscope perform all the configurations of the generated csv file
+- If you generated the file, perform all the configurations of the generated csv file on the microscope 
 - In _constants.py_ set `SPECIFIC_REAL_BEAM_SLICES_FOLDER=None` and place all the images from the microscope as _n.png_, where _n_ stands for the id, in _Raw/Exp_your_experiment_name/RealBeamSlices_ folder **OR** set `SPECIFIC_REAL_BEAM_SLICES_FOLDER=your_folder_name` using the folder containing those images 
 - Set the modifiable parameters in _Utils/constants.py_
 - Run _main.py_ program to generate the cleaned and processed data in the _Cleaned/Exp_your_experiment_name_ folder

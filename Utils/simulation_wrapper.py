@@ -86,7 +86,7 @@ def set_nytche_configuration(nytche_configuration, microscope_sim):
     for aperture in MU_PARAM_APERTURES:
         set_nytche_aperture(aperture, microscope_sim, nytche_configuration)
 
-    # set deflectors
+    # todo set deflectors
 
     # set others
     return
