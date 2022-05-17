@@ -173,7 +173,7 @@ def get_training_data(filename):
 #         for i, v in enumerate(configurations[0]):
 #             if v == 0:
 #                 print(f"{MU_PARAM_NAMES[i]} is not set or null")
-#     for i, name in enumerate(MU_PARAM_NAMES):
-#         print(f"{name}\n{MU_PARAM_YAML_NAMES[i]}\n")
+#     for i, attr_name in enumerate(MU_PARAM_NAMES):
+#         print(f"{attr_name}\n{MU_PARAM_YAML_NAMES[i]}\n")
 #     print(get_cleaned_configuration(experiment))
 #     pass

@@ -28,8 +28,8 @@ def test_simulation():
     # current = 4.0
     # print([lenses[0][1]._potential.ahw(current)])
     #
-    # potentials = [lens[1]._potential.ahw(current) for lens in lenses[0:2]]
-    # potentials += [lens[1]._potential.ahw for lens in lenses[2:]]
+    # potentials = [lens_id[1]._potential.ahw(current) for lens_id in lenses[0:2]]
+    # potentials += [lens_id[1]._potential.ahw for lens_id in lenses[2:]]
     # plot(range(len(potentials[0])), potentials[0])
     # show()
 

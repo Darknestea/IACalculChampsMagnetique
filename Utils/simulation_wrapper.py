@@ -1,6 +1,9 @@
+from math import cos, sin
+
 import numpy as np
 import cv2
 from PIL import Image as PilIm
+from nytche.utilities.cuttingmasks import CuttingMasks
 
 from Tests.test_param_to_image import IMAGE_HEIGHT, IMAGE_WIDTH, IMAGE_SHAPE
 from Utils.constants import *
@@ -9,11 +12,15 @@ from Utils.constants import *
 def command_to_image(configuration, microscope_sim, shape=IMAGE_SHAPE):
     data = np.zeros(SCREEN_SHAPE + (3,), dtype=np.uint8)
     set_nytche_configuration(configuration, microscope_sim)
-    circles, _ = retrieve_nytche_image_output(microscope_sim)
-    for circle in circles:
-        # todo modify since the circles are the apertures and like this it fails if apertures are open
-        add_circle_to_data(circle, data)
-    return PilIm.fromarray(data[i])
+    masks, rotation = retrieve_nytche_image_output(microscope_sim)
+    for mask in masks.values():
+        circles = mask[CuttingMasks.CIRCLES]
+        half_plans = mask[CuttingMasks.PLANS]
+        for circle in circles:
+            add_circle_to_data(circle, data[i], rotation)
+        for half_plan in half_plans:
+            add_plane_to_data(half_plan, data, rotation)
+    return PilIm.fromarray(data)
 
 
 def partial_command_to_field(configuration, microscope_sim):
@@ -33,30 +40,42 @@ def partial_field_to_image(magnetic_field_field, microscope_sim):
     return np.random.random(IMAGE_HEIGHT * IMAGE_WIDTH).reshape(IMAGE_SHAPE)
 
 
+def get_attr_from_sim(sim, attr_name):
+    return getattr(sim, attr_name, f'The attribute named {attr_name} does not exist')
+
+
+def set_attr_from_sim(sim, attr_name, value):
+    if hasattr(sim, attr_name):
+        setattr(sim, attr_name, value)
+    else:
+        raise f'The attribute named {attr_name} does not exist'
+
+
 def set_accelerator(name, values, microscope_sim):
     pass
 
 
-def set_biprism(name, bp_p, bp_v, microscope_sim):
-    microscope_sim.biprisms[name].inserted = bp_p < 0.5  # meaning == 0
-    microscope_sim.biprisms[name].voltage = bp_v / 1000.
+def set_biprism(biprism, bp_pow, bp_pos, bp_v):
+    biprism.inserted = (bp_pow > 0.5) * (bp_pos > 0.5)  # meaning inserted and active
+    biprism.voltage = bp_v / 1000.
 
 
-def set_aperture(name, ap_diam_index, microscope_sim):
-    if ap_diam_index == 0:
+def set_aperture(aperture, ap_diam_index):
+    if ap_diam_index < 0.5:  # should be == 0 but like this it allows continual range
         diam = APERTURE_OPEN_DIAMETER
     else:
-        # The greatest diameter is at index 1 and correspond to the element at poisition 0 in the list.
-        diam = microscope_sim.apertures[name].diameters[ap_diam_index - 1] * 1e-6
-    microscope_sim.apertures[name].diameter = diam
+        # The greatest diameter is at index 1 and correspond to the element at position 0 in the list.
+        relative_index = min(int(ap_diam_index) - 1, len(aperture.diameters) - 1)
+        diam = aperture.diameters[relative_index] * 1e-6
+    aperture.diameter = diam
 
 
 def set_gun(name, values, microscope_sim):
     pass
 
 
-def set_lens(name, value, microscope_sim):
-    microscope_sim.lenses[name].current = value
+def set_lens(lens, value, microscope_sim):
+    lens.current = value
 
 
 def set_others(name, values, microscope_sim):
@@ -92,33 +111,35 @@ def set_nytche_configuration(nytche_configuration, microscope_sim):
     return
 
 
-def set_nytche_aperture(aperture, microscope_sim, nytche_configuration):
-    if all([a not in MU_NYTCHE_PARAMS for a in range(aperture, aperture + MU_OFFSET_AP_LAST)]):
+def set_nytche_aperture(aperture_id, microscope_sim, nytche_configuration):
+    if all([a not in MU_NYTCHE_PARAMS for a in range(aperture_id, aperture_id + MU_OFFSET_AP_LAST)]):
         pass
-    name_diam = MU_PARAM_NAMES[aperture + MU_OFFSET_APP]
-    yaml_name = MU_PARAM_YAML_NAMES[aperture]
+    aperture = get_attr_from_sim(microscope_sim, MU_PARAM_NYTCHE_NAME[aperture_id])
+    name_diam = MU_PARAM_NAMES[aperture_id + MU_OFFSET_APP]
     ap_diam_index = int(nytche_configuration[1][name_diam])
-    set_aperture(name=yaml_name, ap_diam_index=ap_diam_index, microscope_sim=microscope_sim)
+    set_aperture(aperture=aperture, ap_diam_index=ap_diam_index)
 
 
-def set_nytche_biprism(biprism, microscope_sim, nytche_configuration):
-    if all([b not in MU_NYTCHE_PARAMS for b in range(biprism, biprism + MU_OFFSET_BP_LAST)]):
+def set_nytche_biprism(biprism_id, microscope_sim, nytche_configuration):
+    if all([b not in MU_NYTCHE_PARAMS for b in range(biprism_id, biprism_id + MU_OFFSET_BP_LAST)]):
         pass
-    name_v = MU_PARAM_NAMES[biprism + MU_OFFSET_BP_V]
-    name_p = MU_PARAM_NAMES[biprism + MU_OFFSET_BP_P]
-    yaml_name = MU_PARAM_YAML_NAMES[biprism]
-    bp_v, bp_p = nytche_configuration[1][name_v], nytche_configuration[1][name_p]
-    set_biprism(name=yaml_name, bp_v=bp_v, bp_p=bp_p, microscope_sim=microscope_sim)
+    biprism = get_attr_from_sim(microscope_sim, MU_PARAM_NYTCHE_NAME[biprism_id])
+    name_pos = MU_PARAM_NAMES[biprism_id + MU_OFFSET_BP]
+    name_v = MU_PARAM_NAMES[biprism_id + MU_OFFSET_BP_V]
+    name_pow = MU_PARAM_NAMES[biprism_id + MU_OFFSET_BP_P]
+    bp_pos = nytche_configuration[1][name_pos]
+    bp_v = nytche_configuration[1][name_v]
+    bp_pow = nytche_configuration[1][name_pow]
+    set_biprism(biprism=biprism, bp_v=bp_v, bp_pow=bp_pow, bp_pos=bp_pos)
 
 
-def set_nytche_lens(lens, microscope_sim, nytche_configuration):
-    if lens not in MU_NYTCHE_PARAMS:
+def set_nytche_lens(lens_id, microscope_sim, nytche_configuration):
+    if lens_id not in MU_NYTCHE_PARAMS:
         pass
-    nytche_index = MU_NYTCHE_PARAMS.index(lens)
-    name = MU_PARAM_NAMES[lens]
-    yaml_name = MU_PARAM_YAML_NAMES[lens]
+    lens = get_attr_from_sim(microscope_sim, MU_PARAM_NYTCHE_NAME[lens_id])
+    name = MU_PARAM_NAMES[lens_id]
     value = nytche_configuration[1][name]
-    set_lens(name=yaml_name, value=value, microscope_sim=microscope_sim)
+    set_lens(lens=lens, value=value, microscope_sim=microscope_sim)
 
 
 def modify_nytche_magnetic_fields(magnetic_fields):
@@ -136,17 +157,61 @@ def get_nytche_magnetic_fields(microscope_sim):
 def retrieve_nytche_image_output(microscope_sim):
     beam_tree = microscope_sim.beam()
     beam_slice = beam_tree.find(SCREEN_POSITION)
-    circles = beam_slice.beam_nodes[0].cuts(SCREEN_POSITION)
+    masks = {}
+    if beam_slice is None:
+        return masks, 0
+
+    for node in beam_slice:
+        masks[node] = node.cut(SCREEN_POSITION)
     screen_rotation = microscope_sim.larmor_angle(SCREEN_POSITION)
-    return circles, screen_rotation
+    return masks, screen_rotation
 
 
-def add_circle_to_data(circle, data):
-    center_x = SCREEN_CENTER[0] + circle[0]
-    center_y = SCREEN_CENTER[1] + circle[1]
-    radius = circle[2]
-    data[:] = cv2.circle(img=data,
-                         center=(int(center_x), int(center_y)),
-                         radius=int(radius),
-                         color=(255, 0, 0),
-                         thickness=cv2.FILLED)
+def add_circle_to_data(circle, data, rotation):
+    center_x = SCREEN_CENTER[0] + (circle['x'] * cos(rotation))
+    center_y = SCREEN_CENTER[1] + (circle['y'] * sin(rotation))
+    radius = circle['r']
+
+    mask = np.zeros(data.shape, dtype=np.uint8)
+    cv2.circle(img=mask,
+               center=(int(center_x), int(center_y)),
+               radius=int(radius),
+               color=(255, 0, 0),
+               thickness=cv2.FILLED).astype(np.uint8)
+
+    # cv2.imshow('data before', data)
+    # cv2.waitKey(0)
+    cv2.imshow('mask', mask)
+    cv2.waitKey(0)
+
+    data[:] = cv2.bitwise_and(data, mask)
+
+    cv2.imshow('data after', data)
+    cv2.waitKey(0)
+
+
+# Return red if the point is inside the half-plane and black otherwise
+def is_in_half_plane(cx, cy, bx, by, px, py):
+    return 255 * ((px - cx) * bx + (py - cy) * by > 0)
+
+
+def add_plane_to_data(plan, data, rotation):
+    center_x = SCREEN_CENTER[0] + (plan['x'] * cos(rotation)) * 1000
+    center_y = SCREEN_CENTER[1] + (plan['y'] * sin(rotation)) * 1000
+    theta = plan['theta']
+
+    border_point_x = cos(theta + np.pi/2 + rotation)
+    border_point_y = sin(theta + np.pi/2 + rotation)
+
+    mask = np.fromfunction(
+        lambda i, j, k: is_in_half_plane(
+            center_x, center_y, border_point_x, border_point_y, i, j
+        ),
+        data.shape).astype(np.uint8)
+
+    data[:] = cv2.bitwise_and(data, mask)
+    cv2.imshow('mask', mask)
+    cv2.waitKey(0)
+    #
+    # cv2.imshow('data', data)
+    # cv2.waitKey(0)

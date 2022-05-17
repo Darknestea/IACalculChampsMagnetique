@@ -32,14 +32,17 @@ PERFORM_ELLIPSE_PARAMETERS_EXTRACTION = 4
 EXPERIMENT_3 = "3"
 EXPERIMENT_TEST = "test"
 EXPERIMENT_TEST2 = "test2"
+EXPERIMENT_FULL_PARAMETERS_1 = "full_parameters_1"
+EXPERIMENT_FULL_PARAMETERS_2 = "full_parameters_2"
 
 # Parameters
 
-CURRENT_EXPERIMENT = EXPERIMENT_TEST
+CURRENT_EXPERIMENT = EXPERIMENT_FULL_PARAMETERS_2
 VERBOSE = VERBOSE_NONE
 MODE = MODE_TRAINING_FULL
 ELLIPSE_PARAMETER_EXTRACTION_DEFAULT_METHOD = naive_fit_ellipse_v0
-CLEANING_OPERATIONS_TO_PERFORM = (PERFORM_REAL | PERFORM_SIMULATION | PERFORM_ELLIPSE_PARAMETERS_EXTRACTION)
+# CLEANING_OPERATIONS_TO_PERFORM = (PERFORM_REAL | PERFORM_SIMULATION | PERFORM_ELLIPSE_PARAMETERS_EXTRACTION)
+CLEANING_OPERATIONS_TO_PERFORM = (PERFORM_SIMULATION | PERFORM_ELLIPSE_PARAMETERS_EXTRACTION)
 # Set to None if default folder should be used
 # SPECIFIC_REAL_BEAM_SLICES_FOLDER = "F:\\DaVinci\\Images"
 SPECIFIC_REAL_BEAM_SLICES_FOLDER = None
@@ -446,10 +449,13 @@ MU_NYTCHE_PARAMS = [
     MU_PARAM_I3,
     MU_PARAM_P1,
     MU_PARAM_P2,
+    MU_PARAM_BPC,
     MU_PARAM_BPC_V,
     MU_PARAM_BPC_P,
+    MU_PARAM_BP1,
     MU_PARAM_BP1_V,
     MU_PARAM_BP1_P,
+    MU_PARAM_BP2,
     MU_PARAM_BP2_V,
     MU_PARAM_BP2_P,
     MU_PARAM_APP_OB,
@@ -755,40 +761,40 @@ MU_PARAM_YAML_NAMES = [
 
     "obj",
 
-    "BPC",
+    "bpc_pos",
     "bpc_x",
     "bpc_y",
     "bpc_rot",
     "bpc_voltage",
     "bpc_power",
 
-    "BP1",
+    "bp1_pos",
     "bp1_x",
     "bp1_y",
     "bp1_rot",
     "bp1_voltage",
     "bp1_power",
 
-    "BP2",
+    "bp2_pos",
     "bp2_x",
     "bp2_y",
     "bp2_rot",
     "bp2_voltage",
     "bp2_power",
 
-    "Cond Ap",
+    "cond_ap",
     "cond_ap_x",
     "cond_ap_y",
 
-    "STEM Ap",
+    "stem_ap",
     "stem_ap_x",
     "stem_ap_y",
 
-    "Obj Ap",
+    "obj_ap",
     "obj_ap_x",
     "obj_ap_y",
 
-    "SA Ap",
+    "sa_ap",
     "sa_ap_x",
     "sa_ap_y",
 
@@ -899,6 +905,24 @@ MU_PARAM_SPECIAL_YAML_FUNCTIONS = [
         MU_PARAM_RATIO
     )
 ]
+
+MU_PARAM_NYTCHE_NAME = [""] * len(MU_PARAM_YAML_NAMES)
+MU_PARAM_NYTCHE_NAME[MU_PARAM_C1] = 'c1'
+MU_PARAM_NYTCHE_NAME[MU_PARAM_C2] = 'c2'
+MU_PARAM_NYTCHE_NAME[MU_PARAM_C3] = 'c3'
+MU_PARAM_NYTCHE_NAME[MU_PARAM_I1] = 'i1'
+MU_PARAM_NYTCHE_NAME[MU_PARAM_I2] = 'i2'
+MU_PARAM_NYTCHE_NAME[MU_PARAM_I3] = 'i3'
+MU_PARAM_NYTCHE_NAME[MU_PARAM_P1] = 'p1'
+MU_PARAM_NYTCHE_NAME[MU_PARAM_P2] = 'p2'
+MU_PARAM_NYTCHE_NAME[MU_PARAM_OBJ] = 'obj'
+MU_PARAM_NYTCHE_NAME[MU_PARAM_APP_CO] = 'cond_ap'
+MU_PARAM_NYTCHE_NAME[MU_PARAM_APP_OB] = 'obj_ap'
+MU_PARAM_NYTCHE_NAME[MU_PARAM_APP_SA] = 'sa_ap'
+MU_PARAM_NYTCHE_NAME[MU_PARAM_APP_ST] = 'stem_ap'
+MU_PARAM_NYTCHE_NAME[MU_PARAM_BPC] = 'bpc'
+MU_PARAM_NYTCHE_NAME[MU_PARAM_BP1] = 'bp1'
+MU_PARAM_NYTCHE_NAME[MU_PARAM_BP2] = 'bp2'
 
 # Global variables
 RUN_SESSION = None
