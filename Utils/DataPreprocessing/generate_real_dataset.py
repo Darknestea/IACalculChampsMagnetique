@@ -1,4 +1,5 @@
 from os import listdir
+import glob
 
 import cv2 as cv
 import numpy as np
@@ -14,7 +15,8 @@ def clean_real_dataset(do_ellipse_parameter_extraction, experiment=CURRENT_EXPER
 
     raw_beam_path = RAW_REAL_BEAM_SLICES_PATH(experiment)
 
-    images = listdir(raw_beam_path)
+    images = [path for path in glob.iglob(raw_beam_path + '\\*.png', recursive=False)]
+
     if len(images) == 0:
         if VERBOSE & VERBOSE_INFO:
             print(f"There is no valid images in the {raw_beam_path} folder")
@@ -26,8 +28,7 @@ def clean_real_dataset(do_ellipse_parameter_extraction, experiment=CURRENT_EXPER
     if do_ellipse_parameter_extraction:
         ellipses_data = np.zeros((len(images), len(ELLIPSE_PARAMETER_NAMES)), dtype=float)
 
-    for i, image_name in enumerate(images):
-        image_path = raw_beam_path + image_name
+    for i, image_path in enumerate(images):
         gray = load_gray_image(image_path)
         data[i, :, :] = gray
 

@@ -30,8 +30,8 @@ def load_test_ellipse(save=False):
             list_return = method(img)
             for i, result in enumerate(list_return):
                 # show results
-                cv.namedWindow(f"{method.__name__} {i}", cv.WINDOW_NORMAL)
-                cv.imshow(f"{method.__name__} {i}", result)
+                # cv.namedWindow(f"{method.__name__} {i}", cv.WINDOW_NORMAL)
+                # cv.imshow(f"{method.__name__} {i}", result)
                 if save:
                     cv.imwrite(DATA_PATH() + f"EllipseResults\\{method.__name__}_{i}.png", result)
             cv.waitKey(0)

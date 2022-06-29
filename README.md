@@ -28,3 +28,6 @@ Before anything create a _my_id.py_ file containing `MY_ID = "your_id"`, this wi
 
 ### Training a model
 **TODO**
+
+### Notes
+Everything done before 27/06/2022 for simulation is invalid because the acceleration current was wrong

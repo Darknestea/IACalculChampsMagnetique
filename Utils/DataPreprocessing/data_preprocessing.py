@@ -10,7 +10,7 @@ from Utils.constants import DUMMY_MICROSCOPE_PARAMETERS_NUMBER, DUMMY_TRAIN_SIZE
     MU_PARAM_YAML_NAMES, MU_SPECIAL_PARAM_YAML_NAMES, MU_PARAM_SPECIAL_YAML_FUNCTIONS, MU_PARAM_NAMES, VERBOSE, \
     VERBOSE_INFO, EXPERIMENT_3, CONFIGURATIONS_TXT, CONFIGURATIONS_CSV, \
     DUMMY_ELLIPSE_PARAMETERS_NUMBER, VERBOSE_ALL, CONFIGURATIONS_YAML, RAW_CONFIGURATIONS_CSV, CURRENT_EXPERIMENT, \
-    USER_ID
+    USER_ID, RAW_CONFIG, RAW_CONFIG_YAML_ONLY, RAW_CONFIG_CSV_AND_YAML, RAW_CONFIGURATIONS_INCOMPLETE_CSV
 
 
 # Parse a txt file to get a Dataframe
@@ -44,6 +44,14 @@ def get_csv_from_yaml(experiment_name):
     with open(CONFIGURATIONS_YAML(experiment_name)) as file:
         data = parse_yaml_config(file)
         df = pd.DataFrame(data, columns=MU_PARAM_NAMES)
+    df.to_csv(RAW_CONFIGURATIONS_CSV(experiment_name), index=False)
+
+
+def get_csv_from_incomplete_csv_and_yaml(experiment_name):
+    df = pd.read_csv(RAW_CONFIGURATIONS_INCOMPLETE_CSV(experiment_name))
+    with open(CONFIGURATIONS_YAML(experiment_name)) as file:
+        default = parse_yaml_config(file)[0]
+        df = add_default_configuration(df, default)
     df.to_csv(RAW_CONFIGURATIONS_CSV(experiment_name), index=False)
 
 
@@ -95,12 +103,16 @@ def update_configuration_yaml(configuration, key, value, yaml_conf):
 
 
 # Generate the cleaned configurations csv file
-def generate_clean_configurations(experiment_name=CURRENT_EXPERIMENT):
+def generate_clean_configurations(experiment_name=CURRENT_EXPERIMENT, RAW_CONFIG_YAML_AND_TXT=None):
     # Generate the raw configurations.csv if not existing
     if not exists(RAW_CONFIGURATIONS_CSV(experiment_name)):
         if exists(CONFIGURATIONS_YAML(experiment_name)):
-            # TODO replace by yaml only
-            get_csv_from_txt_and_one_yaml(experiment_name)
+            if RAW_CONFIG == RAW_CONFIG_YAML_ONLY:
+                get_csv_from_yaml(experiment_name)
+            elif RAW_CONFIG == RAW_CONFIG_YAML_AND_TXT:
+                get_csv_from_txt_and_one_yaml(experiment_name)
+            elif RAW_CONFIG == RAW_CONFIG_CSV_AND_YAML:
+                get_csv_from_incomplete_csv_and_yaml(experiment_name)
         else:
             print(
                 f"No {CONFIGURATIONS_YAML(experiment_name)} or {RAW_CONFIGURATIONS_CSV(experiment_name)} files found"

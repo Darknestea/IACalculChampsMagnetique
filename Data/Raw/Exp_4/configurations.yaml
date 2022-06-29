@@ -1,0 +1,8370 @@
+---
+- secs: 56
+  nanos: 523996815
+- c1: 2.0047309027777779
+  c2: 3.999998759920635
+  c3: 0.855
+  obj: 12.278125
+  i1: 3.1680687194749699
+  i2: 4.932967032967033
+  i3: 1.5576068376068378
+  p1: 3.02026862026862
+  p2: 5.372405372405372
+  cond_ap: 1
+  cond_ap_x: 4288
+  cond_ap_y: 176548
+  cond_ap_speed: 4
+  stem_ap: 0
+  stem_ap_x: -882
+  stem_ap_y: 3104
+  stem_ap_speed: 4
+  obj_ap: 0
+  obj_ap_x: -3659
+  obj_ap_y: 2675
+  obj_ap_speed: 4
+  sa_ap: 0
+  sa_ap_x: 1193
+  sa_ap_y: -6778
+  sa_ap_speed: 4
+  gh:
+    - 442
+    - -1144
+  ghx:
+    - 0
+    - 0
+  ghy:
+    - 0
+    - 0
+  gt:
+    - 261
+    - 672
+  gtx:
+    - 602
+    - 208
+  gty:
+    - 559
+    - 1009
+  ga:
+    - 2047
+    - 1000
+  cs3:
+    - -2
+    - -11
+  cs3x:
+    - -231
+    - -720
+  cs3y:
+    - 70
+    - -158
+  cs:
+    - 2
+    - 12
+  csx:
+    - 194
+    - -492
+  csy:
+    - 464
+    - -346
+  bh:
+    - -278928
+    - -89285
+  bhu:
+    - 0
+    - 0
+  bhx:
+    - 331
+    - 573
+  bhy:
+    - 369
+    - -865
+  bt:
+    - 9
+    - 27
+  btu:
+    - 2047
+    - 2047
+  btx:
+    - 1996
+    - -153
+  bty:
+    - 2047
+    - -225
+  os:
+    - -23
+    - -37
+  osx:
+    - -598
+    - -1487
+  osy:
+    - -2047
+    - 952
+  osp:
+    - 72
+    - -38
+  isf:
+    - 0
+    - 0
+  isfx:
+    - 0
+    - 0
+  isfy:
+    - 0
+    - 0
+  is:
+    - 0
+    - 0
+  ia:
+    - -19
+    - -200
+  pa:
+    - 0
+    - 0
+  bpc_pos: 0
+  bpc_x: 250000
+  bpc_y: 0
+  bpc_rot: 0
+  bpc_xy_speed: 20
+  bpc_rot_speed: 60
+  bpc_voltage: 0
+  bpc_power: 0
+  bp1_pos: 0
+  bp1_x: 226425
+  bp1_y: -525
+  bp1_rot: -10953
+  bp1_xy_speed: 30
+  bp1_rot_speed: 50
+  bp1_voltage: 0
+  bp1_power: 0
+  bp2_pos: 0
+  bp2_x: 255233
+  bp2_y: 10625
+  bp2_rot: 10492
+  bp2_xy_speed: 30
+  bp2_rot_speed: 50
+  bp2_voltage: 0
+  bp2_power: 0
+  frim_version: 207
+  acc_voltage: 3000
+  extractor_voltage: 46
+  control_voltage: 0
+  emission_curent: 8
+  mag: 150000
+  lens_mode: 0
+  probe_mode: 0
+  screen_pos: 1
+
+---
+- secs: 57
+  nanos: 527048617
+- c1: 2.0047309027777779
+  c2: 3.999998759920635
+  c3: 0.855
+  obj: 12.278039148351649
+  i1: 3.1680687194749699
+  i2: 4.932967032967033
+  i3: 1.5576068376068378
+  p1: 3.02026862026862
+  p2: 5.372405372405372
+  cond_ap: 1
+  cond_ap_x: 4288
+  cond_ap_y: 176548
+  cond_ap_speed: 4
+  stem_ap: 0
+  stem_ap_x: -882
+  stem_ap_y: 3104
+  stem_ap_speed: 4
+  obj_ap: 0
+  obj_ap_x: -3659
+  obj_ap_y: 2675
+  obj_ap_speed: 4
+  sa_ap: 0
+  sa_ap_x: 1193
+  sa_ap_y: -6778
+  sa_ap_speed: 4
+  gh:
+    - 442
+    - -1144
+  ghx:
+    - 0
+    - 0
+  ghy:
+    - 0
+    - 0
+  gt:
+    - 261
+    - 672
+  gtx:
+    - 602
+    - 208
+  gty:
+    - 559
+    - 1009
+  ga:
+    - 2047
+    - 1000
+  cs3:
+    - -2
+    - -11
+  cs3x:
+    - -231
+    - -720
+  cs3y:
+    - 70
+    - -158
+  cs:
+    - 2
+    - 12
+  csx:
+    - 194
+    - -492
+  csy:
+    - 464
+    - -346
+  bh:
+    - -278928
+    - -89285
+  bhu:
+    - 0
+    - 0
+  bhx:
+    - 331
+    - 573
+  bhy:
+    - 369
+    - -865
+  bt:
+    - 9
+    - 27
+  btu:
+    - 2047
+    - 2047
+  btx:
+    - 1996
+    - -153
+  bty:
+    - 2047
+    - -225
+  os:
+    - -23
+    - -37
+  osx:
+    - -598
+    - -1487
+  osy:
+    - -2047
+    - 952
+  osp:
+    - 72
+    - -38
+  isf:
+    - 0
+    - 0
+  isfx:
+    - 0
+    - 0
+  isfy:
+    - 0
+    - 0
+  is:
+    - 0
+    - 0
+  ia:
+    - -19
+    - -200
+  pa:
+    - 0
+    - 0
+  bpc_pos: 0
+  bpc_x: 250000
+  bpc_y: 0
+  bpc_rot: 0
+  bpc_xy_speed: 20
+  bpc_rot_speed: 60
+  bpc_voltage: 0
+  bpc_power: 0
+  bp1_pos: 0
+  bp1_x: 226425
+  bp1_y: -525
+  bp1_rot: -10953
+  bp1_xy_speed: 30
+  bp1_rot_speed: 50
+  bp1_voltage: 0
+  bp1_power: 0
+  bp2_pos: 0
+  bp2_x: 255233
+  bp2_y: 10625
+  bp2_rot: 10492
+  bp2_xy_speed: 30
+  bp2_rot_speed: 50
+  bp2_voltage: 0
+  bp2_power: 0
+  frim_version: 207
+  acc_voltage: 3000
+  extractor_voltage: 46
+  control_voltage: 0
+  emission_curent: 8
+  mag: 150000
+  lens_mode: 0
+  probe_mode: 0
+  screen_pos: 1
+
+---
+- secs: 59
+  nanos: 389479198
+- c1: 2.0047309027777779
+  c2: 3.999998759920635
+  c3: 0.855
+  obj: 12.277953296703297
+  i1: 3.1680687194749699
+  i2: 4.932967032967033
+  i3: 1.5576068376068378
+  p1: 3.02026862026862
+  p2: 5.372405372405372
+  cond_ap: 1
+  cond_ap_x: 4288
+  cond_ap_y: 176548
+  cond_ap_speed: 4
+  stem_ap: 0
+  stem_ap_x: -882
+  stem_ap_y: 3104
+  stem_ap_speed: 4
+  obj_ap: 0
+  obj_ap_x: -3659
+  obj_ap_y: 2675
+  obj_ap_speed: 4
+  sa_ap: 0
+  sa_ap_x: 1193
+  sa_ap_y: -6778
+  sa_ap_speed: 4
+  gh:
+    - 442
+    - -1144
+  ghx:
+    - 0
+    - 0
+  ghy:
+    - 0
+    - 0
+  gt:
+    - 261
+    - 672
+  gtx:
+    - 602
+    - 208
+  gty:
+    - 559
+    - 1009
+  ga:
+    - 2047
+    - 1000
+  cs3:
+    - -2
+    - -11
+  cs3x:
+    - -231
+    - -720
+  cs3y:
+    - 70
+    - -158
+  cs:
+    - 2
+    - 12
+  csx:
+    - 194
+    - -492
+  csy:
+    - 464
+    - -346
+  bh:
+    - -278928
+    - -89285
+  bhu:
+    - 0
+    - 0
+  bhx:
+    - 331
+    - 573
+  bhy:
+    - 369
+    - -865
+  bt:
+    - 9
+    - 27
+  btu:
+    - 2047
+    - 2047
+  btx:
+    - 1996
+    - -153
+  bty:
+    - 2047
+    - -225
+  os:
+    - -23
+    - -37
+  osx:
+    - -598
+    - -1487
+  osy:
+    - -2047
+    - 952
+  osp:
+    - 72
+    - -38
+  isf:
+    - 0
+    - 0
+  isfx:
+    - 0
+    - 0
+  isfy:
+    - 0
+    - 0
+  is:
+    - 0
+    - 0
+  ia:
+    - -19
+    - -200
+  pa:
+    - 0
+    - 0
+  bpc_pos: 0
+  bpc_x: 250000
+  bpc_y: 0
+  bpc_rot: 0
+  bpc_xy_speed: 20
+  bpc_rot_speed: 60
+  bpc_voltage: 0
+  bpc_power: 0
+  bp1_pos: 0
+  bp1_x: 226425
+  bp1_y: -525
+  bp1_rot: -10953
+  bp1_xy_speed: 30
+  bp1_rot_speed: 50
+  bp1_voltage: 0
+  bp1_power: 0
+  bp2_pos: 0
+  bp2_x: 255233
+  bp2_y: 10625
+  bp2_rot: 10492
+  bp2_xy_speed: 30
+  bp2_rot_speed: 50
+  bp2_voltage: 0
+  bp2_power: 0
+  frim_version: 207
+  acc_voltage: 3000
+  extractor_voltage: 46
+  control_voltage: 0
+  emission_curent: 8
+  mag: 150000
+  lens_mode: 0
+  probe_mode: 0
+  screen_pos: 1
+
+---
+- secs: 67
+  nanos: 909535838
+- c1: 2.0047606646825399
+  c2: 3.999998759920635
+  c3: 0.855
+  obj: 12.277953296703297
+  i1: 3.1680687194749699
+  i2: 4.932967032967033
+  i3: 1.5576068376068378
+  p1: 3.02026862026862
+  p2: 5.372405372405372
+  cond_ap: 1
+  cond_ap_x: 4288
+  cond_ap_y: 176548
+  cond_ap_speed: 4
+  stem_ap: 0
+  stem_ap_x: -882
+  stem_ap_y: 3104
+  stem_ap_speed: 4
+  obj_ap: 0
+  obj_ap_x: -3659
+  obj_ap_y: 2675
+  obj_ap_speed: 4
+  sa_ap: 0
+  sa_ap_x: 1193
+  sa_ap_y: -6778
+  sa_ap_speed: 4
+  gh:
+    - 442
+    - -1144
+  ghx:
+    - 0
+    - 0
+  ghy:
+    - 0
+    - 0
+  gt:
+    - 261
+    - 672
+  gtx:
+    - 602
+    - 208
+  gty:
+    - 559
+    - 1009
+  ga:
+    - 2047
+    - 1000
+  cs3:
+    - -2
+    - -11
+  cs3x:
+    - -231
+    - -720
+  cs3y:
+    - 70
+    - -158
+  cs:
+    - 2
+    - 12
+  csx:
+    - 194
+    - -492
+  csy:
+    - 464
+    - -346
+  bh:
+    - -278928
+    - -89285
+  bhu:
+    - 0
+    - 0
+  bhx:
+    - 331
+    - 573
+  bhy:
+    - 369
+    - -865
+  bt:
+    - 9
+    - 27
+  btu:
+    - 2047
+    - 2047
+  btx:
+    - 1996
+    - -153
+  bty:
+    - 2047
+    - -225
+  os:
+    - -23
+    - -37
+  osx:
+    - -598
+    - -1487
+  osy:
+    - -2047
+    - 952
+  osp:
+    - 72
+    - -38
+  isf:
+    - 0
+    - 0
+  isfx:
+    - 0
+    - 0
+  isfy:
+    - 0
+    - 0
+  is:
+    - 0
+    - 0
+  ia:
+    - -19
+    - -200
+  pa:
+    - 0
+    - 0
+  bpc_pos: 0
+  bpc_x: 250000
+  bpc_y: 0
+  bpc_rot: 0
+  bpc_xy_speed: 20
+  bpc_rot_speed: 60
+  bpc_voltage: 0
+  bpc_power: 0
+  bp1_pos: 0
+  bp1_x: 226425
+  bp1_y: -525
+  bp1_rot: -10953
+  bp1_xy_speed: 30
+  bp1_rot_speed: 50
+  bp1_voltage: 0
+  bp1_power: 0
+  bp2_pos: 0
+  bp2_x: 255233
+  bp2_y: 10625
+  bp2_rot: 10492
+  bp2_xy_speed: 30
+  bp2_rot_speed: 50
+  bp2_voltage: 0
+  bp2_power: 0
+  frim_version: 207
+  acc_voltage: 3000
+  extractor_voltage: 46
+  control_voltage: 0
+  emission_curent: 8
+  mag: 150000
+  lens_mode: 0
+  probe_mode: 0
+  screen_pos: 1
+
+---
+- secs: 68
+  nanos: 412488807
+- c1: 2.0046416170634919
+  c2: 3.999998759920635
+  c3: 0.855
+  obj: 12.277953296703297
+  i1: 3.1680687194749699
+  i2: 4.932967032967033
+  i3: 1.5576068376068378
+  p1: 3.02026862026862
+  p2: 5.372405372405372
+  cond_ap: 1
+  cond_ap_x: 4288
+  cond_ap_y: 176548
+  cond_ap_speed: 4
+  stem_ap: 0
+  stem_ap_x: -882
+  stem_ap_y: 3104
+  stem_ap_speed: 4
+  obj_ap: 0
+  obj_ap_x: -3659
+  obj_ap_y: 2675
+  obj_ap_speed: 4
+  sa_ap: 0
+  sa_ap_x: 1193
+  sa_ap_y: -6778
+  sa_ap_speed: 4
+  gh:
+    - 442
+    - -1144
+  ghx:
+    - 0
+    - 0
+  ghy:
+    - 0
+    - 0
+  gt:
+    - 261
+    - 672
+  gtx:
+    - 602
+    - 208
+  gty:
+    - 559
+    - 1009
+  ga:
+    - 2047
+    - 1000
+  cs3:
+    - -2
+    - -11
+  cs3x:
+    - -231
+    - -720
+  cs3y:
+    - 70
+    - -158
+  cs:
+    - 2
+    - 12
+  csx:
+    - 194
+    - -492
+  csy:
+    - 464
+    - -346
+  bh:
+    - -278928
+    - -89285
+  bhu:
+    - 0
+    - 0
+  bhx:
+    - 331
+    - 573
+  bhy:
+    - 369
+    - -865
+  bt:
+    - 9
+    - 27
+  btu:
+    - 2047
+    - 2047
+  btx:
+    - 1996
+    - -153
+  bty:
+    - 2047
+    - -225
+  os:
+    - -23
+    - -37
+  osx:
+    - -598
+    - -1487
+  osy:
+    - -2047
+    - 952
+  osp:
+    - 72
+    - -38
+  isf:
+    - 0
+    - 0
+  isfx:
+    - 0
+    - 0
+  isfy:
+    - 0
+    - 0
+  is:
+    - 0
+    - 0
+  ia:
+    - -19
+    - -200
+  pa:
+    - 0
+    - 0
+  bpc_pos: 0
+  bpc_x: 250000
+  bpc_y: 0
+  bpc_rot: 0
+  bpc_xy_speed: 20
+  bpc_rot_speed: 60
+  bpc_voltage: 0
+  bpc_power: 0
+  bp1_pos: 0
+  bp1_x: 226425
+  bp1_y: -525
+  bp1_rot: -10953
+  bp1_xy_speed: 30
+  bp1_rot_speed: 50
+  bp1_voltage: 0
+  bp1_power: 0
+  bp2_pos: 0
+  bp2_x: 255233
+  bp2_y: 10625
+  bp2_rot: 10492
+  bp2_xy_speed: 30
+  bp2_rot_speed: 50
+  bp2_voltage: 0
+  bp2_power: 0
+  frim_version: 207
+  acc_voltage: 3000
+  extractor_voltage: 46
+  control_voltage: 0
+  emission_curent: 8
+  mag: 150000
+  lens_mode: 0
+  probe_mode: 0
+  screen_pos: 1
+
+---
+- secs: 68
+  nanos: 567678648
+- c1: 2.00461185515873
+  c2: 3.999998759920635
+  c3: 0.855
+  obj: 12.277953296703297
+  i1: 3.1680687194749699
+  i2: 4.932967032967033
+  i3: 1.5576068376068378
+  p1: 3.02026862026862
+  p2: 5.372405372405372
+  cond_ap: 1
+  cond_ap_x: 4288
+  cond_ap_y: 176548
+  cond_ap_speed: 4
+  stem_ap: 0
+  stem_ap_x: -882
+  stem_ap_y: 3104
+  stem_ap_speed: 4
+  obj_ap: 0
+  obj_ap_x: -3659
+  obj_ap_y: 2675
+  obj_ap_speed: 4
+  sa_ap: 0
+  sa_ap_x: 1193
+  sa_ap_y: -6778
+  sa_ap_speed: 4
+  gh:
+    - 442
+    - -1144
+  ghx:
+    - 0
+    - 0
+  ghy:
+    - 0
+    - 0
+  gt:
+    - 261
+    - 672
+  gtx:
+    - 602
+    - 208
+  gty:
+    - 559
+    - 1009
+  ga:
+    - 2047
+    - 1000
+  cs3:
+    - -2
+    - -11
+  cs3x:
+    - -231
+    - -720
+  cs3y:
+    - 70
+    - -158
+  cs:
+    - 2
+    - 12
+  csx:
+    - 194
+    - -492
+  csy:
+    - 464
+    - -346
+  bh:
+    - -278928
+    - -89285
+  bhu:
+    - 0
+    - 0
+  bhx:
+    - 331
+    - 573
+  bhy:
+    - 369
+    - -865
+  bt:
+    - 9
+    - 27
+  btu:
+    - 2047
+    - 2047
+  btx:
+    - 1996
+    - -153
+  bty:
+    - 2047
+    - -225
+  os:
+    - -23
+    - -37
+  osx:
+    - -598
+    - -1487
+  osy:
+    - -2047
+    - 952
+  osp:
+    - 72
+    - -38
+  isf:
+    - 0
+    - 0
+  isfx:
+    - 0
+    - 0
+  isfy:
+    - 0
+    - 0
+  is:
+    - 0
+    - 0
+  ia:
+    - -19
+    - -200
+  pa:
+    - 0
+    - 0
+  bpc_pos: 0
+  bpc_x: 250000
+  bpc_y: 0
+  bpc_rot: 0
+  bpc_xy_speed: 20
+  bpc_rot_speed: 60
+  bpc_voltage: 0
+  bpc_power: 0
+  bp1_pos: 0
+  bp1_x: 226425
+  bp1_y: -525
+  bp1_rot: -10953
+  bp1_xy_speed: 30
+  bp1_rot_speed: 50
+  bp1_voltage: 0
+  bp1_power: 0
+  bp2_pos: 0
+  bp2_x: 255233
+  bp2_y: 10625
+  bp2_rot: 10492
+  bp2_xy_speed: 30
+  bp2_rot_speed: 50
+  bp2_voltage: 0
+  bp2_power: 0
+  frim_version: 207
+  acc_voltage: 3000
+  extractor_voltage: 46
+  control_voltage: 0
+  emission_curent: 8
+  mag: 150000
+  lens_mode: 0
+  probe_mode: 0
+  screen_pos: 1
+
+---
+- secs: 68
+  nanos: 946438096
+- c1: 2.0045225694444448
+  c2: 3.999998759920635
+  c3: 0.855
+  obj: 12.277953296703297
+  i1: 3.1680687194749699
+  i2: 4.932967032967033
+  i3: 1.5576068376068378
+  p1: 3.02026862026862
+  p2: 5.372405372405372
+  cond_ap: 1
+  cond_ap_x: 4288
+  cond_ap_y: 176548
+  cond_ap_speed: 4
+  stem_ap: 0
+  stem_ap_x: -882
+  stem_ap_y: 3104
+  stem_ap_speed: 4
+  obj_ap: 0
+  obj_ap_x: -3659
+  obj_ap_y: 2675
+  obj_ap_speed: 4
+  sa_ap: 0
+  sa_ap_x: 1193
+  sa_ap_y: -6778
+  sa_ap_speed: 4
+  gh:
+    - 442
+    - -1144
+  ghx:
+    - 0
+    - 0
+  ghy:
+    - 0
+    - 0
+  gt:
+    - 261
+    - 672
+  gtx:
+    - 602
+    - 208
+  gty:
+    - 559
+    - 1009
+  ga:
+    - 2047
+    - 1000
+  cs3:
+    - -2
+    - -11
+  cs3x:
+    - -231
+    - -720
+  cs3y:
+    - 70
+    - -158
+  cs:
+    - 2
+    - 12
+  csx:
+    - 194
+    - -492
+  csy:
+    - 464
+    - -346
+  bh:
+    - -278928
+    - -89285
+  bhu:
+    - 0
+    - 0
+  bhx:
+    - 331
+    - 573
+  bhy:
+    - 369
+    - -865
+  bt:
+    - 9
+    - 27
+  btu:
+    - 2047
+    - 2047
+  btx:
+    - 1996
+    - -153
+  bty:
+    - 2047
+    - -225
+  os:
+    - -23
+    - -37
+  osx:
+    - -598
+    - -1487
+  osy:
+    - -2047
+    - 952
+  osp:
+    - 72
+    - -38
+  isf:
+    - 0
+    - 0
+  isfx:
+    - 0
+    - 0
+  isfy:
+    - 0
+    - 0
+  is:
+    - 0
+    - 0
+  ia:
+    - -19
+    - -200
+  pa:
+    - 0
+    - 0
+  bpc_pos: 0
+  bpc_x: 250000
+  bpc_y: 0
+  bpc_rot: 0
+  bpc_xy_speed: 20
+  bpc_rot_speed: 60
+  bpc_voltage: 0
+  bpc_power: 0
+  bp1_pos: 0
+  bp1_x: 226425
+  bp1_y: -525
+  bp1_rot: -10953
+  bp1_xy_speed: 30
+  bp1_rot_speed: 50
+  bp1_voltage: 0
+  bp1_power: 0
+  bp2_pos: 0
+  bp2_x: 255233
+  bp2_y: 10625
+  bp2_rot: 10492
+  bp2_xy_speed: 30
+  bp2_rot_speed: 50
+  bp2_voltage: 0
+  bp2_power: 0
+  frim_version: 207
+  acc_voltage: 3000
+  extractor_voltage: 46
+  control_voltage: 0
+  emission_curent: 8
+  mag: 150000
+  lens_mode: 0
+  probe_mode: 0
+  screen_pos: 1
+
+---
+- secs: 69
+  nanos: 14547155
+- c1: 2.0042547123015876
+  c2: 3.999998759920635
+  c3: 0.855
+  obj: 12.277953296703297
+  i1: 3.1680687194749699
+  i2: 4.932967032967033
+  i3: 1.5576068376068378
+  p1: 3.02026862026862
+  p2: 5.372405372405372
+  cond_ap: 1
+  cond_ap_x: 4288
+  cond_ap_y: 176548
+  cond_ap_speed: 4
+  stem_ap: 0
+  stem_ap_x: -882
+  stem_ap_y: 3104
+  stem_ap_speed: 4
+  obj_ap: 0
+  obj_ap_x: -3659
+  obj_ap_y: 2675
+  obj_ap_speed: 4
+  sa_ap: 0
+  sa_ap_x: 1193
+  sa_ap_y: -6778
+  sa_ap_speed: 4
+  gh:
+    - 442
+    - -1144
+  ghx:
+    - 0
+    - 0
+  ghy:
+    - 0
+    - 0
+  gt:
+    - 261
+    - 672
+  gtx:
+    - 602
+    - 208
+  gty:
+    - 559
+    - 1009
+  ga:
+    - 2047
+    - 1000
+  cs3:
+    - -2
+    - -11
+  cs3x:
+    - -231
+    - -720
+  cs3y:
+    - 70
+    - -158
+  cs:
+    - 2
+    - 12
+  csx:
+    - 194
+    - -492
+  csy:
+    - 464
+    - -346
+  bh:
+    - -278928
+    - -89285
+  bhu:
+    - 0
+    - 0
+  bhx:
+    - 331
+    - 573
+  bhy:
+    - 369
+    - -865
+  bt:
+    - 9
+    - 27
+  btu:
+    - 2047
+    - 2047
+  btx:
+    - 1996
+    - -153
+  bty:
+    - 2047
+    - -225
+  os:
+    - -23
+    - -37
+  osx:
+    - -598
+    - -1487
+  osy:
+    - -2047
+    - 952
+  osp:
+    - 72
+    - -38
+  isf:
+    - 0
+    - 0
+  isfx:
+    - 0
+    - 0
+  isfy:
+    - 0
+    - 0
+  is:
+    - 0
+    - 0
+  ia:
+    - -19
+    - -200
+  pa:
+    - 0
+    - 0
+  bpc_pos: 0
+  bpc_x: 250000
+  bpc_y: 0
+  bpc_rot: 0
+  bpc_xy_speed: 20
+  bpc_rot_speed: 60
+  bpc_voltage: 0
+  bpc_power: 0
+  bp1_pos: 0
+  bp1_x: 226425
+  bp1_y: -525
+  bp1_rot: -10953
+  bp1_xy_speed: 30
+  bp1_rot_speed: 50
+  bp1_voltage: 0
+  bp1_power: 0
+  bp2_pos: 0
+  bp2_x: 255233
+  bp2_y: 10625
+  bp2_rot: 10492
+  bp2_xy_speed: 30
+  bp2_rot_speed: 50
+  bp2_voltage: 0
+  bp2_power: 0
+  frim_version: 207
+  acc_voltage: 3000
+  extractor_voltage: 46
+  control_voltage: 0
+  emission_curent: 8
+  mag: 150000
+  lens_mode: 0
+  probe_mode: 0
+  screen_pos: 1
+
+---
+- secs: 69
+  nanos: 172450812
+- c1: 2.0041951884920636
+  c2: 3.999998759920635
+  c3: 0.855
+  obj: 12.277953296703297
+  i1: 3.1680687194749699
+  i2: 4.932967032967033
+  i3: 1.5576068376068378
+  p1: 3.02026862026862
+  p2: 5.372405372405372
+  cond_ap: 1
+  cond_ap_x: 4288
+  cond_ap_y: 176548
+  cond_ap_speed: 4
+  stem_ap: 0
+  stem_ap_x: -882
+  stem_ap_y: 3104
+  stem_ap_speed: 4
+  obj_ap: 0
+  obj_ap_x: -3659
+  obj_ap_y: 2675
+  obj_ap_speed: 4
+  sa_ap: 0
+  sa_ap_x: 1193
+  sa_ap_y: -6778
+  sa_ap_speed: 4
+  gh:
+    - 442
+    - -1144
+  ghx:
+    - 0
+    - 0
+  ghy:
+    - 0
+    - 0
+  gt:
+    - 261
+    - 672
+  gtx:
+    - 602
+    - 208
+  gty:
+    - 559
+    - 1009
+  ga:
+    - 2047
+    - 1000
+  cs3:
+    - -2
+    - -11
+  cs3x:
+    - -231
+    - -720
+  cs3y:
+    - 70
+    - -158
+  cs:
+    - 2
+    - 12
+  csx:
+    - 194
+    - -492
+  csy:
+    - 464
+    - -346
+  bh:
+    - -278928
+    - -89285
+  bhu:
+    - 0
+    - 0
+  bhx:
+    - 331
+    - 573
+  bhy:
+    - 369
+    - -865
+  bt:
+    - 9
+    - 27
+  btu:
+    - 2047
+    - 2047
+  btx:
+    - 1996
+    - -153
+  bty:
+    - 2047
+    - -225
+  os:
+    - -23
+    - -37
+  osx:
+    - -598
+    - -1487
+  osy:
+    - -2047
+    - 952
+  osp:
+    - 72
+    - -38
+  isf:
+    - 0
+    - 0
+  isfx:
+    - 0
+    - 0
+  isfy:
+    - 0
+    - 0
+  is:
+    - 0
+    - 0
+  ia:
+    - -19
+    - -200
+  pa:
+    - 0
+    - 0
+  bpc_pos: 0
+  bpc_x: 250000
+  bpc_y: 0
+  bpc_rot: 0
+  bpc_xy_speed: 20
+  bpc_rot_speed: 60
+  bpc_voltage: 0
+  bpc_power: 0
+  bp1_pos: 0
+  bp1_x: 226425
+  bp1_y: -525
+  bp1_rot: -10953
+  bp1_xy_speed: 30
+  bp1_rot_speed: 50
+  bp1_voltage: 0
+  bp1_power: 0
+  bp2_pos: 0
+  bp2_x: 255233
+  bp2_y: 10625
+  bp2_rot: 10492
+  bp2_xy_speed: 30
+  bp2_rot_speed: 50
+  bp2_voltage: 0
+  bp2_power: 0
+  frim_version: 207
+  acc_voltage: 3000
+  extractor_voltage: 46
+  control_voltage: 0
+  emission_curent: 8
+  mag: 150000
+  lens_mode: 0
+  probe_mode: 0
+  screen_pos: 1
+
+---
+- secs: 69
+  nanos: 536696423
+- c1: 2.0042547123015876
+  c2: 3.999998759920635
+  c3: 0.855
+  obj: 12.277953296703297
+  i1: 3.1680687194749699
+  i2: 4.932967032967033
+  i3: 1.5576068376068378
+  p1: 3.02026862026862
+  p2: 5.372405372405372
+  cond_ap: 1
+  cond_ap_x: 4288
+  cond_ap_y: 176548
+  cond_ap_speed: 4
+  stem_ap: 0
+  stem_ap_x: -882
+  stem_ap_y: 3104
+  stem_ap_speed: 4
+  obj_ap: 0
+  obj_ap_x: -3659
+  obj_ap_y: 2675
+  obj_ap_speed: 4
+  sa_ap: 0
+  sa_ap_x: 1193
+  sa_ap_y: -6778
+  sa_ap_speed: 4
+  gh:
+    - 442
+    - -1144
+  ghx:
+    - 0
+    - 0
+  ghy:
+    - 0
+    - 0
+  gt:
+    - 261
+    - 672
+  gtx:
+    - 602
+    - 208
+  gty:
+    - 559
+    - 1009
+  ga:
+    - 2047
+    - 1000
+  cs3:
+    - -2
+    - -11
+  cs3x:
+    - -231
+    - -720
+  cs3y:
+    - 70
+    - -158
+  cs:
+    - 2
+    - 12
+  csx:
+    - 194
+    - -492
+  csy:
+    - 464
+    - -346
+  bh:
+    - -278928
+    - -89285
+  bhu:
+    - 0
+    - 0
+  bhx:
+    - 331
+    - 573
+  bhy:
+    - 369
+    - -865
+  bt:
+    - 9
+    - 27
+  btu:
+    - 2047
+    - 2047
+  btx:
+    - 1996
+    - -153
+  bty:
+    - 2047
+    - -225
+  os:
+    - -23
+    - -37
+  osx:
+    - -598
+    - -1487
+  osy:
+    - -2047
+    - 952
+  osp:
+    - 72
+    - -38
+  isf:
+    - 0
+    - 0
+  isfx:
+    - 0
+    - 0
+  isfy:
+    - 0
+    - 0
+  is:
+    - 0
+    - 0
+  ia:
+    - -19
+    - -200
+  pa:
+    - 0
+    - 0
+  bpc_pos: 0
+  bpc_x: 250000
+  bpc_y: 0
+  bpc_rot: 0
+  bpc_xy_speed: 20
+  bpc_rot_speed: 60
+  bpc_voltage: 0
+  bpc_power: 0
+  bp1_pos: 0
+  bp1_x: 226425
+  bp1_y: -525
+  bp1_rot: -10953
+  bp1_xy_speed: 30
+  bp1_rot_speed: 50
+  bp1_voltage: 0
+  bp1_power: 0
+  bp2_pos: 0
+  bp2_x: 255233
+  bp2_y: 10625
+  bp2_rot: 10492
+  bp2_xy_speed: 30
+  bp2_rot_speed: 50
+  bp2_voltage: 0
+  bp2_power: 0
+  frim_version: 207
+  acc_voltage: 3000
+  extractor_voltage: 46
+  control_voltage: 0
+  emission_curent: 8
+  mag: 150000
+  lens_mode: 0
+  probe_mode: 0
+  screen_pos: 1
+
+---
+- secs: 69
+  nanos: 705936853
+- c1: 2.004403521825397
+  c2: 3.999998759920635
+  c3: 0.855
+  obj: 12.277953296703297
+  i1: 3.1680687194749699
+  i2: 4.932967032967033
+  i3: 1.5576068376068378
+  p1: 3.02026862026862
+  p2: 5.372405372405372
+  cond_ap: 1
+  cond_ap_x: 4288
+  cond_ap_y: 176548
+  cond_ap_speed: 4
+  stem_ap: 0
+  stem_ap_x: -882
+  stem_ap_y: 3104
+  stem_ap_speed: 4
+  obj_ap: 0
+  obj_ap_x: -3659
+  obj_ap_y: 2675
+  obj_ap_speed: 4
+  sa_ap: 0
+  sa_ap_x: 1193
+  sa_ap_y: -6778
+  sa_ap_speed: 4
+  gh:
+    - 442
+    - -1144
+  ghx:
+    - 0
+    - 0
+  ghy:
+    - 0
+    - 0
+  gt:
+    - 261
+    - 672
+  gtx:
+    - 602
+    - 208
+  gty:
+    - 559
+    - 1009
+  ga:
+    - 2047
+    - 1000
+  cs3:
+    - -2
+    - -11
+  cs3x:
+    - -231
+    - -720
+  cs3y:
+    - 70
+    - -158
+  cs:
+    - 2
+    - 12
+  csx:
+    - 194
+    - -492
+  csy:
+    - 464
+    - -346
+  bh:
+    - -278928
+    - -89285
+  bhu:
+    - 0
+    - 0
+  bhx:
+    - 331
+    - 573
+  bhy:
+    - 369
+    - -865
+  bt:
+    - 9
+    - 27
+  btu:
+    - 2047
+    - 2047
+  btx:
+    - 1996
+    - -153
+  bty:
+    - 2047
+    - -225
+  os:
+    - -23
+    - -37
+  osx:
+    - -598
+    - -1487
+  osy:
+    - -2047
+    - 952
+  osp:
+    - 72
+    - -38
+  isf:
+    - 0
+    - 0
+  isfx:
+    - 0
+    - 0
+  isfy:
+    - 0
+    - 0
+  is:
+    - 0
+    - 0
+  ia:
+    - -19
+    - -200
+  pa:
+    - 0
+    - 0
+  bpc_pos: 0
+  bpc_x: 250000
+  bpc_y: 0
+  bpc_rot: 0
+  bpc_xy_speed: 20
+  bpc_rot_speed: 60
+  bpc_voltage: 0
+  bpc_power: 0
+  bp1_pos: 0
+  bp1_x: 226425
+  bp1_y: -525
+  bp1_rot: -10953
+  bp1_xy_speed: 30
+  bp1_rot_speed: 50
+  bp1_voltage: 0
+  bp1_power: 0
+  bp2_pos: 0
+  bp2_x: 255233
+  bp2_y: 10625
+  bp2_rot: 10492
+  bp2_xy_speed: 30
+  bp2_rot_speed: 50
+  bp2_voltage: 0
+  bp2_power: 0
+  frim_version: 207
+  acc_voltage: 3000
+  extractor_voltage: 46
+  control_voltage: 0
+  emission_curent: 8
+  mag: 150000
+  lens_mode: 0
+  probe_mode: 0
+  screen_pos: 1
+
+---
+- secs: 69
+  nanos: 775585268
+- c1: 2.0044630456349208
+  c2: 3.999998759920635
+  c3: 0.855
+  obj: 12.277953296703297
+  i1: 3.1680687194749699
+  i2: 4.932967032967033
+  i3: 1.5576068376068378
+  p1: 3.02026862026862
+  p2: 5.372405372405372
+  cond_ap: 1
+  cond_ap_x: 4288
+  cond_ap_y: 176548
+  cond_ap_speed: 4
+  stem_ap: 0
+  stem_ap_x: -882
+  stem_ap_y: 3104
+  stem_ap_speed: 4
+  obj_ap: 0
+  obj_ap_x: -3659
+  obj_ap_y: 2675
+  obj_ap_speed: 4
+  sa_ap: 0
+  sa_ap_x: 1193
+  sa_ap_y: -6778
+  sa_ap_speed: 4
+  gh:
+    - 442
+    - -1144
+  ghx:
+    - 0
+    - 0
+  ghy:
+    - 0
+    - 0
+  gt:
+    - 261
+    - 672
+  gtx:
+    - 602
+    - 208
+  gty:
+    - 559
+    - 1009
+  ga:
+    - 2047
+    - 1000
+  cs3:
+    - -2
+    - -11
+  cs3x:
+    - -231
+    - -720
+  cs3y:
+    - 70
+    - -158
+  cs:
+    - 2
+    - 12
+  csx:
+    - 194
+    - -492
+  csy:
+    - 464
+    - -346
+  bh:
+    - -278928
+    - -89285
+  bhu:
+    - 0
+    - 0
+  bhx:
+    - 331
+    - 573
+  bhy:
+    - 369
+    - -865
+  bt:
+    - 9
+    - 27
+  btu:
+    - 2047
+    - 2047
+  btx:
+    - 1996
+    - -153
+  bty:
+    - 2047
+    - -225
+  os:
+    - -23
+    - -37
+  osx:
+    - -598
+    - -1487
+  osy:
+    - -2047
+    - 952
+  osp:
+    - 72
+    - -38
+  isf:
+    - 0
+    - 0
+  isfx:
+    - 0
+    - 0
+  isfy:
+    - 0
+    - 0
+  is:
+    - 0
+    - 0
+  ia:
+    - -19
+    - -200
+  pa:
+    - 0
+    - 0
+  bpc_pos: 0
+  bpc_x: 250000
+  bpc_y: 0
+  bpc_rot: 0
+  bpc_xy_speed: 20
+  bpc_rot_speed: 60
+  bpc_voltage: 0
+  bpc_power: 0
+  bp1_pos: 0
+  bp1_x: 226425
+  bp1_y: -525
+  bp1_rot: -10953
+  bp1_xy_speed: 30
+  bp1_rot_speed: 50
+  bp1_voltage: 0
+  bp1_power: 0
+  bp2_pos: 0
+  bp2_x: 255233
+  bp2_y: 10625
+  bp2_rot: 10492
+  bp2_xy_speed: 30
+  bp2_rot_speed: 50
+  bp2_voltage: 0
+  bp2_power: 0
+  frim_version: 207
+  acc_voltage: 3000
+  extractor_voltage: 46
+  control_voltage: 0
+  emission_curent: 8
+  mag: 150000
+  lens_mode: 0
+  probe_mode: 0
+  screen_pos: 1
+
+---
+- secs: 69
+  nanos: 978558259
+- c1: 2.0045225694444448
+  c2: 3.999998759920635
+  c3: 0.855
+  obj: 12.277953296703297
+  i1: 3.1680687194749699
+  i2: 4.932967032967033
+  i3: 1.5576068376068378
+  p1: 3.02026862026862
+  p2: 5.372405372405372
+  cond_ap: 1
+  cond_ap_x: 4288
+  cond_ap_y: 176548
+  cond_ap_speed: 4
+  stem_ap: 0
+  stem_ap_x: -882
+  stem_ap_y: 3104
+  stem_ap_speed: 4
+  obj_ap: 0
+  obj_ap_x: -3659
+  obj_ap_y: 2675
+  obj_ap_speed: 4
+  sa_ap: 0
+  sa_ap_x: 1193
+  sa_ap_y: -6778
+  sa_ap_speed: 4
+  gh:
+    - 442
+    - -1144
+  ghx:
+    - 0
+    - 0
+  ghy:
+    - 0
+    - 0
+  gt:
+    - 261
+    - 672
+  gtx:
+    - 602
+    - 208
+  gty:
+    - 559
+    - 1009
+  ga:
+    - 2047
+    - 1000
+  cs3:
+    - -2
+    - -11
+  cs3x:
+    - -231
+    - -720
+  cs3y:
+    - 70
+    - -158
+  cs:
+    - 2
+    - 12
+  csx:
+    - 194
+    - -492
+  csy:
+    - 464
+    - -346
+  bh:
+    - -278928
+    - -89285
+  bhu:
+    - 0
+    - 0
+  bhx:
+    - 331
+    - 573
+  bhy:
+    - 369
+    - -865
+  bt:
+    - 9
+    - 27
+  btu:
+    - 2047
+    - 2047
+  btx:
+    - 1996
+    - -153
+  bty:
+    - 2047
+    - -225
+  os:
+    - -23
+    - -37
+  osx:
+    - -598
+    - -1487
+  osy:
+    - -2047
+    - 952
+  osp:
+    - 72
+    - -38
+  isf:
+    - 0
+    - 0
+  isfx:
+    - 0
+    - 0
+  isfy:
+    - 0
+    - 0
+  is:
+    - 0
+    - 0
+  ia:
+    - -19
+    - -200
+  pa:
+    - 0
+    - 0
+  bpc_pos: 0
+  bpc_x: 250000
+  bpc_y: 0
+  bpc_rot: 0
+  bpc_xy_speed: 20
+  bpc_rot_speed: 60
+  bpc_voltage: 0
+  bpc_power: 0
+  bp1_pos: 0
+  bp1_x: 226425
+  bp1_y: -525
+  bp1_rot: -10953
+  bp1_xy_speed: 30
+  bp1_rot_speed: 50
+  bp1_voltage: 0
+  bp1_power: 0
+  bp2_pos: 0
+  bp2_x: 255233
+  bp2_y: 10625
+  bp2_rot: 10492
+  bp2_xy_speed: 30
+  bp2_rot_speed: 50
+  bp2_voltage: 0
+  bp2_power: 0
+  frim_version: 207
+  acc_voltage: 3000
+  extractor_voltage: 46
+  control_voltage: 0
+  emission_curent: 8
+  mag: 150000
+  lens_mode: 0
+  probe_mode: 0
+  screen_pos: 1
+
+---
+- secs: 70
+  nanos: 91676745
+- c1: 2.0045523313492068
+  c2: 3.999998759920635
+  c3: 0.855
+  obj: 12.277953296703297
+  i1: 3.1680687194749699
+  i2: 4.932967032967033
+  i3: 1.5576068376068378
+  p1: 3.02026862026862
+  p2: 5.372405372405372
+  cond_ap: 1
+  cond_ap_x: 4288
+  cond_ap_y: 176548
+  cond_ap_speed: 4
+  stem_ap: 0
+  stem_ap_x: -882
+  stem_ap_y: 3104
+  stem_ap_speed: 4
+  obj_ap: 0
+  obj_ap_x: -3659
+  obj_ap_y: 2675
+  obj_ap_speed: 4
+  sa_ap: 0
+  sa_ap_x: 1193
+  sa_ap_y: -6778
+  sa_ap_speed: 4
+  gh:
+    - 442
+    - -1144
+  ghx:
+    - 0
+    - 0
+  ghy:
+    - 0
+    - 0
+  gt:
+    - 261
+    - 672
+  gtx:
+    - 602
+    - 208
+  gty:
+    - 559
+    - 1009
+  ga:
+    - 2047
+    - 1000
+  cs3:
+    - -2
+    - -11
+  cs3x:
+    - -231
+    - -720
+  cs3y:
+    - 70
+    - -158
+  cs:
+    - 2
+    - 12
+  csx:
+    - 194
+    - -492
+  csy:
+    - 464
+    - -346
+  bh:
+    - -278928
+    - -89285
+  bhu:
+    - 0
+    - 0
+  bhx:
+    - 331
+    - 573
+  bhy:
+    - 369
+    - -865
+  bt:
+    - 9
+    - 27
+  btu:
+    - 2047
+    - 2047
+  btx:
+    - 1996
+    - -153
+  bty:
+    - 2047
+    - -225
+  os:
+    - -23
+    - -37
+  osx:
+    - -598
+    - -1487
+  osy:
+    - -2047
+    - 952
+  osp:
+    - 72
+    - -38
+  isf:
+    - 0
+    - 0
+  isfx:
+    - 0
+    - 0
+  isfy:
+    - 0
+    - 0
+  is:
+    - 0
+    - 0
+  ia:
+    - -19
+    - -200
+  pa:
+    - 0
+    - 0
+  bpc_pos: 0
+  bpc_x: 250000
+  bpc_y: 0
+  bpc_rot: 0
+  bpc_xy_speed: 20
+  bpc_rot_speed: 60
+  bpc_voltage: 0
+  bpc_power: 0
+  bp1_pos: 0
+  bp1_x: 226425
+  bp1_y: -525
+  bp1_rot: -10953
+  bp1_xy_speed: 30
+  bp1_rot_speed: 50
+  bp1_voltage: 0
+  bp1_power: 0
+  bp2_pos: 0
+  bp2_x: 255233
+  bp2_y: 10625
+  bp2_rot: 10492
+  bp2_xy_speed: 30
+  bp2_rot_speed: 50
+  bp2_voltage: 0
+  bp2_power: 0
+  frim_version: 207
+  acc_voltage: 3000
+  extractor_voltage: 46
+  control_voltage: 0
+  emission_curent: 8
+  mag: 150000
+  lens_mode: 0
+  probe_mode: 0
+  screen_pos: 1
+
+---
+- secs: 74
+  nanos: 141769731
+- c1: 2.0045225694444448
+  c2: 3.999998759920635
+  c3: 0.855
+  obj: 12.277953296703297
+  i1: 3.1680687194749699
+  i2: 4.932967032967033
+  i3: 1.5576068376068378
+  p1: 3.02026862026862
+  p2: 5.372405372405372
+  cond_ap: 1
+  cond_ap_x: 4288
+  cond_ap_y: 176548
+  cond_ap_speed: 4
+  stem_ap: 0
+  stem_ap_x: -882
+  stem_ap_y: 3104
+  stem_ap_speed: 4
+  obj_ap: 0
+  obj_ap_x: -3659
+  obj_ap_y: 2675
+  obj_ap_speed: 4
+  sa_ap: 0
+  sa_ap_x: 1193
+  sa_ap_y: -6778
+  sa_ap_speed: 4
+  gh:
+    - 442
+    - -1144
+  ghx:
+    - 0
+    - 0
+  ghy:
+    - 0
+    - 0
+  gt:
+    - 261
+    - 672
+  gtx:
+    - 602
+    - 208
+  gty:
+    - 559
+    - 1009
+  ga:
+    - 2047
+    - 1000
+  cs3:
+    - -2
+    - -11
+  cs3x:
+    - -231
+    - -720
+  cs3y:
+    - 70
+    - -158
+  cs:
+    - 2
+    - 12
+  csx:
+    - 194
+    - -492
+  csy:
+    - 464
+    - -346
+  bh:
+    - -278928
+    - -89285
+  bhu:
+    - 0
+    - 0
+  bhx:
+    - 331
+    - 573
+  bhy:
+    - 369
+    - -865
+  bt:
+    - 9
+    - 27
+  btu:
+    - 2047
+    - 2047
+  btx:
+    - 1996
+    - -153
+  bty:
+    - 2047
+    - -225
+  os:
+    - -23
+    - -37
+  osx:
+    - -598
+    - -1487
+  osy:
+    - -2047
+    - 952
+  osp:
+    - 72
+    - -38
+  isf:
+    - 0
+    - 0
+  isfx:
+    - 0
+    - 0
+  isfy:
+    - 0
+    - 0
+  is:
+    - 0
+    - 0
+  ia:
+    - -19
+    - -200
+  pa:
+    - 0
+    - 0
+  bpc_pos: 0
+  bpc_x: 250000
+  bpc_y: 0
+  bpc_rot: 0
+  bpc_xy_speed: 20
+  bpc_rot_speed: 60
+  bpc_voltage: 0
+  bpc_power: 0
+  bp1_pos: 0
+  bp1_x: 226425
+  bp1_y: -525
+  bp1_rot: -10953
+  bp1_xy_speed: 30
+  bp1_rot_speed: 50
+  bp1_voltage: 0
+  bp1_power: 0
+  bp2_pos: 0
+  bp2_x: 255233
+  bp2_y: 10625
+  bp2_rot: 10492
+  bp2_xy_speed: 30
+  bp2_rot_speed: 50
+  bp2_voltage: 0
+  bp2_power: 0
+  frim_version: 207
+  acc_voltage: 3000
+  extractor_voltage: 46
+  control_voltage: 0
+  emission_curent: 8
+  mag: 150000
+  lens_mode: 0
+  probe_mode: 0
+  screen_pos: 1
+
+---
+- secs: 74
+  nanos: 432564189
+- c1: 2.0044928075396828
+  c2: 3.999998759920635
+  c3: 0.855
+  obj: 12.277953296703297
+  i1: 3.1680687194749699
+  i2: 4.932967032967033
+  i3: 1.5576068376068378
+  p1: 3.02026862026862
+  p2: 5.372405372405372
+  cond_ap: 1
+  cond_ap_x: 4288
+  cond_ap_y: 176548
+  cond_ap_speed: 4
+  stem_ap: 0
+  stem_ap_x: -882
+  stem_ap_y: 3104
+  stem_ap_speed: 4
+  obj_ap: 0
+  obj_ap_x: -3659
+  obj_ap_y: 2675
+  obj_ap_speed: 4
+  sa_ap: 0
+  sa_ap_x: 1193
+  sa_ap_y: -6778
+  sa_ap_speed: 4
+  gh:
+    - 442
+    - -1144
+  ghx:
+    - 0
+    - 0
+  ghy:
+    - 0
+    - 0
+  gt:
+    - 261
+    - 672
+  gtx:
+    - 602
+    - 208
+  gty:
+    - 559
+    - 1009
+  ga:
+    - 2047
+    - 1000
+  cs3:
+    - -2
+    - -11
+  cs3x:
+    - -231
+    - -720
+  cs3y:
+    - 70
+    - -158
+  cs:
+    - 2
+    - 12
+  csx:
+    - 194
+    - -492
+  csy:
+    - 464
+    - -346
+  bh:
+    - -278928
+    - -89285
+  bhu:
+    - 0
+    - 0
+  bhx:
+    - 331
+    - 573
+  bhy:
+    - 369
+    - -865
+  bt:
+    - 9
+    - 27
+  btu:
+    - 2047
+    - 2047
+  btx:
+    - 1996
+    - -153
+  bty:
+    - 2047
+    - -225
+  os:
+    - -23
+    - -37
+  osx:
+    - -598
+    - -1487
+  osy:
+    - -2047
+    - 952
+  osp:
+    - 72
+    - -38
+  isf:
+    - 0
+    - 0
+  isfx:
+    - 0
+    - 0
+  isfy:
+    - 0
+    - 0
+  is:
+    - 0
+    - 0
+  ia:
+    - -19
+    - -200
+  pa:
+    - 0
+    - 0
+  bpc_pos: 0
+  bpc_x: 250000
+  bpc_y: 0
+  bpc_rot: 0
+  bpc_xy_speed: 20
+  bpc_rot_speed: 60
+  bpc_voltage: 0
+  bpc_power: 0
+  bp1_pos: 0
+  bp1_x: 226425
+  bp1_y: -525
+  bp1_rot: -10953
+  bp1_xy_speed: 30
+  bp1_rot_speed: 50
+  bp1_voltage: 0
+  bp1_power: 0
+  bp2_pos: 0
+  bp2_x: 255233
+  bp2_y: 10625
+  bp2_rot: 10492
+  bp2_xy_speed: 30
+  bp2_rot_speed: 50
+  bp2_voltage: 0
+  bp2_power: 0
+  frim_version: 207
+  acc_voltage: 3000
+  extractor_voltage: 46
+  control_voltage: 0
+  emission_curent: 8
+  mag: 150000
+  lens_mode: 0
+  probe_mode: 0
+  screen_pos: 1
+
+---
+- secs: 75
+  nanos: 672260995
+- c1: 2.0045225694444448
+  c2: 3.999998759920635
+  c3: 0.855
+  obj: 12.277953296703297
+  i1: 3.1680687194749699
+  i2: 4.932967032967033
+  i3: 1.5576068376068378
+  p1: 3.02026862026862
+  p2: 5.372405372405372
+  cond_ap: 1
+  cond_ap_x: 4288
+  cond_ap_y: 176548
+  cond_ap_speed: 4
+  stem_ap: 0
+  stem_ap_x: -882
+  stem_ap_y: 3104
+  stem_ap_speed: 4
+  obj_ap: 0
+  obj_ap_x: -3659
+  obj_ap_y: 2675
+  obj_ap_speed: 4
+  sa_ap: 0
+  sa_ap_x: 1193
+  sa_ap_y: -6778
+  sa_ap_speed: 4
+  gh:
+    - 442
+    - -1144
+  ghx:
+    - 0
+    - 0
+  ghy:
+    - 0
+    - 0
+  gt:
+    - 261
+    - 672
+  gtx:
+    - 602
+    - 208
+  gty:
+    - 559
+    - 1009
+  ga:
+    - 2047
+    - 1000
+  cs3:
+    - -2
+    - -11
+  cs3x:
+    - -231
+    - -720
+  cs3y:
+    - 70
+    - -158
+  cs:
+    - 2
+    - 12
+  csx:
+    - 194
+    - -492
+  csy:
+    - 464
+    - -346
+  bh:
+    - -278928
+    - -89285
+  bhu:
+    - 0
+    - 0
+  bhx:
+    - 331
+    - 573
+  bhy:
+    - 369
+    - -865
+  bt:
+    - 9
+    - 27
+  btu:
+    - 2047
+    - 2047
+  btx:
+    - 1996
+    - -153
+  bty:
+    - 2047
+    - -225
+  os:
+    - -23
+    - -37
+  osx:
+    - -598
+    - -1487
+  osy:
+    - -2047
+    - 952
+  osp:
+    - 72
+    - -38
+  isf:
+    - 0
+    - 0
+  isfx:
+    - 0
+    - 0
+  isfy:
+    - 0
+    - 0
+  is:
+    - 0
+    - 0
+  ia:
+    - -19
+    - -200
+  pa:
+    - 0
+    - 0
+  bpc_pos: 0
+  bpc_x: 250000
+  bpc_y: 0
+  bpc_rot: 0
+  bpc_xy_speed: 20
+  bpc_rot_speed: 60
+  bpc_voltage: 0
+  bpc_power: 0
+  bp1_pos: 0
+  bp1_x: 226425
+  bp1_y: -525
+  bp1_rot: -10953
+  bp1_xy_speed: 30
+  bp1_rot_speed: 50
+  bp1_voltage: 0
+  bp1_power: 0
+  bp2_pos: 0
+  bp2_x: 255233
+  bp2_y: 10625
+  bp2_rot: 10492
+  bp2_xy_speed: 30
+  bp2_rot_speed: 50
+  bp2_voltage: 0
+  bp2_power: 0
+  frim_version: 207
+  acc_voltage: 3000
+  extractor_voltage: 46
+  control_voltage: 0
+  emission_curent: 8
+  mag: 150000
+  lens_mode: 0
+  probe_mode: 0
+  screen_pos: 1
+
+---
+- secs: 76
+  nanos: 460797678
+- c1: 2.004403521825397
+  c2: 3.999998759920635
+  c3: 0.855
+  obj: 12.277953296703297
+  i1: 3.1680687194749699
+  i2: 4.932967032967033
+  i3: 1.5576068376068378
+  p1: 3.02026862026862
+  p2: 5.372405372405372
+  cond_ap: 1
+  cond_ap_x: 4288
+  cond_ap_y: 176548
+  cond_ap_speed: 4
+  stem_ap: 0
+  stem_ap_x: -882
+  stem_ap_y: 3104
+  stem_ap_speed: 4
+  obj_ap: 0
+  obj_ap_x: -3659
+  obj_ap_y: 2675
+  obj_ap_speed: 4
+  sa_ap: 0
+  sa_ap_x: 1193
+  sa_ap_y: -6778
+  sa_ap_speed: 4
+  gh:
+    - 442
+    - -1144
+  ghx:
+    - 0
+    - 0
+  ghy:
+    - 0
+    - 0
+  gt:
+    - 261
+    - 672
+  gtx:
+    - 602
+    - 208
+  gty:
+    - 559
+    - 1009
+  ga:
+    - 2047
+    - 1000
+  cs3:
+    - -2
+    - -11
+  cs3x:
+    - -231
+    - -720
+  cs3y:
+    - 70
+    - -158
+  cs:
+    - 2
+    - 12
+  csx:
+    - 194
+    - -492
+  csy:
+    - 464
+    - -346
+  bh:
+    - -278928
+    - -89285
+  bhu:
+    - 0
+    - 0
+  bhx:
+    - 331
+    - 573
+  bhy:
+    - 369
+    - -865
+  bt:
+    - 9
+    - 27
+  btu:
+    - 2047
+    - 2047
+  btx:
+    - 1996
+    - -153
+  bty:
+    - 2047
+    - -225
+  os:
+    - -23
+    - -37
+  osx:
+    - -598
+    - -1487
+  osy:
+    - -2047
+    - 952
+  osp:
+    - 72
+    - -38
+  isf:
+    - 0
+    - 0
+  isfx:
+    - 0
+    - 0
+  isfy:
+    - 0
+    - 0
+  is:
+    - 0
+    - 0
+  ia:
+    - -19
+    - -200
+  pa:
+    - 0
+    - 0
+  bpc_pos: 0
+  bpc_x: 250000
+  bpc_y: 0
+  bpc_rot: 0
+  bpc_xy_speed: 20
+  bpc_rot_speed: 60
+  bpc_voltage: 0
+  bpc_power: 0
+  bp1_pos: 0
+  bp1_x: 226425
+  bp1_y: -525
+  bp1_rot: -10953
+  bp1_xy_speed: 30
+  bp1_rot_speed: 50
+  bp1_voltage: 0
+  bp1_power: 0
+  bp2_pos: 0
+  bp2_x: 255233
+  bp2_y: 10625
+  bp2_rot: 10492
+  bp2_xy_speed: 30
+  bp2_rot_speed: 50
+  bp2_voltage: 0
+  bp2_power: 0
+  frim_version: 207
+  acc_voltage: 3000
+  extractor_voltage: 46
+  control_voltage: 0
+  emission_curent: 8
+  mag: 150000
+  lens_mode: 0
+  probe_mode: 0
+  screen_pos: 1
+
+---
+- secs: 76
+  nanos: 533055149
+- c1: 2.0039273313492065
+  c2: 3.999998759920635
+  c3: 0.855
+  obj: 12.277953296703297
+  i1: 3.1680687194749699
+  i2: 4.932967032967033
+  i3: 1.5576068376068378
+  p1: 3.02026862026862
+  p2: 5.372405372405372
+  cond_ap: 1
+  cond_ap_x: 4288
+  cond_ap_y: 176548
+  cond_ap_speed: 4
+  stem_ap: 0
+  stem_ap_x: -882
+  stem_ap_y: 3104
+  stem_ap_speed: 4
+  obj_ap: 0
+  obj_ap_x: -3659
+  obj_ap_y: 2675
+  obj_ap_speed: 4
+  sa_ap: 0
+  sa_ap_x: 1193
+  sa_ap_y: -6778
+  sa_ap_speed: 4
+  gh:
+    - 442
+    - -1144
+  ghx:
+    - 0
+    - 0
+  ghy:
+    - 0
+    - 0
+  gt:
+    - 261
+    - 672
+  gtx:
+    - 602
+    - 208
+  gty:
+    - 559
+    - 1009
+  ga:
+    - 2047
+    - 1000
+  cs3:
+    - -2
+    - -11
+  cs3x:
+    - -231
+    - -720
+  cs3y:
+    - 70
+    - -158
+  cs:
+    - 2
+    - 12
+  csx:
+    - 194
+    - -492
+  csy:
+    - 464
+    - -346
+  bh:
+    - -278928
+    - -89285
+  bhu:
+    - 0
+    - 0
+  bhx:
+    - 331
+    - 573
+  bhy:
+    - 369
+    - -865
+  bt:
+    - 9
+    - 27
+  btu:
+    - 2047
+    - 2047
+  btx:
+    - 1996
+    - -153
+  bty:
+    - 2047
+    - -225
+  os:
+    - -23
+    - -37
+  osx:
+    - -598
+    - -1487
+  osy:
+    - -2047
+    - 952
+  osp:
+    - 72
+    - -38
+  isf:
+    - 0
+    - 0
+  isfx:
+    - 0
+    - 0
+  isfy:
+    - 0
+    - 0
+  is:
+    - 0
+    - 0
+  ia:
+    - -19
+    - -200
+  pa:
+    - 0
+    - 0
+  bpc_pos: 0
+  bpc_x: 250000
+  bpc_y: 0
+  bpc_rot: 0
+  bpc_xy_speed: 20
+  bpc_rot_speed: 60
+  bpc_voltage: 0
+  bpc_power: 0
+  bp1_pos: 0
+  bp1_x: 226425
+  bp1_y: -525
+  bp1_rot: -10953
+  bp1_xy_speed: 30
+  bp1_rot_speed: 50
+  bp1_voltage: 0
+  bp1_power: 0
+  bp2_pos: 0
+  bp2_x: 255233
+  bp2_y: 10625
+  bp2_rot: 10492
+  bp2_xy_speed: 30
+  bp2_rot_speed: 50
+  bp2_voltage: 0
+  bp2_power: 0
+  frim_version: 207
+  acc_voltage: 3000
+  extractor_voltage: 46
+  control_voltage: 0
+  emission_curent: 8
+  mag: 150000
+  lens_mode: 0
+  probe_mode: 0
+  screen_pos: 1
+
+---
+- secs: 76
+  nanos: 700374027
+- c1: 2.0033618551587306
+  c2: 3.999998759920635
+  c3: 0.855
+  obj: 12.277953296703297
+  i1: 3.1680687194749699
+  i2: 4.932967032967033
+  i3: 1.5576068376068378
+  p1: 3.02026862026862
+  p2: 5.372405372405372
+  cond_ap: 1
+  cond_ap_x: 4288
+  cond_ap_y: 176548
+  cond_ap_speed: 4
+  stem_ap: 0
+  stem_ap_x: -882
+  stem_ap_y: 3104
+  stem_ap_speed: 4
+  obj_ap: 0
+  obj_ap_x: -3659
+  obj_ap_y: 2675
+  obj_ap_speed: 4
+  sa_ap: 0
+  sa_ap_x: 1193
+  sa_ap_y: -6778
+  sa_ap_speed: 4
+  gh:
+    - 442
+    - -1144
+  ghx:
+    - 0
+    - 0
+  ghy:
+    - 0
+    - 0
+  gt:
+    - 261
+    - 672
+  gtx:
+    - 602
+    - 208
+  gty:
+    - 559
+    - 1009
+  ga:
+    - 2047
+    - 1000
+  cs3:
+    - -2
+    - -11
+  cs3x:
+    - -231
+    - -720
+  cs3y:
+    - 70
+    - -158
+  cs:
+    - 2
+    - 12
+  csx:
+    - 194
+    - -492
+  csy:
+    - 464
+    - -346
+  bh:
+    - -278928
+    - -89285
+  bhu:
+    - 0
+    - 0
+  bhx:
+    - 331
+    - 573
+  bhy:
+    - 369
+    - -865
+  bt:
+    - 9
+    - 27
+  btu:
+    - 2047
+    - 2047
+  btx:
+    - 1996
+    - -153
+  bty:
+    - 2047
+    - -225
+  os:
+    - -23
+    - -37
+  osx:
+    - -598
+    - -1487
+  osy:
+    - -2047
+    - 952
+  osp:
+    - 72
+    - -38
+  isf:
+    - 0
+    - 0
+  isfx:
+    - 0
+    - 0
+  isfy:
+    - 0
+    - 0
+  is:
+    - 0
+    - 0
+  ia:
+    - -19
+    - -200
+  pa:
+    - 0
+    - 0
+  bpc_pos: 0
+  bpc_x: 250000
+  bpc_y: 0
+  bpc_rot: 0
+  bpc_xy_speed: 20
+  bpc_rot_speed: 60
+  bpc_voltage: 0
+  bpc_power: 0
+  bp1_pos: 0
+  bp1_x: 226425
+  bp1_y: -525
+  bp1_rot: -10953
+  bp1_xy_speed: 30
+  bp1_rot_speed: 50
+  bp1_voltage: 0
+  bp1_power: 0
+  bp2_pos: 0
+  bp2_x: 255233
+  bp2_y: 10625
+  bp2_rot: 10492
+  bp2_xy_speed: 30
+  bp2_rot_speed: 50
+  bp2_voltage: 0
+  bp2_power: 0
+  frim_version: 207
+  acc_voltage: 3000
+  extractor_voltage: 46
+  control_voltage: 0
+  emission_curent: 8
+  mag: 150000
+  lens_mode: 0
+  probe_mode: 0
+  screen_pos: 1
+
+---
+- secs: 76
+  nanos: 770629534
+- c1: 2.002826140873016
+  c2: 3.999998759920635
+  c3: 0.855
+  obj: 12.277953296703297
+  i1: 3.1680687194749699
+  i2: 4.932967032967033
+  i3: 1.5576068376068378
+  p1: 3.02026862026862
+  p2: 5.372405372405372
+  cond_ap: 1
+  cond_ap_x: 4288
+  cond_ap_y: 176548
+  cond_ap_speed: 4
+  stem_ap: 0
+  stem_ap_x: -882
+  stem_ap_y: 3104
+  stem_ap_speed: 4
+  obj_ap: 0
+  obj_ap_x: -3659
+  obj_ap_y: 2675
+  obj_ap_speed: 4
+  sa_ap: 0
+  sa_ap_x: 1193
+  sa_ap_y: -6778
+  sa_ap_speed: 4
+  gh:
+    - 442
+    - -1144
+  ghx:
+    - 0
+    - 0
+  ghy:
+    - 0
+    - 0
+  gt:
+    - 261
+    - 672
+  gtx:
+    - 602
+    - 208
+  gty:
+    - 559
+    - 1009
+  ga:
+    - 2047
+    - 1000
+  cs3:
+    - -2
+    - -11
+  cs3x:
+    - -231
+    - -720
+  cs3y:
+    - 70
+    - -158
+  cs:
+    - 2
+    - 12
+  csx:
+    - 194
+    - -492
+  csy:
+    - 464
+    - -346
+  bh:
+    - -278928
+    - -89285
+  bhu:
+    - 0
+    - 0
+  bhx:
+    - 331
+    - 573
+  bhy:
+    - 369
+    - -865
+  bt:
+    - 9
+    - 27
+  btu:
+    - 2047
+    - 2047
+  btx:
+    - 1996
+    - -153
+  bty:
+    - 2047
+    - -225
+  os:
+    - -23
+    - -37
+  osx:
+    - -598
+    - -1487
+  osy:
+    - -2047
+    - 952
+  osp:
+    - 72
+    - -38
+  isf:
+    - 0
+    - 0
+  isfx:
+    - 0
+    - 0
+  isfy:
+    - 0
+    - 0
+  is:
+    - 0
+    - 0
+  ia:
+    - -19
+    - -200
+  pa:
+    - 0
+    - 0
+  bpc_pos: 0
+  bpc_x: 250000
+  bpc_y: 0
+  bpc_rot: 0
+  bpc_xy_speed: 20
+  bpc_rot_speed: 60
+  bpc_voltage: 0
+  bpc_power: 0
+  bp1_pos: 0
+  bp1_x: 226425
+  bp1_y: -525
+  bp1_rot: -10953
+  bp1_xy_speed: 30
+  bp1_rot_speed: 50
+  bp1_voltage: 0
+  bp1_power: 0
+  bp2_pos: 0
+  bp2_x: 255233
+  bp2_y: 10625
+  bp2_rot: 10492
+  bp2_xy_speed: 30
+  bp2_rot_speed: 50
+  bp2_voltage: 0
+  bp2_power: 0
+  frim_version: 207
+  acc_voltage: 3000
+  extractor_voltage: 46
+  control_voltage: 0
+  emission_curent: 8
+  mag: 150000
+  lens_mode: 0
+  probe_mode: 0
+  screen_pos: 1
+
+---
+- secs: 76
+  nanos: 923714573
+- c1: 2.0020523313492064
+  c2: 3.999998759920635
+  c3: 0.855
+  obj: 12.277953296703297
+  i1: 3.1680687194749699
+  i2: 4.932967032967033
+  i3: 1.5576068376068378
+  p1: 3.02026862026862
+  p2: 5.372405372405372
+  cond_ap: 1
+  cond_ap_x: 4288
+  cond_ap_y: 176548
+  cond_ap_speed: 4
+  stem_ap: 0
+  stem_ap_x: -882
+  stem_ap_y: 3104
+  stem_ap_speed: 4
+  obj_ap: 0
+  obj_ap_x: -3659
+  obj_ap_y: 2675
+  obj_ap_speed: 4
+  sa_ap: 0
+  sa_ap_x: 1193
+  sa_ap_y: -6778
+  sa_ap_speed: 4
+  gh:
+    - 442
+    - -1144
+  ghx:
+    - 0
+    - 0
+  ghy:
+    - 0
+    - 0
+  gt:
+    - 261
+    - 672
+  gtx:
+    - 602
+    - 208
+  gty:
+    - 559
+    - 1009
+  ga:
+    - 2047
+    - 1000
+  cs3:
+    - -2
+    - -11
+  cs3x:
+    - -231
+    - -720
+  cs3y:
+    - 70
+    - -158
+  cs:
+    - 2
+    - 12
+  csx:
+    - 194
+    - -492
+  csy:
+    - 464
+    - -346
+  bh:
+    - -278928
+    - -89285
+  bhu:
+    - 0
+    - 0
+  bhx:
+    - 331
+    - 573
+  bhy:
+    - 369
+    - -865
+  bt:
+    - 9
+    - 27
+  btu:
+    - 2047
+    - 2047
+  btx:
+    - 1996
+    - -153
+  bty:
+    - 2047
+    - -225
+  os:
+    - -23
+    - -37
+  osx:
+    - -598
+    - -1487
+  osy:
+    - -2047
+    - 952
+  osp:
+    - 72
+    - -38
+  isf:
+    - 0
+    - 0
+  isfx:
+    - 0
+    - 0
+  isfy:
+    - 0
+    - 0
+  is:
+    - 0
+    - 0
+  ia:
+    - -19
+    - -200
+  pa:
+    - 0
+    - 0
+  bpc_pos: 0
+  bpc_x: 250000
+  bpc_y: 0
+  bpc_rot: 0
+  bpc_xy_speed: 20
+  bpc_rot_speed: 60
+  bpc_voltage: 0
+  bpc_power: 0
+  bp1_pos: 0
+  bp1_x: 226425
+  bp1_y: -525
+  bp1_rot: -10953
+  bp1_xy_speed: 30
+  bp1_rot_speed: 50
+  bp1_voltage: 0
+  bp1_power: 0
+  bp2_pos: 0
+  bp2_x: 255233
+  bp2_y: 10625
+  bp2_rot: 10492
+  bp2_xy_speed: 30
+  bp2_rot_speed: 50
+  bp2_voltage: 0
+  bp2_power: 0
+  frim_version: 207
+  acc_voltage: 3000
+  extractor_voltage: 46
+  control_voltage: 0
+  emission_curent: 8
+  mag: 150000
+  lens_mode: 0
+  probe_mode: 0
+  screen_pos: 1
+
+---
+- secs: 77
+  nanos: 95438156
+- c1: 2.001308283730159
+  c2: 3.999998759920635
+  c3: 0.855
+  obj: 12.277953296703297
+  i1: 3.1680687194749699
+  i2: 4.932967032967033
+  i3: 1.5576068376068378
+  p1: 3.02026862026862
+  p2: 5.372405372405372
+  cond_ap: 1
+  cond_ap_x: 4288
+  cond_ap_y: 176548
+  cond_ap_speed: 4
+  stem_ap: 0
+  stem_ap_x: -882
+  stem_ap_y: 3104
+  stem_ap_speed: 4
+  obj_ap: 0
+  obj_ap_x: -3659
+  obj_ap_y: 2675
+  obj_ap_speed: 4
+  sa_ap: 0
+  sa_ap_x: 1193
+  sa_ap_y: -6778
+  sa_ap_speed: 4
+  gh:
+    - 442
+    - -1144
+  ghx:
+    - 0
+    - 0
+  ghy:
+    - 0
+    - 0
+  gt:
+    - 261
+    - 672
+  gtx:
+    - 602
+    - 208
+  gty:
+    - 559
+    - 1009
+  ga:
+    - 2047
+    - 1000
+  cs3:
+    - -2
+    - -11
+  cs3x:
+    - -231
+    - -720
+  cs3y:
+    - 70
+    - -158
+  cs:
+    - 2
+    - 12
+  csx:
+    - 194
+    - -492
+  csy:
+    - 464
+    - -346
+  bh:
+    - -278928
+    - -89285
+  bhu:
+    - 0
+    - 0
+  bhx:
+    - 331
+    - 573
+  bhy:
+    - 369
+    - -865
+  bt:
+    - 9
+    - 27
+  btu:
+    - 2047
+    - 2047
+  btx:
+    - 1996
+    - -153
+  bty:
+    - 2047
+    - -225
+  os:
+    - -23
+    - -37
+  osx:
+    - -598
+    - -1487
+  osy:
+    - -2047
+    - 952
+  osp:
+    - 72
+    - -38
+  isf:
+    - 0
+    - 0
+  isfx:
+    - 0
+    - 0
+  isfy:
+    - 0
+    - 0
+  is:
+    - 0
+    - 0
+  ia:
+    - -19
+    - -200
+  pa:
+    - 0
+    - 0
+  bpc_pos: 0
+  bpc_x: 250000
+  bpc_y: 0
+  bpc_rot: 0
+  bpc_xy_speed: 20
+  bpc_rot_speed: 60
+  bpc_voltage: 0
+  bpc_power: 0
+  bp1_pos: 0
+  bp1_x: 226425
+  bp1_y: -525
+  bp1_rot: -10953
+  bp1_xy_speed: 30
+  bp1_rot_speed: 50
+  bp1_voltage: 0
+  bp1_power: 0
+  bp2_pos: 0
+  bp2_x: 255233
+  bp2_y: 10625
+  bp2_rot: 10492
+  bp2_xy_speed: 30
+  bp2_rot_speed: 50
+  bp2_voltage: 0
+  bp2_power: 0
+  frim_version: 207
+  acc_voltage: 3000
+  extractor_voltage: 46
+  control_voltage: 0
+  emission_curent: 8
+  mag: 150000
+  lens_mode: 0
+  probe_mode: 0
+  screen_pos: 1
+
+---
+- secs: 77
+  nanos: 163475132
+- c1: 2.0007725694444447
+  c2: 3.999998759920635
+  c3: 0.855
+  obj: 12.277953296703297
+  i1: 3.1680687194749699
+  i2: 4.932967032967033
+  i3: 1.5576068376068378
+  p1: 3.02026862026862
+  p2: 5.372405372405372
+  cond_ap: 1
+  cond_ap_x: 4288
+  cond_ap_y: 176548
+  cond_ap_speed: 4
+  stem_ap: 0
+  stem_ap_x: -882
+  stem_ap_y: 3104
+  stem_ap_speed: 4
+  obj_ap: 0
+  obj_ap_x: -3659
+  obj_ap_y: 2675
+  obj_ap_speed: 4
+  sa_ap: 0
+  sa_ap_x: 1193
+  sa_ap_y: -6778
+  sa_ap_speed: 4
+  gh:
+    - 442
+    - -1144
+  ghx:
+    - 0
+    - 0
+  ghy:
+    - 0
+    - 0
+  gt:
+    - 261
+    - 672
+  gtx:
+    - 602
+    - 208
+  gty:
+    - 559
+    - 1009
+  ga:
+    - 2047
+    - 1000
+  cs3:
+    - -2
+    - -11
+  cs3x:
+    - -231
+    - -720
+  cs3y:
+    - 70
+    - -158
+  cs:
+    - 2
+    - 12
+  csx:
+    - 194
+    - -492
+  csy:
+    - 464
+    - -346
+  bh:
+    - -278928
+    - -89285
+  bhu:
+    - 0
+    - 0
+  bhx:
+    - 331
+    - 573
+  bhy:
+    - 369
+    - -865
+  bt:
+    - 9
+    - 27
+  btu:
+    - 2047
+    - 2047
+  btx:
+    - 1996
+    - -153
+  bty:
+    - 2047
+    - -225
+  os:
+    - -23
+    - -37
+  osx:
+    - -598
+    - -1487
+  osy:
+    - -2047
+    - 952
+  osp:
+    - 72
+    - -38
+  isf:
+    - 0
+    - 0
+  isfx:
+    - 0
+    - 0
+  isfy:
+    - 0
+    - 0
+  is:
+    - 0
+    - 0
+  ia:
+    - -19
+    - -200
+  pa:
+    - 0
+    - 0
+  bpc_pos: 0
+  bpc_x: 250000
+  bpc_y: 0
+  bpc_rot: 0
+  bpc_xy_speed: 20
+  bpc_rot_speed: 60
+  bpc_voltage: 0
+  bpc_power: 0
+  bp1_pos: 0
+  bp1_x: 226425
+  bp1_y: -525
+  bp1_rot: -10953
+  bp1_xy_speed: 30
+  bp1_rot_speed: 50
+  bp1_voltage: 0
+  bp1_power: 0
+  bp2_pos: 0
+  bp2_x: 255233
+  bp2_y: 10625
+  bp2_rot: 10492
+  bp2_xy_speed: 30
+  bp2_rot_speed: 50
+  bp2_voltage: 0
+  bp2_power: 0
+  frim_version: 207
+  acc_voltage: 3000
+  extractor_voltage: 46
+  control_voltage: 0
+  emission_curent: 8
+  mag: 150000
+  lens_mode: 0
+  probe_mode: 0
+  screen_pos: 1
+
+---
+- secs: 77
+  nanos: 332845951
+- c1: 2.000296378968254
+  c2: 3.999998759920635
+  c3: 0.855
+  obj: 12.277953296703297
+  i1: 3.1680687194749699
+  i2: 4.932967032967033
+  i3: 1.5576068376068378
+  p1: 3.02026862026862
+  p2: 5.372405372405372
+  cond_ap: 1
+  cond_ap_x: 4288
+  cond_ap_y: 176548
+  cond_ap_speed: 4
+  stem_ap: 0
+  stem_ap_x: -882
+  stem_ap_y: 3104
+  stem_ap_speed: 4
+  obj_ap: 0
+  obj_ap_x: -3659
+  obj_ap_y: 2675
+  obj_ap_speed: 4
+  sa_ap: 0
+  sa_ap_x: 1193
+  sa_ap_y: -6778
+  sa_ap_speed: 4
+  gh:
+    - 442
+    - -1144
+  ghx:
+    - 0
+    - 0
+  ghy:
+    - 0
+    - 0
+  gt:
+    - 261
+    - 672
+  gtx:
+    - 602
+    - 208
+  gty:
+    - 559
+    - 1009
+  ga:
+    - 2047
+    - 1000
+  cs3:
+    - -2
+    - -11
+  cs3x:
+    - -231
+    - -720
+  cs3y:
+    - 70
+    - -158
+  cs:
+    - 2
+    - 12
+  csx:
+    - 194
+    - -492
+  csy:
+    - 464
+    - -346
+  bh:
+    - -278928
+    - -89285
+  bhu:
+    - 0
+    - 0
+  bhx:
+    - 331
+    - 573
+  bhy:
+    - 369
+    - -865
+  bt:
+    - 9
+    - 27
+  btu:
+    - 2047
+    - 2047
+  btx:
+    - 1996
+    - -153
+  bty:
+    - 2047
+    - -225
+  os:
+    - -23
+    - -37
+  osx:
+    - -598
+    - -1487
+  osy:
+    - -2047
+    - 952
+  osp:
+    - 72
+    - -38
+  isf:
+    - 0
+    - 0
+  isfx:
+    - 0
+    - 0
+  isfy:
+    - 0
+    - 0
+  is:
+    - 0
+    - 0
+  ia:
+    - -19
+    - -200
+  pa:
+    - 0
+    - 0
+  bpc_pos: 0
+  bpc_x: 250000
+  bpc_y: 0
+  bpc_rot: 0
+  bpc_xy_speed: 20
+  bpc_rot_speed: 60
+  bpc_voltage: 0
+  bpc_power: 0
+  bp1_pos: 0
+  bp1_x: 226425
+  bp1_y: -525
+  bp1_rot: -10953
+  bp1_xy_speed: 30
+  bp1_rot_speed: 50
+  bp1_voltage: 0
+  bp1_power: 0
+  bp2_pos: 0
+  bp2_x: 255233
+  bp2_y: 10625
+  bp2_rot: 10492
+  bp2_xy_speed: 30
+  bp2_rot_speed: 50
+  bp2_voltage: 0
+  bp2_power: 0
+  frim_version: 207
+  acc_voltage: 3000
+  extractor_voltage: 46
+  control_voltage: 0
+  emission_curent: 8
+  mag: 150000
+  lens_mode: 0
+  probe_mode: 0
+  screen_pos: 1
+
+---
+- secs: 77
+  nanos: 401120959
+- c1: 1.9997606646825399
+  c2: 3.999998759920635
+  c3: 0.855
+  obj: 12.277953296703297
+  i1: 3.1680687194749699
+  i2: 4.932967032967033
+  i3: 1.5576068376068378
+  p1: 3.02026862026862
+  p2: 5.372405372405372
+  cond_ap: 1
+  cond_ap_x: 4288
+  cond_ap_y: 176548
+  cond_ap_speed: 4
+  stem_ap: 0
+  stem_ap_x: -882
+  stem_ap_y: 3104
+  stem_ap_speed: 4
+  obj_ap: 0
+  obj_ap_x: -3659
+  obj_ap_y: 2675
+  obj_ap_speed: 4
+  sa_ap: 0
+  sa_ap_x: 1193
+  sa_ap_y: -6778
+  sa_ap_speed: 4
+  gh:
+    - 442
+    - -1144
+  ghx:
+    - 0
+    - 0
+  ghy:
+    - 0
+    - 0
+  gt:
+    - 261
+    - 672
+  gtx:
+    - 602
+    - 208
+  gty:
+    - 559
+    - 1009
+  ga:
+    - 2047
+    - 1000
+  cs3:
+    - -2
+    - -11
+  cs3x:
+    - -231
+    - -720
+  cs3y:
+    - 70
+    - -158
+  cs:
+    - 2
+    - 12
+  csx:
+    - 194
+    - -492
+  csy:
+    - 464
+    - -346
+  bh:
+    - -278928
+    - -89285
+  bhu:
+    - 0
+    - 0
+  bhx:
+    - 331
+    - 573
+  bhy:
+    - 369
+    - -865
+  bt:
+    - 9
+    - 27
+  btu:
+    - 2047
+    - 2047
+  btx:
+    - 1996
+    - -153
+  bty:
+    - 2047
+    - -225
+  os:
+    - -23
+    - -37
+  osx:
+    - -598
+    - -1487
+  osy:
+    - -2047
+    - 952
+  osp:
+    - 72
+    - -38
+  isf:
+    - 0
+    - 0
+  isfx:
+    - 0
+    - 0
+  isfy:
+    - 0
+    - 0
+  is:
+    - 0
+    - 0
+  ia:
+    - -19
+    - -200
+  pa:
+    - 0
+    - 0
+  bpc_pos: 0
+  bpc_x: 250000
+  bpc_y: 0
+  bpc_rot: 0
+  bpc_xy_speed: 20
+  bpc_rot_speed: 60
+  bpc_voltage: 0
+  bpc_power: 0
+  bp1_pos: 0
+  bp1_x: 226425
+  bp1_y: -525
+  bp1_rot: -10953
+  bp1_xy_speed: 30
+  bp1_rot_speed: 50
+  bp1_voltage: 0
+  bp1_power: 0
+  bp2_pos: 0
+  bp2_x: 255233
+  bp2_y: 10625
+  bp2_rot: 10492
+  bp2_xy_speed: 30
+  bp2_rot_speed: 50
+  bp2_voltage: 0
+  bp2_power: 0
+  frim_version: 207
+  acc_voltage: 3000
+  extractor_voltage: 46
+  control_voltage: 0
+  emission_curent: 8
+  mag: 150000
+  lens_mode: 0
+  probe_mode: 0
+  screen_pos: 1
+
+---
+- secs: 77
+  nanos: 569704319
+- c1: 1.9991654265873018
+  c2: 3.999998759920635
+  c3: 0.855
+  obj: 12.277953296703297
+  i1: 3.1680687194749699
+  i2: 4.932967032967033
+  i3: 1.5576068376068378
+  p1: 3.02026862026862
+  p2: 5.372405372405372
+  cond_ap: 1
+  cond_ap_x: 4288
+  cond_ap_y: 176548
+  cond_ap_speed: 4
+  stem_ap: 0
+  stem_ap_x: -882
+  stem_ap_y: 3104
+  stem_ap_speed: 4
+  obj_ap: 0
+  obj_ap_x: -3659
+  obj_ap_y: 2675
+  obj_ap_speed: 4
+  sa_ap: 0
+  sa_ap_x: 1193
+  sa_ap_y: -6778
+  sa_ap_speed: 4
+  gh:
+    - 442
+    - -1144
+  ghx:
+    - 0
+    - 0
+  ghy:
+    - 0
+    - 0
+  gt:
+    - 261
+    - 672
+  gtx:
+    - 602
+    - 208
+  gty:
+    - 559
+    - 1009
+  ga:
+    - 2047
+    - 1000
+  cs3:
+    - -2
+    - -11
+  cs3x:
+    - -231
+    - -720
+  cs3y:
+    - 70
+    - -158
+  cs:
+    - 2
+    - 12
+  csx:
+    - 194
+    - -492
+  csy:
+    - 464
+    - -346
+  bh:
+    - -278928
+    - -89285
+  bhu:
+    - 0
+    - 0
+  bhx:
+    - 331
+    - 573
+  bhy:
+    - 369
+    - -865
+  bt:
+    - 9
+    - 27
+  btu:
+    - 2047
+    - 2047
+  btx:
+    - 1996
+    - -153
+  bty:
+    - 2047
+    - -225
+  os:
+    - -23
+    - -37
+  osx:
+    - -598
+    - -1487
+  osy:
+    - -2047
+    - 952
+  osp:
+    - 72
+    - -38
+  isf:
+    - 0
+    - 0
+  isfx:
+    - 0
+    - 0
+  isfy:
+    - 0
+    - 0
+  is:
+    - 0
+    - 0
+  ia:
+    - -19
+    - -200
+  pa:
+    - 0
+    - 0
+  bpc_pos: 0
+  bpc_x: 250000
+  bpc_y: 0
+  bpc_rot: 0
+  bpc_xy_speed: 20
+  bpc_rot_speed: 60
+  bpc_voltage: 0
+  bpc_power: 0
+  bp1_pos: 0
+  bp1_x: 226425
+  bp1_y: -525
+  bp1_rot: -10953
+  bp1_xy_speed: 30
+  bp1_rot_speed: 50
+  bp1_voltage: 0
+  bp1_power: 0
+  bp2_pos: 0
+  bp2_x: 255233
+  bp2_y: 10625
+  bp2_rot: 10492
+  bp2_xy_speed: 30
+  bp2_rot_speed: 50
+  bp2_voltage: 0
+  bp2_power: 0
+  frim_version: 207
+  acc_voltage: 3000
+  extractor_voltage: 46
+  control_voltage: 0
+  emission_curent: 8
+  mag: 150000
+  lens_mode: 0
+  probe_mode: 0
+  screen_pos: 1
+
+---
+- secs: 77
+  nanos: 641883941
+- c1: 1.9985999503968255
+  c2: 3.999998759920635
+  c3: 0.855
+  obj: 12.277953296703297
+  i1: 3.1680687194749699
+  i2: 4.932967032967033
+  i3: 1.5576068376068378
+  p1: 3.02026862026862
+  p2: 5.372405372405372
+  cond_ap: 1
+  cond_ap_x: 4288
+  cond_ap_y: 176548
+  cond_ap_speed: 4
+  stem_ap: 0
+  stem_ap_x: -882
+  stem_ap_y: 3104
+  stem_ap_speed: 4
+  obj_ap: 0
+  obj_ap_x: -3659
+  obj_ap_y: 2675
+  obj_ap_speed: 4
+  sa_ap: 0
+  sa_ap_x: 1193
+  sa_ap_y: -6778
+  sa_ap_speed: 4
+  gh:
+    - 442
+    - -1144
+  ghx:
+    - 0
+    - 0
+  ghy:
+    - 0
+    - 0
+  gt:
+    - 261
+    - 672
+  gtx:
+    - 602
+    - 208
+  gty:
+    - 559
+    - 1009
+  ga:
+    - 2047
+    - 1000
+  cs3:
+    - -2
+    - -11
+  cs3x:
+    - -231
+    - -720
+  cs3y:
+    - 70
+    - -158
+  cs:
+    - 2
+    - 12
+  csx:
+    - 194
+    - -492
+  csy:
+    - 464
+    - -346
+  bh:
+    - -278928
+    - -89285
+  bhu:
+    - 0
+    - 0
+  bhx:
+    - 331
+    - 573
+  bhy:
+    - 369
+    - -865
+  bt:
+    - 9
+    - 27
+  btu:
+    - 2047
+    - 2047
+  btx:
+    - 1996
+    - -153
+  bty:
+    - 2047
+    - -225
+  os:
+    - -23
+    - -37
+  osx:
+    - -598
+    - -1487
+  osy:
+    - -2047
+    - 952
+  osp:
+    - 72
+    - -38
+  isf:
+    - 0
+    - 0
+  isfx:
+    - 0
+    - 0
+  isfy:
+    - 0
+    - 0
+  is:
+    - 0
+    - 0
+  ia:
+    - -19
+    - -200
+  pa:
+    - 0
+    - 0
+  bpc_pos: 0
+  bpc_x: 250000
+  bpc_y: 0
+  bpc_rot: 0
+  bpc_xy_speed: 20
+  bpc_rot_speed: 60
+  bpc_voltage: 0
+  bpc_power: 0
+  bp1_pos: 0
+  bp1_x: 226425
+  bp1_y: -525
+  bp1_rot: -10953
+  bp1_xy_speed: 30
+  bp1_rot_speed: 50
+  bp1_voltage: 0
+  bp1_power: 0
+  bp2_pos: 0
+  bp2_x: 255233
+  bp2_y: 10625
+  bp2_rot: 10492
+  bp2_xy_speed: 30
+  bp2_rot_speed: 50
+  bp2_voltage: 0
+  bp2_power: 0
+  frim_version: 207
+  acc_voltage: 3000
+  extractor_voltage: 46
+  control_voltage: 0
+  emission_curent: 8
+  mag: 150000
+  lens_mode: 0
+  probe_mode: 0
+  screen_pos: 1
+
+---
+- secs: 77
+  nanos: 793620562
+- c1: 1.9982130456349208
+  c2: 3.999998759920635
+  c3: 0.855
+  obj: 12.277953296703297
+  i1: 3.1680687194749699
+  i2: 4.932967032967033
+  i3: 1.5576068376068378
+  p1: 3.02026862026862
+  p2: 5.372405372405372
+  cond_ap: 1
+  cond_ap_x: 4288
+  cond_ap_y: 176548
+  cond_ap_speed: 4
+  stem_ap: 0
+  stem_ap_x: -882
+  stem_ap_y: 3104
+  stem_ap_speed: 4
+  obj_ap: 0
+  obj_ap_x: -3659
+  obj_ap_y: 2675
+  obj_ap_speed: 4
+  sa_ap: 0
+  sa_ap_x: 1193
+  sa_ap_y: -6778
+  sa_ap_speed: 4
+  gh:
+    - 442
+    - -1144
+  ghx:
+    - 0
+    - 0
+  ghy:
+    - 0
+    - 0
+  gt:
+    - 261
+    - 672
+  gtx:
+    - 602
+    - 208
+  gty:
+    - 559
+    - 1009
+  ga:
+    - 2047
+    - 1000
+  cs3:
+    - -2
+    - -11
+  cs3x:
+    - -231
+    - -720
+  cs3y:
+    - 70
+    - -158
+  cs:
+    - 2
+    - 12
+  csx:
+    - 194
+    - -492
+  csy:
+    - 464
+    - -346
+  bh:
+    - -278928
+    - -89285
+  bhu:
+    - 0
+    - 0
+  bhx:
+    - 331
+    - 573
+  bhy:
+    - 369
+    - -865
+  bt:
+    - 9
+    - 27
+  btu:
+    - 2047
+    - 2047
+  btx:
+    - 1996
+    - -153
+  bty:
+    - 2047
+    - -225
+  os:
+    - -23
+    - -37
+  osx:
+    - -598
+    - -1487
+  osy:
+    - -2047
+    - 952
+  osp:
+    - 72
+    - -38
+  isf:
+    - 0
+    - 0
+  isfx:
+    - 0
+    - 0
+  isfy:
+    - 0
+    - 0
+  is:
+    - 0
+    - 0
+  ia:
+    - -19
+    - -200
+  pa:
+    - 0
+    - 0
+  bpc_pos: 0
+  bpc_x: 250000
+  bpc_y: 0
+  bpc_rot: 0
+  bpc_xy_speed: 20
+  bpc_rot_speed: 60
+  bpc_voltage: 0
+  bpc_power: 0
+  bp1_pos: 0
+  bp1_x: 226425
+  bp1_y: -525
+  bp1_rot: -10953
+  bp1_xy_speed: 30
+  bp1_rot_speed: 50
+  bp1_voltage: 0
+  bp1_power: 0
+  bp2_pos: 0
+  bp2_x: 255233
+  bp2_y: 10625
+  bp2_rot: 10492
+  bp2_xy_speed: 30
+  bp2_rot_speed: 50
+  bp2_voltage: 0
+  bp2_power: 0
+  frim_version: 207
+  acc_voltage: 3000
+  extractor_voltage: 46
+  control_voltage: 0
+  emission_curent: 8
+  mag: 150000
+  lens_mode: 0
+  probe_mode: 0
+  screen_pos: 1
+
+---
+- secs: 77
+  nanos: 966646430
+- c1: 1.9979451884920637
+  c2: 3.999998759920635
+  c3: 0.855
+  obj: 12.277953296703297
+  i1: 3.1680687194749699
+  i2: 4.932967032967033
+  i3: 1.5576068376068378
+  p1: 3.02026862026862
+  p2: 5.372405372405372
+  cond_ap: 1
+  cond_ap_x: 4288
+  cond_ap_y: 176548
+  cond_ap_speed: 4
+  stem_ap: 0
+  stem_ap_x: -882
+  stem_ap_y: 3104
+  stem_ap_speed: 4
+  obj_ap: 0
+  obj_ap_x: -3659
+  obj_ap_y: 2675
+  obj_ap_speed: 4
+  sa_ap: 0
+  sa_ap_x: 1193
+  sa_ap_y: -6778
+  sa_ap_speed: 4
+  gh:
+    - 442
+    - -1144
+  ghx:
+    - 0
+    - 0
+  ghy:
+    - 0
+    - 0
+  gt:
+    - 261
+    - 672
+  gtx:
+    - 602
+    - 208
+  gty:
+    - 559
+    - 1009
+  ga:
+    - 2047
+    - 1000
+  cs3:
+    - -2
+    - -11
+  cs3x:
+    - -231
+    - -720
+  cs3y:
+    - 70
+    - -158
+  cs:
+    - 2
+    - 12
+  csx:
+    - 194
+    - -492
+  csy:
+    - 464
+    - -346
+  bh:
+    - -278928
+    - -89285
+  bhu:
+    - 0
+    - 0
+  bhx:
+    - 331
+    - 573
+  bhy:
+    - 369
+    - -865
+  bt:
+    - 9
+    - 27
+  btu:
+    - 2047
+    - 2047
+  btx:
+    - 1996
+    - -153
+  bty:
+    - 2047
+    - -225
+  os:
+    - -23
+    - -37
+  osx:
+    - -598
+    - -1487
+  osy:
+    - -2047
+    - 952
+  osp:
+    - 72
+    - -38
+  isf:
+    - 0
+    - 0
+  isfx:
+    - 0
+    - 0
+  isfy:
+    - 0
+    - 0
+  is:
+    - 0
+    - 0
+  ia:
+    - -19
+    - -200
+  pa:
+    - 0
+    - 0
+  bpc_pos: 0
+  bpc_x: 250000
+  bpc_y: 0
+  bpc_rot: 0
+  bpc_xy_speed: 20
+  bpc_rot_speed: 60
+  bpc_voltage: 0
+  bpc_power: 0
+  bp1_pos: 0
+  bp1_x: 226425
+  bp1_y: -525
+  bp1_rot: -10953
+  bp1_xy_speed: 30
+  bp1_rot_speed: 50
+  bp1_voltage: 0
+  bp1_power: 0
+  bp2_pos: 0
+  bp2_x: 255233
+  bp2_y: 10625
+  bp2_rot: 10492
+  bp2_xy_speed: 30
+  bp2_rot_speed: 50
+  bp2_voltage: 0
+  bp2_power: 0
+  frim_version: 207
+  acc_voltage: 3000
+  extractor_voltage: 46
+  control_voltage: 0
+  emission_curent: 8
+  mag: 150000
+  lens_mode: 0
+  probe_mode: 0
+  screen_pos: 1
+
+---
+- secs: 78
+  nanos: 34547251
+- c1: 1.997439236111111
+  c2: 3.999998759920635
+  c3: 0.855
+  obj: 12.277953296703297
+  i1: 3.1680687194749699
+  i2: 4.932967032967033
+  i3: 1.5576068376068378
+  p1: 3.02026862026862
+  p2: 5.372405372405372
+  cond_ap: 1
+  cond_ap_x: 4288
+  cond_ap_y: 176548
+  cond_ap_speed: 4
+  stem_ap: 0
+  stem_ap_x: -882
+  stem_ap_y: 3104
+  stem_ap_speed: 4
+  obj_ap: 0
+  obj_ap_x: -3659
+  obj_ap_y: 2675
+  obj_ap_speed: 4
+  sa_ap: 0
+  sa_ap_x: 1193
+  sa_ap_y: -6778
+  sa_ap_speed: 4
+  gh:
+    - 442
+    - -1144
+  ghx:
+    - 0
+    - 0
+  ghy:
+    - 0
+    - 0
+  gt:
+    - 261
+    - 672
+  gtx:
+    - 602
+    - 208
+  gty:
+    - 559
+    - 1009
+  ga:
+    - 2047
+    - 1000
+  cs3:
+    - -2
+    - -11
+  cs3x:
+    - -231
+    - -720
+  cs3y:
+    - 70
+    - -158
+  cs:
+    - 2
+    - 12
+  csx:
+    - 194
+    - -492
+  csy:
+    - 464
+    - -346
+  bh:
+    - -278928
+    - -89285
+  bhu:
+    - 0
+    - 0
+  bhx:
+    - 331
+    - 573
+  bhy:
+    - 369
+    - -865
+  bt:
+    - 9
+    - 27
+  btu:
+    - 2047
+    - 2047
+  btx:
+    - 1996
+    - -153
+  bty:
+    - 2047
+    - -225
+  os:
+    - -23
+    - -37
+  osx:
+    - -598
+    - -1487
+  osy:
+    - -2047
+    - 952
+  osp:
+    - 72
+    - -38
+  isf:
+    - 0
+    - 0
+  isfx:
+    - 0
+    - 0
+  isfy:
+    - 0
+    - 0
+  is:
+    - 0
+    - 0
+  ia:
+    - -19
+    - -200
+  pa:
+    - 0
+    - 0
+  bpc_pos: 0
+  bpc_x: 250000
+  bpc_y: 0
+  bpc_rot: 0
+  bpc_xy_speed: 20
+  bpc_rot_speed: 60
+  bpc_voltage: 0
+  bpc_power: 0
+  bp1_pos: 0
+  bp1_x: 226425
+  bp1_y: -525
+  bp1_rot: -10953
+  bp1_xy_speed: 30
+  bp1_rot_speed: 50
+  bp1_voltage: 0
+  bp1_power: 0
+  bp2_pos: 0
+  bp2_x: 255233
+  bp2_y: 10625
+  bp2_rot: 10492
+  bp2_xy_speed: 30
+  bp2_rot_speed: 50
+  bp2_voltage: 0
+  bp2_power: 0
+  frim_version: 207
+  acc_voltage: 3000
+  extractor_voltage: 46
+  control_voltage: 0
+  emission_curent: 8
+  mag: 150000
+  lens_mode: 0
+  probe_mode: 0
+  screen_pos: 1
+
+---
+- secs: 78
+  nanos: 222975971
+- c1: 1.9968737599206353
+  c2: 3.999998759920635
+  c3: 0.855
+  obj: 12.277953296703297
+  i1: 3.1680687194749699
+  i2: 4.932967032967033
+  i3: 1.5576068376068378
+  p1: 3.02026862026862
+  p2: 5.372405372405372
+  cond_ap: 1
+  cond_ap_x: 4288
+  cond_ap_y: 176548
+  cond_ap_speed: 4
+  stem_ap: 0
+  stem_ap_x: -882
+  stem_ap_y: 3104
+  stem_ap_speed: 4
+  obj_ap: 0
+  obj_ap_x: -3659
+  obj_ap_y: 2675
+  obj_ap_speed: 4
+  sa_ap: 0
+  sa_ap_x: 1193
+  sa_ap_y: -6778
+  sa_ap_speed: 4
+  gh:
+    - 442
+    - -1144
+  ghx:
+    - 0
+    - 0
+  ghy:
+    - 0
+    - 0
+  gt:
+    - 261
+    - 672
+  gtx:
+    - 602
+    - 208
+  gty:
+    - 559
+    - 1009
+  ga:
+    - 2047
+    - 1000
+  cs3:
+    - -2
+    - -11
+  cs3x:
+    - -231
+    - -720
+  cs3y:
+    - 70
+    - -158
+  cs:
+    - 2
+    - 12
+  csx:
+    - 194
+    - -492
+  csy:
+    - 464
+    - -346
+  bh:
+    - -278928
+    - -89285
+  bhu:
+    - 0
+    - 0
+  bhx:
+    - 331
+    - 573
+  bhy:
+    - 369
+    - -865
+  bt:
+    - 9
+    - 27
+  btu:
+    - 2047
+    - 2047
+  btx:
+    - 1996
+    - -153
+  bty:
+    - 2047
+    - -225
+  os:
+    - -23
+    - -37
+  osx:
+    - -598
+    - -1487
+  osy:
+    - -2047
+    - 952
+  osp:
+    - 72
+    - -38
+  isf:
+    - 0
+    - 0
+  isfx:
+    - 0
+    - 0
+  isfy:
+    - 0
+    - 0
+  is:
+    - 0
+    - 0
+  ia:
+    - -19
+    - -200
+  pa:
+    - 0
+    - 0
+  bpc_pos: 0
+  bpc_x: 250000
+  bpc_y: 0
+  bpc_rot: 0
+  bpc_xy_speed: 20
+  bpc_rot_speed: 60
+  bpc_voltage: 0
+  bpc_power: 0
+  bp1_pos: 0
+  bp1_x: 226425
+  bp1_y: -525
+  bp1_rot: -10953
+  bp1_xy_speed: 30
+  bp1_rot_speed: 50
+  bp1_voltage: 0
+  bp1_power: 0
+  bp2_pos: 0
+  bp2_x: 255233
+  bp2_y: 10625
+  bp2_rot: 10492
+  bp2_xy_speed: 30
+  bp2_rot_speed: 50
+  bp2_voltage: 0
+  bp2_power: 0
+  frim_version: 207
+  acc_voltage: 3000
+  extractor_voltage: 46
+  control_voltage: 0
+  emission_curent: 8
+  mag: 150000
+  lens_mode: 0
+  probe_mode: 0
+  screen_pos: 1
+
+---
+- secs: 78
+  nanos: 338545252
+- c1: 1.9964570932539685
+  c2: 3.999998759920635
+  c3: 0.855
+  obj: 12.277953296703297
+  i1: 3.1680687194749699
+  i2: 4.932967032967033
+  i3: 1.5576068376068378
+  p1: 3.02026862026862
+  p2: 5.372405372405372
+  cond_ap: 1
+  cond_ap_x: 4288
+  cond_ap_y: 176548
+  cond_ap_speed: 4
+  stem_ap: 0
+  stem_ap_x: -882
+  stem_ap_y: 3104
+  stem_ap_speed: 4
+  obj_ap: 0
+  obj_ap_x: -3659
+  obj_ap_y: 2675
+  obj_ap_speed: 4
+  sa_ap: 0
+  sa_ap_x: 1193
+  sa_ap_y: -6778
+  sa_ap_speed: 4
+  gh:
+    - 442
+    - -1144
+  ghx:
+    - 0
+    - 0
+  ghy:
+    - 0
+    - 0
+  gt:
+    - 261
+    - 672
+  gtx:
+    - 602
+    - 208
+  gty:
+    - 559
+    - 1009
+  ga:
+    - 2047
+    - 1000
+  cs3:
+    - -2
+    - -11
+  cs3x:
+    - -231
+    - -720
+  cs3y:
+    - 70
+    - -158
+  cs:
+    - 2
+    - 12
+  csx:
+    - 194
+    - -492
+  csy:
+    - 464
+    - -346
+  bh:
+    - -278928
+    - -89285
+  bhu:
+    - 0
+    - 0
+  bhx:
+    - 331
+    - 573
+  bhy:
+    - 369
+    - -865
+  bt:
+    - 9
+    - 27
+  btu:
+    - 2047
+    - 2047
+  btx:
+    - 1996
+    - -153
+  bty:
+    - 2047
+    - -225
+  os:
+    - -23
+    - -37
+  osx:
+    - -598
+    - -1487
+  osy:
+    - -2047
+    - 952
+  osp:
+    - 72
+    - -38
+  isf:
+    - 0
+    - 0
+  isfx:
+    - 0
+    - 0
+  isfy:
+    - 0
+    - 0
+  is:
+    - 0
+    - 0
+  ia:
+    - -19
+    - -200
+  pa:
+    - 0
+    - 0
+  bpc_pos: 0
+  bpc_x: 250000
+  bpc_y: 0
+  bpc_rot: 0
+  bpc_xy_speed: 20
+  bpc_rot_speed: 60
+  bpc_voltage: 0
+  bpc_power: 0
+  bp1_pos: 0
+  bp1_x: 226425
+  bp1_y: -525
+  bp1_rot: -10953
+  bp1_xy_speed: 30
+  bp1_rot_speed: 50
+  bp1_voltage: 0
+  bp1_power: 0
+  bp2_pos: 0
+  bp2_x: 255233
+  bp2_y: 10625
+  bp2_rot: 10492
+  bp2_xy_speed: 30
+  bp2_rot_speed: 50
+  bp2_voltage: 0
+  bp2_power: 0
+  frim_version: 207
+  acc_voltage: 3000
+  extractor_voltage: 46
+  control_voltage: 0
+  emission_curent: 8
+  mag: 150000
+  lens_mode: 0
+  probe_mode: 0
+  screen_pos: 1
+
+---
+- secs: 78
+  nanos: 409620895
+- c1: 1.9962785218253972
+  c2: 3.999998759920635
+  c3: 0.855
+  obj: 12.277953296703297
+  i1: 3.1680687194749699
+  i2: 4.932967032967033
+  i3: 1.5576068376068378
+  p1: 3.02026862026862
+  p2: 5.372405372405372
+  cond_ap: 1
+  cond_ap_x: 4288
+  cond_ap_y: 176548
+  cond_ap_speed: 4
+  stem_ap: 0
+  stem_ap_x: -882
+  stem_ap_y: 3104
+  stem_ap_speed: 4
+  obj_ap: 0
+  obj_ap_x: -3659
+  obj_ap_y: 2675
+  obj_ap_speed: 4
+  sa_ap: 0
+  sa_ap_x: 1193
+  sa_ap_y: -6778
+  sa_ap_speed: 4
+  gh:
+    - 442
+    - -1144
+  ghx:
+    - 0
+    - 0
+  ghy:
+    - 0
+    - 0
+  gt:
+    - 261
+    - 672
+  gtx:
+    - 602
+    - 208
+  gty:
+    - 559
+    - 1009
+  ga:
+    - 2047
+    - 1000
+  cs3:
+    - -2
+    - -11
+  cs3x:
+    - -231
+    - -720
+  cs3y:
+    - 70
+    - -158
+  cs:
+    - 2
+    - 12
+  csx:
+    - 194
+    - -492
+  csy:
+    - 464
+    - -346
+  bh:
+    - -278928
+    - -89285
+  bhu:
+    - 0
+    - 0
+  bhx:
+    - 331
+    - 573
+  bhy:
+    - 369
+    - -865
+  bt:
+    - 9
+    - 27
+  btu:
+    - 2047
+    - 2047
+  btx:
+    - 1996
+    - -153
+  bty:
+    - 2047
+    - -225
+  os:
+    - -23
+    - -37
+  osx:
+    - -598
+    - -1487
+  osy:
+    - -2047
+    - 952
+  osp:
+    - 72
+    - -38
+  isf:
+    - 0
+    - 0
+  isfx:
+    - 0
+    - 0
+  isfy:
+    - 0
+    - 0
+  is:
+    - 0
+    - 0
+  ia:
+    - -19
+    - -200
+  pa:
+    - 0
+    - 0
+  bpc_pos: 0
+  bpc_x: 250000
+  bpc_y: 0
+  bpc_rot: 0
+  bpc_xy_speed: 20
+  bpc_rot_speed: 60
+  bpc_voltage: 0
+  bpc_power: 0
+  bp1_pos: 0
+  bp1_x: 226425
+  bp1_y: -525
+  bp1_rot: -10953
+  bp1_xy_speed: 30
+  bp1_rot_speed: 50
+  bp1_voltage: 0
+  bp1_power: 0
+  bp2_pos: 0
+  bp2_x: 255233
+  bp2_y: 10625
+  bp2_rot: 10492
+  bp2_xy_speed: 30
+  bp2_rot_speed: 50
+  bp2_voltage: 0
+  bp2_power: 0
+  frim_version: 207
+  acc_voltage: 3000
+  extractor_voltage: 46
+  control_voltage: 0
+  emission_curent: 8
+  mag: 150000
+  lens_mode: 0
+  probe_mode: 0
+  screen_pos: 1
+
+---
+- secs: 78
+  nanos: 590114162
+- c1: 1.996189236111111
+  c2: 3.999998759920635
+  c3: 0.855
+  obj: 12.277953296703297
+  i1: 3.1680687194749699
+  i2: 4.932967032967033
+  i3: 1.5576068376068378
+  p1: 3.02026862026862
+  p2: 5.372405372405372
+  cond_ap: 1
+  cond_ap_x: 4288
+  cond_ap_y: 176548
+  cond_ap_speed: 4
+  stem_ap: 0
+  stem_ap_x: -882
+  stem_ap_y: 3104
+  stem_ap_speed: 4
+  obj_ap: 0
+  obj_ap_x: -3659
+  obj_ap_y: 2675
+  obj_ap_speed: 4
+  sa_ap: 0
+  sa_ap_x: 1193
+  sa_ap_y: -6778
+  sa_ap_speed: 4
+  gh:
+    - 442
+    - -1144
+  ghx:
+    - 0
+    - 0
+  ghy:
+    - 0
+    - 0
+  gt:
+    - 261
+    - 672
+  gtx:
+    - 602
+    - 208
+  gty:
+    - 559
+    - 1009
+  ga:
+    - 2047
+    - 1000
+  cs3:
+    - -2
+    - -11
+  cs3x:
+    - -231
+    - -720
+  cs3y:
+    - 70
+    - -158
+  cs:
+    - 2
+    - 12
+  csx:
+    - 194
+    - -492
+  csy:
+    - 464
+    - -346
+  bh:
+    - -278928
+    - -89285
+  bhu:
+    - 0
+    - 0
+  bhx:
+    - 331
+    - 573
+  bhy:
+    - 369
+    - -865
+  bt:
+    - 9
+    - 27
+  btu:
+    - 2047
+    - 2047
+  btx:
+    - 1996
+    - -153
+  bty:
+    - 2047
+    - -225
+  os:
+    - -23
+    - -37
+  osx:
+    - -598
+    - -1487
+  osy:
+    - -2047
+    - 952
+  osp:
+    - 72
+    - -38
+  isf:
+    - 0
+    - 0
+  isfx:
+    - 0
+    - 0
+  isfy:
+    - 0
+    - 0
+  is:
+    - 0
+    - 0
+  ia:
+    - -19
+    - -200
+  pa:
+    - 0
+    - 0
+  bpc_pos: 0
+  bpc_x: 250000
+  bpc_y: 0
+  bpc_rot: 0
+  bpc_xy_speed: 20
+  bpc_rot_speed: 60
+  bpc_voltage: 0
+  bpc_power: 0
+  bp1_pos: 0
+  bp1_x: 226425
+  bp1_y: -525
+  bp1_rot: -10953
+  bp1_xy_speed: 30
+  bp1_rot_speed: 50
+  bp1_voltage: 0
+  bp1_power: 0
+  bp2_pos: 0
+  bp2_x: 255233
+  bp2_y: 10625
+  bp2_rot: 10492
+  bp2_xy_speed: 30
+  bp2_rot_speed: 50
+  bp2_voltage: 0
+  bp2_power: 0
+  frim_version: 207
+  acc_voltage: 3000
+  extractor_voltage: 46
+  control_voltage: 0
+  emission_curent: 8
+  mag: 150000
+  lens_mode: 0
+  probe_mode: 0
+  screen_pos: 1
+
+---
+- secs: 78
+  nanos: 659433562
+- c1: 1.9966951884920635
+  c2: 3.999998759920635
+  c3: 0.855
+  obj: 12.277953296703297
+  i1: 3.1680687194749699
+  i2: 4.932967032967033
+  i3: 1.5576068376068378
+  p1: 3.02026862026862
+  p2: 5.372405372405372
+  cond_ap: 1
+  cond_ap_x: 4288
+  cond_ap_y: 176548
+  cond_ap_speed: 4
+  stem_ap: 0
+  stem_ap_x: -882
+  stem_ap_y: 3104
+  stem_ap_speed: 4
+  obj_ap: 0
+  obj_ap_x: -3659
+  obj_ap_y: 2675
+  obj_ap_speed: 4
+  sa_ap: 0
+  sa_ap_x: 1193
+  sa_ap_y: -6778
+  sa_ap_speed: 4
+  gh:
+    - 442
+    - -1144
+  ghx:
+    - 0
+    - 0
+  ghy:
+    - 0
+    - 0
+  gt:
+    - 261
+    - 672
+  gtx:
+    - 602
+    - 208
+  gty:
+    - 559
+    - 1009
+  ga:
+    - 2047
+    - 1000
+  cs3:
+    - -2
+    - -11
+  cs3x:
+    - -231
+    - -720
+  cs3y:
+    - 70
+    - -158
+  cs:
+    - 2
+    - 12
+  csx:
+    - 194
+    - -492
+  csy:
+    - 464
+    - -346
+  bh:
+    - -278928
+    - -89285
+  bhu:
+    - 0
+    - 0
+  bhx:
+    - 331
+    - 573
+  bhy:
+    - 369
+    - -865
+  bt:
+    - 9
+    - 27
+  btu:
+    - 2047
+    - 2047
+  btx:
+    - 1996
+    - -153
+  bty:
+    - 2047
+    - -225
+  os:
+    - -23
+    - -37
+  osx:
+    - -598
+    - -1487
+  osy:
+    - -2047
+    - 952
+  osp:
+    - 72
+    - -38
+  isf:
+    - 0
+    - 0
+  isfx:
+    - 0
+    - 0
+  isfy:
+    - 0
+    - 0
+  is:
+    - 0
+    - 0
+  ia:
+    - -19
+    - -200
+  pa:
+    - 0
+    - 0
+  bpc_pos: 0
+  bpc_x: 250000
+  bpc_y: 0
+  bpc_rot: 0
+  bpc_xy_speed: 20
+  bpc_rot_speed: 60
+  bpc_voltage: 0
+  bpc_power: 0
+  bp1_pos: 0
+  bp1_x: 226425
+  bp1_y: -525
+  bp1_rot: -10953
+  bp1_xy_speed: 30
+  bp1_rot_speed: 50
+  bp1_voltage: 0
+  bp1_power: 0
+  bp2_pos: 0
+  bp2_x: 255233
+  bp2_y: 10625
+  bp2_rot: 10492
+  bp2_xy_speed: 30
+  bp2_rot_speed: 50
+  bp2_voltage: 0
+  bp2_power: 0
+  frim_version: 207
+  acc_voltage: 3000
+  extractor_voltage: 46
+  control_voltage: 0
+  emission_curent: 8
+  mag: 150000
+  lens_mode: 0
+  probe_mode: 0
+  screen_pos: 1
+
+---
+- secs: 78
+  nanos: 829772524
+- c1: 1.9971713789682542
+  c2: 3.999998759920635
+  c3: 0.855
+  obj: 12.277953296703297
+  i1: 3.1680687194749699
+  i2: 4.932967032967033
+  i3: 1.5576068376068378
+  p1: 3.02026862026862
+  p2: 5.372405372405372
+  cond_ap: 1
+  cond_ap_x: 4288
+  cond_ap_y: 176548
+  cond_ap_speed: 4
+  stem_ap: 0
+  stem_ap_x: -882
+  stem_ap_y: 3104
+  stem_ap_speed: 4
+  obj_ap: 0
+  obj_ap_x: -3659
+  obj_ap_y: 2675
+  obj_ap_speed: 4
+  sa_ap: 0
+  sa_ap_x: 1193
+  sa_ap_y: -6778
+  sa_ap_speed: 4
+  gh:
+    - 442
+    - -1144
+  ghx:
+    - 0
+    - 0
+  ghy:
+    - 0
+    - 0
+  gt:
+    - 261
+    - 672
+  gtx:
+    - 602
+    - 208
+  gty:
+    - 559
+    - 1009
+  ga:
+    - 2047
+    - 1000
+  cs3:
+    - -2
+    - -11
+  cs3x:
+    - -231
+    - -720
+  cs3y:
+    - 70
+    - -158
+  cs:
+    - 2
+    - 12
+  csx:
+    - 194
+    - -492
+  csy:
+    - 464
+    - -346
+  bh:
+    - -278928
+    - -89285
+  bhu:
+    - 0
+    - 0
+  bhx:
+    - 331
+    - 573
+  bhy:
+    - 369
+    - -865
+  bt:
+    - 9
+    - 27
+  btu:
+    - 2047
+    - 2047
+  btx:
+    - 1996
+    - -153
+  bty:
+    - 2047
+    - -225
+  os:
+    - -23
+    - -37
+  osx:
+    - -598
+    - -1487
+  osy:
+    - -2047
+    - 952
+  osp:
+    - 72
+    - -38
+  isf:
+    - 0
+    - 0
+  isfx:
+    - 0
+    - 0
+  isfy:
+    - 0
+    - 0
+  is:
+    - 0
+    - 0
+  ia:
+    - -19
+    - -200
+  pa:
+    - 0
+    - 0
+  bpc_pos: 0
+  bpc_x: 250000
+  bpc_y: 0
+  bpc_rot: 0
+  bpc_xy_speed: 20
+  bpc_rot_speed: 60
+  bpc_voltage: 0
+  bpc_power: 0
+  bp1_pos: 0
+  bp1_x: 226425
+  bp1_y: -525
+  bp1_rot: -10953
+  bp1_xy_speed: 30
+  bp1_rot_speed: 50
+  bp1_voltage: 0
+  bp1_power: 0
+  bp2_pos: 0
+  bp2_x: 255233
+  bp2_y: 10625
+  bp2_rot: 10492
+  bp2_xy_speed: 30
+  bp2_rot_speed: 50
+  bp2_voltage: 0
+  bp2_power: 0
+  frim_version: 207
+  acc_voltage: 3000
+  extractor_voltage: 46
+  control_voltage: 0
+  emission_curent: 8
+  mag: 150000
+  lens_mode: 0
+  probe_mode: 0
+  screen_pos: 1
+
+---
+- secs: 78
+  nanos: 897729089
+- c1: 1.9975880456349207
+  c2: 3.999998759920635
+  c3: 0.855
+  obj: 12.277953296703297
+  i1: 3.1680687194749699
+  i2: 4.932967032967033
+  i3: 1.5576068376068378
+  p1: 3.02026862026862
+  p2: 5.372405372405372
+  cond_ap: 1
+  cond_ap_x: 4288
+  cond_ap_y: 176548
+  cond_ap_speed: 4
+  stem_ap: 0
+  stem_ap_x: -882
+  stem_ap_y: 3104
+  stem_ap_speed: 4
+  obj_ap: 0
+  obj_ap_x: -3659
+  obj_ap_y: 2675
+  obj_ap_speed: 4
+  sa_ap: 0
+  sa_ap_x: 1193
+  sa_ap_y: -6778
+  sa_ap_speed: 4
+  gh:
+    - 442
+    - -1144
+  ghx:
+    - 0
+    - 0
+  ghy:
+    - 0
+    - 0
+  gt:
+    - 261
+    - 672
+  gtx:
+    - 602
+    - 208
+  gty:
+    - 559
+    - 1009
+  ga:
+    - 2047
+    - 1000
+  cs3:
+    - -2
+    - -11
+  cs3x:
+    - -231
+    - -720
+  cs3y:
+    - 70
+    - -158
+  cs:
+    - 2
+    - 12
+  csx:
+    - 194
+    - -492
+  csy:
+    - 464
+    - -346
+  bh:
+    - -278928
+    - -89285
+  bhu:
+    - 0
+    - 0
+  bhx:
+    - 331
+    - 573
+  bhy:
+    - 369
+    - -865
+  bt:
+    - 9
+    - 27
+  btu:
+    - 2047
+    - 2047
+  btx:
+    - 1996
+    - -153
+  bty:
+    - 2047
+    - -225
+  os:
+    - -23
+    - -37
+  osx:
+    - -598
+    - -1487
+  osy:
+    - -2047
+    - 952
+  osp:
+    - 72
+    - -38
+  isf:
+    - 0
+    - 0
+  isfx:
+    - 0
+    - 0
+  isfy:
+    - 0
+    - 0
+  is:
+    - 0
+    - 0
+  ia:
+    - -19
+    - -200
+  pa:
+    - 0
+    - 0
+  bpc_pos: 0
+  bpc_x: 250000
+  bpc_y: 0
+  bpc_rot: 0
+  bpc_xy_speed: 20
+  bpc_rot_speed: 60
+  bpc_voltage: 0
+  bpc_power: 0
+  bp1_pos: 0
+  bp1_x: 226425
+  bp1_y: -525
+  bp1_rot: -10953
+  bp1_xy_speed: 30
+  bp1_rot_speed: 50
+  bp1_voltage: 0
+  bp1_power: 0
+  bp2_pos: 0
+  bp2_x: 255233
+  bp2_y: 10625
+  bp2_rot: 10492
+  bp2_xy_speed: 30
+  bp2_rot_speed: 50
+  bp2_voltage: 0
+  bp2_power: 0
+  frim_version: 207
+  acc_voltage: 3000
+  extractor_voltage: 46
+  control_voltage: 0
+  emission_curent: 8
+  mag: 150000
+  lens_mode: 0
+  probe_mode: 0
+  screen_pos: 1
+
+---
+- secs: 79
+  nanos: 68359264
+- c1: 1.9980344742063492
+  c2: 3.999998759920635
+  c3: 0.855
+  obj: 12.277953296703297
+  i1: 3.1680687194749699
+  i2: 4.932967032967033
+  i3: 1.5576068376068378
+  p1: 3.02026862026862
+  p2: 5.372405372405372
+  cond_ap: 1
+  cond_ap_x: 4288
+  cond_ap_y: 176548
+  cond_ap_speed: 4
+  stem_ap: 0
+  stem_ap_x: -882
+  stem_ap_y: 3104
+  stem_ap_speed: 4
+  obj_ap: 0
+  obj_ap_x: -3659
+  obj_ap_y: 2675
+  obj_ap_speed: 4
+  sa_ap: 0
+  sa_ap_x: 1193
+  sa_ap_y: -6778
+  sa_ap_speed: 4
+  gh:
+    - 442
+    - -1144
+  ghx:
+    - 0
+    - 0
+  ghy:
+    - 0
+    - 0
+  gt:
+    - 261
+    - 672
+  gtx:
+    - 602
+    - 208
+  gty:
+    - 559
+    - 1009
+  ga:
+    - 2047
+    - 1000
+  cs3:
+    - -2
+    - -11
+  cs3x:
+    - -231
+    - -720
+  cs3y:
+    - 70
+    - -158
+  cs:
+    - 2
+    - 12
+  csx:
+    - 194
+    - -492
+  csy:
+    - 464
+    - -346
+  bh:
+    - -278928
+    - -89285
+  bhu:
+    - 0
+    - 0
+  bhx:
+    - 331
+    - 573
+  bhy:
+    - 369
+    - -865
+  bt:
+    - 9
+    - 27
+  btu:
+    - 2047
+    - 2047
+  btx:
+    - 1996
+    - -153
+  bty:
+    - 2047
+    - -225
+  os:
+    - -23
+    - -37
+  osx:
+    - -598
+    - -1487
+  osy:
+    - -2047
+    - 952
+  osp:
+    - 72
+    - -38
+  isf:
+    - 0
+    - 0
+  isfx:
+    - 0
+    - 0
+  isfy:
+    - 0
+    - 0
+  is:
+    - 0
+    - 0
+  ia:
+    - -19
+    - -200
+  pa:
+    - 0
+    - 0
+  bpc_pos: 0
+  bpc_x: 250000
+  bpc_y: 0
+  bpc_rot: 0
+  bpc_xy_speed: 20
+  bpc_rot_speed: 60
+  bpc_voltage: 0
+  bpc_power: 0
+  bp1_pos: 0
+  bp1_x: 226425
+  bp1_y: -525
+  bp1_rot: -10953
+  bp1_xy_speed: 30
+  bp1_rot_speed: 50
+  bp1_voltage: 0
+  bp1_power: 0
+  bp2_pos: 0
+  bp2_x: 255233
+  bp2_y: 10625
+  bp2_rot: 10492
+  bp2_xy_speed: 30
+  bp2_rot_speed: 50
+  bp2_voltage: 0
+  bp2_power: 0
+  frim_version: 207
+  acc_voltage: 3000
+  extractor_voltage: 46
+  control_voltage: 0
+  emission_curent: 8
+  mag: 150000
+  lens_mode: 0
+  probe_mode: 0
+  screen_pos: 1
+
+---
+- secs: 79
+  nanos: 136197934
+- c1: 1.998718998015873
+  c2: 3.999998759920635
+  c3: 0.855
+  obj: 12.277953296703297
+  i1: 3.1680687194749699
+  i2: 4.932967032967033
+  i3: 1.5576068376068378
+  p1: 3.02026862026862
+  p2: 5.372405372405372
+  cond_ap: 1
+  cond_ap_x: 4288
+  cond_ap_y: 176548
+  cond_ap_speed: 4
+  stem_ap: 0
+  stem_ap_x: -882
+  stem_ap_y: 3104
+  stem_ap_speed: 4
+  obj_ap: 0
+  obj_ap_x: -3659
+  obj_ap_y: 2675
+  obj_ap_speed: 4
+  sa_ap: 0
+  sa_ap_x: 1193
+  sa_ap_y: -6778
+  sa_ap_speed: 4
+  gh:
+    - 442
+    - -1144
+  ghx:
+    - 0
+    - 0
+  ghy:
+    - 0
+    - 0
+  gt:
+    - 261
+    - 672
+  gtx:
+    - 602
+    - 208
+  gty:
+    - 559
+    - 1009
+  ga:
+    - 2047
+    - 1000
+  cs3:
+    - -2
+    - -11
+  cs3x:
+    - -231
+    - -720
+  cs3y:
+    - 70
+    - -158
+  cs:
+    - 2
+    - 12
+  csx:
+    - 194
+    - -492
+  csy:
+    - 464
+    - -346
+  bh:
+    - -278928
+    - -89285
+  bhu:
+    - 0
+    - 0
+  bhx:
+    - 331
+    - 573
+  bhy:
+    - 369
+    - -865
+  bt:
+    - 9
+    - 27
+  btu:
+    - 2047
+    - 2047
+  btx:
+    - 1996
+    - -153
+  bty:
+    - 2047
+    - -225
+  os:
+    - -23
+    - -37
+  osx:
+    - -598
+    - -1487
+  osy:
+    - -2047
+    - 952
+  osp:
+    - 72
+    - -38
+  isf:
+    - 0
+    - 0
+  isfx:
+    - 0
+    - 0
+  isfy:
+    - 0
+    - 0
+  is:
+    - 0
+    - 0
+  ia:
+    - -19
+    - -200
+  pa:
+    - 0
+    - 0
+  bpc_pos: 0
+  bpc_x: 250000
+  bpc_y: 0
+  bpc_rot: 0
+  bpc_xy_speed: 20
+  bpc_rot_speed: 60
+  bpc_voltage: 0
+  bpc_power: 0
+  bp1_pos: 0
+  bp1_x: 226425
+  bp1_y: -525
+  bp1_rot: -10953
+  bp1_xy_speed: 30
+  bp1_rot_speed: 50
+  bp1_voltage: 0
+  bp1_power: 0
+  bp2_pos: 0
+  bp2_x: 255233
+  bp2_y: 10625
+  bp2_rot: 10492
+  bp2_xy_speed: 30
+  bp2_rot_speed: 50
+  bp2_voltage: 0
+  bp2_power: 0
+  frim_version: 207
+  acc_voltage: 3000
+  extractor_voltage: 46
+  control_voltage: 0
+  emission_curent: 8
+  mag: 150000
+  lens_mode: 0
+  probe_mode: 0
+  screen_pos: 1
+
+---
+- secs: 79
+  nanos: 413016769
+- c1: 1.999968998015873
+  c2: 3.999998759920635
+  c3: 0.855
+  obj: 12.277953296703297
+  i1: 3.1680687194749699
+  i2: 4.932967032967033
+  i3: 1.5576068376068378
+  p1: 3.02026862026862
+  p2: 5.372405372405372
+  cond_ap: 1
+  cond_ap_x: 4288
+  cond_ap_y: 176548
+  cond_ap_speed: 4
+  stem_ap: 0
+  stem_ap_x: -882
+  stem_ap_y: 3104
+  stem_ap_speed: 4
+  obj_ap: 0
+  obj_ap_x: -3659
+  obj_ap_y: 2675
+  obj_ap_speed: 4
+  sa_ap: 0
+  sa_ap_x: 1193
+  sa_ap_y: -6778
+  sa_ap_speed: 4
+  gh:
+    - 442
+    - -1144
+  ghx:
+    - 0
+    - 0
+  ghy:
+    - 0
+    - 0
+  gt:
+    - 261
+    - 672
+  gtx:
+    - 602
+    - 208
+  gty:
+    - 559
+    - 1009
+  ga:
+    - 2047
+    - 1000
+  cs3:
+    - -2
+    - -11
+  cs3x:
+    - -231
+    - -720
+  cs3y:
+    - 70
+    - -158
+  cs:
+    - 2
+    - 12
+  csx:
+    - 194
+    - -492
+  csy:
+    - 464
+    - -346
+  bh:
+    - -278928
+    - -89285
+  bhu:
+    - 0
+    - 0
+  bhx:
+    - 331
+    - 573
+  bhy:
+    - 369
+    - -865
+  bt:
+    - 9
+    - 27
+  btu:
+    - 2047
+    - 2047
+  btx:
+    - 1996
+    - -153
+  bty:
+    - 2047
+    - -225
+  os:
+    - -23
+    - -37
+  osx:
+    - -598
+    - -1487
+  osy:
+    - -2047
+    - 952
+  osp:
+    - 72
+    - -38
+  isf:
+    - 0
+    - 0
+  isfx:
+    - 0
+    - 0
+  isfy:
+    - 0
+    - 0
+  is:
+    - 0
+    - 0
+  ia:
+    - -19
+    - -200
+  pa:
+    - 0
+    - 0
+  bpc_pos: 0
+  bpc_x: 250000
+  bpc_y: 0
+  bpc_rot: 0
+  bpc_xy_speed: 20
+  bpc_rot_speed: 60
+  bpc_voltage: 0
+  bpc_power: 0
+  bp1_pos: 0
+  bp1_x: 226425
+  bp1_y: -525
+  bp1_rot: -10953
+  bp1_xy_speed: 30
+  bp1_rot_speed: 50
+  bp1_voltage: 0
+  bp1_power: 0
+  bp2_pos: 0
+  bp2_x: 255233
+  bp2_y: 10625
+  bp2_rot: 10492
+  bp2_xy_speed: 30
+  bp2_rot_speed: 50
+  bp2_voltage: 0
+  bp2_power: 0
+  frim_version: 207
+  acc_voltage: 3000
+  extractor_voltage: 46
+  control_voltage: 0
+  emission_curent: 8
+  mag: 150000
+  lens_mode: 0
+  probe_mode: 0
+  screen_pos: 1
+
+---
+- secs: 79
+  nanos: 584818200
+- c1: 2.000564236111111
+  c2: 3.999998759920635
+  c3: 0.855
+  obj: 12.277953296703297
+  i1: 3.1680687194749699
+  i2: 4.932967032967033
+  i3: 1.5576068376068378
+  p1: 3.02026862026862
+  p2: 5.372405372405372
+  cond_ap: 1
+  cond_ap_x: 4288
+  cond_ap_y: 176548
+  cond_ap_speed: 4
+  stem_ap: 0
+  stem_ap_x: -882
+  stem_ap_y: 3104
+  stem_ap_speed: 4
+  obj_ap: 0
+  obj_ap_x: -3659
+  obj_ap_y: 2675
+  obj_ap_speed: 4
+  sa_ap: 0
+  sa_ap_x: 1193
+  sa_ap_y: -6778
+  sa_ap_speed: 4
+  gh:
+    - 442
+    - -1144
+  ghx:
+    - 0
+    - 0
+  ghy:
+    - 0
+    - 0
+  gt:
+    - 261
+    - 672
+  gtx:
+    - 602
+    - 208
+  gty:
+    - 559
+    - 1009
+  ga:
+    - 2047
+    - 1000
+  cs3:
+    - -2
+    - -11
+  cs3x:
+    - -231
+    - -720
+  cs3y:
+    - 70
+    - -158
+  cs:
+    - 2
+    - 12
+  csx:
+    - 194
+    - -492
+  csy:
+    - 464
+    - -346
+  bh:
+    - -278928
+    - -89285
+  bhu:
+    - 0
+    - 0
+  bhx:
+    - 331
+    - 573
+  bhy:
+    - 369
+    - -865
+  bt:
+    - 9
+    - 27
+  btu:
+    - 2047
+    - 2047
+  btx:
+    - 1996
+    - -153
+  bty:
+    - 2047
+    - -225
+  os:
+    - -23
+    - -37
+  osx:
+    - -598
+    - -1487
+  osy:
+    - -2047
+    - 952
+  osp:
+    - 72
+    - -38
+  isf:
+    - 0
+    - 0
+  isfx:
+    - 0
+    - 0
+  isfy:
+    - 0
+    - 0
+  is:
+    - 0
+    - 0
+  ia:
+    - -19
+    - -200
+  pa:
+    - 0
+    - 0
+  bpc_pos: 0
+  bpc_x: 250000
+  bpc_y: 0
+  bpc_rot: 0
+  bpc_xy_speed: 20
+  bpc_rot_speed: 60
+  bpc_voltage: 0
+  bpc_power: 0
+  bp1_pos: 0
+  bp1_x: 226425
+  bp1_y: -525
+  bp1_rot: -10953
+  bp1_xy_speed: 30
+  bp1_rot_speed: 50
+  bp1_voltage: 0
+  bp1_power: 0
+  bp2_pos: 0
+  bp2_x: 255233
+  bp2_y: 10625
+  bp2_rot: 10492
+  bp2_xy_speed: 30
+  bp2_rot_speed: 50
+  bp2_voltage: 0
+  bp2_power: 0
+  frim_version: 207
+  acc_voltage: 3000
+  extractor_voltage: 46
+  control_voltage: 0
+  emission_curent: 8
+  mag: 150000
+  lens_mode: 0
+  probe_mode: 0
+  screen_pos: 1
+
+---
+- secs: 79
+  nanos: 652906115
+- c1: 2.0010106646825398
+  c2: 3.999998759920635
+  c3: 0.855
+  obj: 12.277953296703297
+  i1: 3.1680687194749699
+  i2: 4.932967032967033
+  i3: 1.5576068376068378
+  p1: 3.02026862026862
+  p2: 5.372405372405372
+  cond_ap: 1
+  cond_ap_x: 4288
+  cond_ap_y: 176548
+  cond_ap_speed: 4
+  stem_ap: 0
+  stem_ap_x: -882
+  stem_ap_y: 3104
+  stem_ap_speed: 4
+  obj_ap: 0
+  obj_ap_x: -3659
+  obj_ap_y: 2675
+  obj_ap_speed: 4
+  sa_ap: 0
+  sa_ap_x: 1193
+  sa_ap_y: -6778
+  sa_ap_speed: 4
+  gh:
+    - 442
+    - -1144
+  ghx:
+    - 0
+    - 0
+  ghy:
+    - 0
+    - 0
+  gt:
+    - 261
+    - 672
+  gtx:
+    - 602
+    - 208
+  gty:
+    - 559
+    - 1009
+  ga:
+    - 2047
+    - 1000
+  cs3:
+    - -2
+    - -11
+  cs3x:
+    - -231
+    - -720
+  cs3y:
+    - 70
+    - -158
+  cs:
+    - 2
+    - 12
+  csx:
+    - 194
+    - -492
+  csy:
+    - 464
+    - -346
+  bh:
+    - -278928
+    - -89285
+  bhu:
+    - 0
+    - 0
+  bhx:
+    - 331
+    - 573
+  bhy:
+    - 369
+    - -865
+  bt:
+    - 9
+    - 27
+  btu:
+    - 2047
+    - 2047
+  btx:
+    - 1996
+    - -153
+  bty:
+    - 2047
+    - -225
+  os:
+    - -23
+    - -37
+  osx:
+    - -598
+    - -1487
+  osy:
+    - -2047
+    - 952
+  osp:
+    - 72
+    - -38
+  isf:
+    - 0
+    - 0
+  isfx:
+    - 0
+    - 0
+  isfy:
+    - 0
+    - 0
+  is:
+    - 0
+    - 0
+  ia:
+    - -19
+    - -200
+  pa:
+    - 0
+    - 0
+  bpc_pos: 0
+  bpc_x: 250000
+  bpc_y: 0
+  bpc_rot: 0
+  bpc_xy_speed: 20
+  bpc_rot_speed: 60
+  bpc_voltage: 0
+  bpc_power: 0
+  bp1_pos: 0
+  bp1_x: 226425
+  bp1_y: -525
+  bp1_rot: -10953
+  bp1_xy_speed: 30
+  bp1_rot_speed: 50
+  bp1_voltage: 0
+  bp1_power: 0
+  bp2_pos: 0
+  bp2_x: 255233
+  bp2_y: 10625
+  bp2_rot: 10492
+  bp2_xy_speed: 30
+  bp2_rot_speed: 50
+  bp2_voltage: 0
+  bp2_power: 0
+  frim_version: 207
+  acc_voltage: 3000
+  extractor_voltage: 46
+  control_voltage: 0
+  emission_curent: 8
+  mag: 150000
+  lens_mode: 0
+  probe_mode: 0
+  screen_pos: 1
+
+---
+- secs: 79
+  nanos: 819597397
+- c1: 2.0014570932539685
+  c2: 3.999998759920635
+  c3: 0.855
+  obj: 12.277953296703297
+  i1: 3.1680687194749699
+  i2: 4.932967032967033
+  i3: 1.5576068376068378
+  p1: 3.02026862026862
+  p2: 5.372405372405372
+  cond_ap: 1
+  cond_ap_x: 4288
+  cond_ap_y: 176548
+  cond_ap_speed: 4
+  stem_ap: 0
+  stem_ap_x: -882
+  stem_ap_y: 3104
+  stem_ap_speed: 4
+  obj_ap: 0
+  obj_ap_x: -3659
+  obj_ap_y: 2675
+  obj_ap_speed: 4
+  sa_ap: 0
+  sa_ap_x: 1193
+  sa_ap_y: -6778
+  sa_ap_speed: 4
+  gh:
+    - 442
+    - -1144
+  ghx:
+    - 0
+    - 0
+  ghy:
+    - 0
+    - 0
+  gt:
+    - 261
+    - 672
+  gtx:
+    - 602
+    - 208
+  gty:
+    - 559
+    - 1009
+  ga:
+    - 2047
+    - 1000
+  cs3:
+    - -2
+    - -11
+  cs3x:
+    - -231
+    - -720
+  cs3y:
+    - 70
+    - -158
+  cs:
+    - 2
+    - 12
+  csx:
+    - 194
+    - -492
+  csy:
+    - 464
+    - -346
+  bh:
+    - -278928
+    - -89285
+  bhu:
+    - 0
+    - 0
+  bhx:
+    - 331
+    - 573
+  bhy:
+    - 369
+    - -865
+  bt:
+    - 9
+    - 27
+  btu:
+    - 2047
+    - 2047
+  btx:
+    - 1996
+    - -153
+  bty:
+    - 2047
+    - -225
+  os:
+    - -23
+    - -37
+  osx:
+    - -598
+    - -1487
+  osy:
+    - -2047
+    - 952
+  osp:
+    - 72
+    - -38
+  isf:
+    - 0
+    - 0
+  isfx:
+    - 0
+    - 0
+  isfy:
+    - 0
+    - 0
+  is:
+    - 0
+    - 0
+  ia:
+    - -19
+    - -200
+  pa:
+    - 0
+    - 0
+  bpc_pos: 0
+  bpc_x: 250000
+  bpc_y: 0
+  bpc_rot: 0
+  bpc_xy_speed: 20
+  bpc_rot_speed: 60
+  bpc_voltage: 0
+  bpc_power: 0
+  bp1_pos: 0
+  bp1_x: 226425
+  bp1_y: -525
+  bp1_rot: -10953
+  bp1_xy_speed: 30
+  bp1_rot_speed: 50
+  bp1_voltage: 0
+  bp1_power: 0
+  bp2_pos: 0
+  bp2_x: 255233
+  bp2_y: 10625
+  bp2_rot: 10492
+  bp2_xy_speed: 30
+  bp2_rot_speed: 50
+  bp2_voltage: 0
+  bp2_power: 0
+  frim_version: 207
+  acc_voltage: 3000
+  extractor_voltage: 46
+  control_voltage: 0
+  emission_curent: 8
+  mag: 150000
+  lens_mode: 0
+  probe_mode: 0
+  screen_pos: 1
+
+---
+- secs: 79
+  nanos: 887816020
+- c1: 2.0019630456349208
+  c2: 3.999998759920635
+  c3: 0.855
+  obj: 12.277953296703297
+  i1: 3.1680687194749699
+  i2: 4.932967032967033
+  i3: 1.5576068376068378
+  p1: 3.02026862026862
+  p2: 5.372405372405372
+  cond_ap: 1
+  cond_ap_x: 4288
+  cond_ap_y: 176548
+  cond_ap_speed: 4
+  stem_ap: 0
+  stem_ap_x: -882
+  stem_ap_y: 3104
+  stem_ap_speed: 4
+  obj_ap: 0
+  obj_ap_x: -3659
+  obj_ap_y: 2675
+  obj_ap_speed: 4
+  sa_ap: 0
+  sa_ap_x: 1193
+  sa_ap_y: -6778
+  sa_ap_speed: 4
+  gh:
+    - 442
+    - -1144
+  ghx:
+    - 0
+    - 0
+  ghy:
+    - 0
+    - 0
+  gt:
+    - 261
+    - 672
+  gtx:
+    - 602
+    - 208
+  gty:
+    - 559
+    - 1009
+  ga:
+    - 2047
+    - 1000
+  cs3:
+    - -2
+    - -11
+  cs3x:
+    - -231
+    - -720
+  cs3y:
+    - 70
+    - -158
+  cs:
+    - 2
+    - 12
+  csx:
+    - 194
+    - -492
+  csy:
+    - 464
+    - -346
+  bh:
+    - -278928
+    - -89285
+  bhu:
+    - 0
+    - 0
+  bhx:
+    - 331
+    - 573
+  bhy:
+    - 369
+    - -865
+  bt:
+    - 9
+    - 27
+  btu:
+    - 2047
+    - 2047
+  btx:
+    - 1996
+    - -153
+  bty:
+    - 2047
+    - -225
+  os:
+    - -23
+    - -37
+  osx:
+    - -598
+    - -1487
+  osy:
+    - -2047
+    - 952
+  osp:
+    - 72
+    - -38
+  isf:
+    - 0
+    - 0
+  isfx:
+    - 0
+    - 0
+  isfy:
+    - 0
+    - 0
+  is:
+    - 0
+    - 0
+  ia:
+    - -19
+    - -200
+  pa:
+    - 0
+    - 0
+  bpc_pos: 0
+  bpc_x: 250000
+  bpc_y: 0
+  bpc_rot: 0
+  bpc_xy_speed: 20
+  bpc_rot_speed: 60
+  bpc_voltage: 0
+  bpc_power: 0
+  bp1_pos: 0
+  bp1_x: 226425
+  bp1_y: -525
+  bp1_rot: -10953
+  bp1_xy_speed: 30
+  bp1_rot_speed: 50
+  bp1_voltage: 0
+  bp1_power: 0
+  bp2_pos: 0
+  bp2_x: 255233
+  bp2_y: 10625
+  bp2_rot: 10492
+  bp2_xy_speed: 30
+  bp2_rot_speed: 50
+  bp2_voltage: 0
+  bp2_power: 0
+  frim_version: 207
+  acc_voltage: 3000
+  extractor_voltage: 46
+  control_voltage: 0
+  emission_curent: 8
+  mag: 150000
+  lens_mode: 0
+  probe_mode: 0
+  screen_pos: 1
+
+---
+- secs: 80
+  nanos: 43529018
+- c1: 2.0025880456349207
+  c2: 3.999998759920635
+  c3: 0.855
+  obj: 12.277953296703297
+  i1: 3.1680687194749699
+  i2: 4.932967032967033
+  i3: 1.5576068376068378
+  p1: 3.02026862026862
+  p2: 5.372405372405372
+  cond_ap: 1
+  cond_ap_x: 4288
+  cond_ap_y: 176548
+  cond_ap_speed: 4
+  stem_ap: 0
+  stem_ap_x: -882
+  stem_ap_y: 3104
+  stem_ap_speed: 4
+  obj_ap: 0
+  obj_ap_x: -3659
+  obj_ap_y: 2675
+  obj_ap_speed: 4
+  sa_ap: 0
+  sa_ap_x: 1193
+  sa_ap_y: -6778
+  sa_ap_speed: 4
+  gh:
+    - 442
+    - -1144
+  ghx:
+    - 0
+    - 0
+  ghy:
+    - 0
+    - 0
+  gt:
+    - 261
+    - 672
+  gtx:
+    - 602
+    - 208
+  gty:
+    - 559
+    - 1009
+  ga:
+    - 2047
+    - 1000
+  cs3:
+    - -2
+    - -11
+  cs3x:
+    - -231
+    - -720
+  cs3y:
+    - 70
+    - -158
+  cs:
+    - 2
+    - 12
+  csx:
+    - 194
+    - -492
+  csy:
+    - 464
+    - -346
+  bh:
+    - -278928
+    - -89285
+  bhu:
+    - 0
+    - 0
+  bhx:
+    - 331
+    - 573
+  bhy:
+    - 369
+    - -865
+  bt:
+    - 9
+    - 27
+  btu:
+    - 2047
+    - 2047
+  btx:
+    - 1996
+    - -153
+  bty:
+    - 2047
+    - -225
+  os:
+    - -23
+    - -37
+  osx:
+    - -598
+    - -1487
+  osy:
+    - -2047
+    - 952
+  osp:
+    - 72
+    - -38
+  isf:
+    - 0
+    - 0
+  isfx:
+    - 0
+    - 0
+  isfy:
+    - 0
+    - 0
+  is:
+    - 0
+    - 0
+  ia:
+    - -19
+    - -200
+  pa:
+    - 0
+    - 0
+  bpc_pos: 0
+  bpc_x: 250000
+  bpc_y: 0
+  bpc_rot: 0
+  bpc_xy_speed: 20
+  bpc_rot_speed: 60
+  bpc_voltage: 0
+  bpc_power: 0
+  bp1_pos: 0
+  bp1_x: 226425
+  bp1_y: -525
+  bp1_rot: -10953
+  bp1_xy_speed: 30
+  bp1_rot_speed: 50
+  bp1_voltage: 0
+  bp1_power: 0
+  bp2_pos: 0
+  bp2_x: 255233
+  bp2_y: 10625
+  bp2_rot: 10492
+  bp2_xy_speed: 30
+  bp2_rot_speed: 50
+  bp2_voltage: 0
+  bp2_power: 0
+  frim_version: 207
+  acc_voltage: 3000
+  extractor_voltage: 46
+  control_voltage: 0
+  emission_curent: 8
+  mag: 150000
+  lens_mode: 0
+  probe_mode: 0
+  screen_pos: 1
+
+---
+- secs: 80
+  nanos: 212804367
+- c1: 2.003153521825397
+  c2: 3.999998759920635
+  c3: 0.855
+  obj: 12.277953296703297
+  i1: 3.1680687194749699
+  i2: 4.932967032967033
+  i3: 1.5576068376068378
+  p1: 3.02026862026862
+  p2: 5.372405372405372
+  cond_ap: 1
+  cond_ap_x: 4288
+  cond_ap_y: 176548
+  cond_ap_speed: 4
+  stem_ap: 0
+  stem_ap_x: -882
+  stem_ap_y: 3104
+  stem_ap_speed: 4
+  obj_ap: 0
+  obj_ap_x: -3659
+  obj_ap_y: 2675
+  obj_ap_speed: 4
+  sa_ap: 0
+  sa_ap_x: 1193
+  sa_ap_y: -6778
+  sa_ap_speed: 4
+  gh:
+    - 442
+    - -1144
+  ghx:
+    - 0
+    - 0
+  ghy:
+    - 0
+    - 0
+  gt:
+    - 261
+    - 672
+  gtx:
+    - 602
+    - 208
+  gty:
+    - 559
+    - 1009
+  ga:
+    - 2047
+    - 1000
+  cs3:
+    - -2
+    - -11
+  cs3x:
+    - -231
+    - -720
+  cs3y:
+    - 70
+    - -158
+  cs:
+    - 2
+    - 12
+  csx:
+    - 194
+    - -492
+  csy:
+    - 464
+    - -346
+  bh:
+    - -278928
+    - -89285
+  bhu:
+    - 0
+    - 0
+  bhx:
+    - 331
+    - 573
+  bhy:
+    - 369
+    - -865
+  bt:
+    - 9
+    - 27
+  btu:
+    - 2047
+    - 2047
+  btx:
+    - 1996
+    - -153
+  bty:
+    - 2047
+    - -225
+  os:
+    - -23
+    - -37
+  osx:
+    - -598
+    - -1487
+  osy:
+    - -2047
+    - 952
+  osp:
+    - 72
+    - -38
+  isf:
+    - 0
+    - 0
+  isfx:
+    - 0
+    - 0
+  isfy:
+    - 0
+    - 0
+  is:
+    - 0
+    - 0
+  ia:
+    - -19
+    - -200
+  pa:
+    - 0
+    - 0
+  bpc_pos: 0
+  bpc_x: 250000
+  bpc_y: 0
+  bpc_rot: 0
+  bpc_xy_speed: 20
+  bpc_rot_speed: 60
+  bpc_voltage: 0
+  bpc_power: 0
+  bp1_pos: 0
+  bp1_x: 226425
+  bp1_y: -525
+  bp1_rot: -10953
+  bp1_xy_speed: 30
+  bp1_rot_speed: 50
+  bp1_voltage: 0
+  bp1_power: 0
+  bp2_pos: 0
+  bp2_x: 255233
+  bp2_y: 10625
+  bp2_rot: 10492
+  bp2_xy_speed: 30
+  bp2_rot_speed: 50
+  bp2_voltage: 0
+  bp2_power: 0
+  frim_version: 207
+  acc_voltage: 3000
+  extractor_voltage: 46
+  control_voltage: 0
+  emission_curent: 8
+  mag: 150000
+  lens_mode: 0
+  probe_mode: 0
+  screen_pos: 1
+
+---
+- secs: 80
+  nanos: 281143448
+- c1: 2.003480902777778
+  c2: 3.999998759920635
+  c3: 0.855
+  obj: 12.277953296703297
+  i1: 3.1680687194749699
+  i2: 4.932967032967033
+  i3: 1.5576068376068378
+  p1: 3.02026862026862
+  p2: 5.372405372405372
+  cond_ap: 1
+  cond_ap_x: 4288
+  cond_ap_y: 176548
+  cond_ap_speed: 4
+  stem_ap: 0
+  stem_ap_x: -882
+  stem_ap_y: 3104
+  stem_ap_speed: 4
+  obj_ap: 0
+  obj_ap_x: -3659
+  obj_ap_y: 2675
+  obj_ap_speed: 4
+  sa_ap: 0
+  sa_ap_x: 1193
+  sa_ap_y: -6778
+  sa_ap_speed: 4
+  gh:
+    - 442
+    - -1144
+  ghx:
+    - 0
+    - 0
+  ghy:
+    - 0
+    - 0
+  gt:
+    - 261
+    - 672
+  gtx:
+    - 602
+    - 208
+  gty:
+    - 559
+    - 1009
+  ga:
+    - 2047
+    - 1000
+  cs3:
+    - -2
+    - -11
+  cs3x:
+    - -231
+    - -720
+  cs3y:
+    - 70
+    - -158
+  cs:
+    - 2
+    - 12
+  csx:
+    - 194
+    - -492
+  csy:
+    - 464
+    - -346
+  bh:
+    - -278928
+    - -89285
+  bhu:
+    - 0
+    - 0
+  bhx:
+    - 331
+    - 573
+  bhy:
+    - 369
+    - -865
+  bt:
+    - 9
+    - 27
+  btu:
+    - 2047
+    - 2047
+  btx:
+    - 1996
+    - -153
+  bty:
+    - 2047
+    - -225
+  os:
+    - -23
+    - -37
+  osx:
+    - -598
+    - -1487
+  osy:
+    - -2047
+    - 952
+  osp:
+    - 72
+    - -38
+  isf:
+    - 0
+    - 0
+  isfx:
+    - 0
+    - 0
+  isfy:
+    - 0
+    - 0
+  is:
+    - 0
+    - 0
+  ia:
+    - -19
+    - -200
+  pa:
+    - 0
+    - 0
+  bpc_pos: 0
+  bpc_x: 250000
+  bpc_y: 0
+  bpc_rot: 0
+  bpc_xy_speed: 20
+  bpc_rot_speed: 60
+  bpc_voltage: 0
+  bpc_power: 0
+  bp1_pos: 0
+  bp1_x: 226425
+  bp1_y: -525
+  bp1_rot: -10953
+  bp1_xy_speed: 30
+  bp1_rot_speed: 50
+  bp1_voltage: 0
+  bp1_power: 0
+  bp2_pos: 0
+  bp2_x: 255233
+  bp2_y: 10625
+  bp2_rot: 10492
+  bp2_xy_speed: 30
+  bp2_rot_speed: 50
+  bp2_voltage: 0
+  bp2_power: 0
+  frim_version: 207
+  acc_voltage: 3000
+  extractor_voltage: 46
+  control_voltage: 0
+  emission_curent: 8
+  mag: 150000
+  lens_mode: 0
+  probe_mode: 0
+  screen_pos: 1
+
+---
+- secs: 80
+  nanos: 451528864
+- c1: 2.003599950396825
+  c2: 3.999998759920635
+  c3: 0.855
+  obj: 12.277953296703297
+  i1: 3.1680687194749699
+  i2: 4.932967032967033
+  i3: 1.5576068376068378
+  p1: 3.02026862026862
+  p2: 5.372405372405372
+  cond_ap: 1
+  cond_ap_x: 4288
+  cond_ap_y: 176548
+  cond_ap_speed: 4
+  stem_ap: 0
+  stem_ap_x: -882
+  stem_ap_y: 3104
+  stem_ap_speed: 4
+  obj_ap: 0
+  obj_ap_x: -3659
+  obj_ap_y: 2675
+  obj_ap_speed: 4
+  sa_ap: 0
+  sa_ap_x: 1193
+  sa_ap_y: -6778
+  sa_ap_speed: 4
+  gh:
+    - 442
+    - -1144
+  ghx:
+    - 0
+    - 0
+  ghy:
+    - 0
+    - 0
+  gt:
+    - 261
+    - 672
+  gtx:
+    - 602
+    - 208
+  gty:
+    - 559
+    - 1009
+  ga:
+    - 2047
+    - 1000
+  cs3:
+    - -2
+    - -11
+  cs3x:
+    - -231
+    - -720
+  cs3y:
+    - 70
+    - -158
+  cs:
+    - 2
+    - 12
+  csx:
+    - 194
+    - -492
+  csy:
+    - 464
+    - -346
+  bh:
+    - -278928
+    - -89285
+  bhu:
+    - 0
+    - 0
+  bhx:
+    - 331
+    - 573
+  bhy:
+    - 369
+    - -865
+  bt:
+    - 9
+    - 27
+  btu:
+    - 2047
+    - 2047
+  btx:
+    - 1996
+    - -153
+  bty:
+    - 2047
+    - -225
+  os:
+    - -23
+    - -37
+  osx:
+    - -598
+    - -1487
+  osy:
+    - -2047
+    - 952
+  osp:
+    - 72
+    - -38
+  isf:
+    - 0
+    - 0
+  isfx:
+    - 0
+    - 0
+  isfy:
+    - 0
+    - 0
+  is:
+    - 0
+    - 0
+  ia:
+    - -19
+    - -200
+  pa:
+    - 0
+    - 0
+  bpc_pos: 0
+  bpc_x: 250000
+  bpc_y: 0
+  bpc_rot: 0
+  bpc_xy_speed: 20
+  bpc_rot_speed: 60
+  bpc_voltage: 0
+  bpc_power: 0
+  bp1_pos: 0
+  bp1_x: 226425
+  bp1_y: -525
+  bp1_rot: -10953
+  bp1_xy_speed: 30
+  bp1_rot_speed: 50
+  bp1_voltage: 0
+  bp1_power: 0
+  bp2_pos: 0
+  bp2_x: 255233
+  bp2_y: 10625
+  bp2_rot: 10492
+  bp2_xy_speed: 30
+  bp2_rot_speed: 50
+  bp2_voltage: 0
+  bp2_power: 0
+  frim_version: 207
+  acc_voltage: 3000
+  extractor_voltage: 46
+  control_voltage: 0
+  emission_curent: 8
+  mag: 150000
+  lens_mode: 0
+  probe_mode: 0
+  screen_pos: 1
+
+---
+- secs: 80
+  nanos: 520340484
+- c1: 2.003689236111111
+  c2: 3.999998759920635
+  c3: 0.855
+  obj: 12.277953296703297
+  i1: 3.1680687194749699
+  i2: 4.932967032967033
+  i3: 1.5576068376068378
+  p1: 3.02026862026862
+  p2: 5.372405372405372
+  cond_ap: 1
+  cond_ap_x: 4288
+  cond_ap_y: 176548
+  cond_ap_speed: 4
+  stem_ap: 0
+  stem_ap_x: -882
+  stem_ap_y: 3104
+  stem_ap_speed: 4
+  obj_ap: 0
+  obj_ap_x: -3659
+  obj_ap_y: 2675
+  obj_ap_speed: 4
+  sa_ap: 0
+  sa_ap_x: 1193
+  sa_ap_y: -6778
+  sa_ap_speed: 4
+  gh:
+    - 442
+    - -1144
+  ghx:
+    - 0
+    - 0
+  ghy:
+    - 0
+    - 0
+  gt:
+    - 261
+    - 672
+  gtx:
+    - 602
+    - 208
+  gty:
+    - 559
+    - 1009
+  ga:
+    - 2047
+    - 1000
+  cs3:
+    - -2
+    - -11
+  cs3x:
+    - -231
+    - -720
+  cs3y:
+    - 70
+    - -158
+  cs:
+    - 2
+    - 12
+  csx:
+    - 194
+    - -492
+  csy:
+    - 464
+    - -346
+  bh:
+    - -278928
+    - -89285
+  bhu:
+    - 0
+    - 0
+  bhx:
+    - 331
+    - 573
+  bhy:
+    - 369
+    - -865
+  bt:
+    - 9
+    - 27
+  btu:
+    - 2047
+    - 2047
+  btx:
+    - 1996
+    - -153
+  bty:
+    - 2047
+    - -225
+  os:
+    - -23
+    - -37
+  osx:
+    - -598
+    - -1487
+  osy:
+    - -2047
+    - 952
+  osp:
+    - 72
+    - -38
+  isf:
+    - 0
+    - 0
+  isfx:
+    - 0
+    - 0
+  isfy:
+    - 0
+    - 0
+  is:
+    - 0
+    - 0
+  ia:
+    - -19
+    - -200
+  pa:
+    - 0
+    - 0
+  bpc_pos: 0
+  bpc_x: 250000
+  bpc_y: 0
+  bpc_rot: 0
+  bpc_xy_speed: 20
+  bpc_rot_speed: 60
+  bpc_voltage: 0
+  bpc_power: 0
+  bp1_pos: 0
+  bp1_x: 226425
+  bp1_y: -525
+  bp1_rot: -10953
+  bp1_xy_speed: 30
+  bp1_rot_speed: 50
+  bp1_voltage: 0
+  bp1_power: 0
+  bp2_pos: 0
+  bp2_x: 255233
+  bp2_y: 10625
+  bp2_rot: 10492
+  bp2_xy_speed: 30
+  bp2_rot_speed: 50
+  bp2_voltage: 0
+  bp2_power: 0
+  frim_version: 207
+  acc_voltage: 3000
+  extractor_voltage: 46
+  control_voltage: 0
+  emission_curent: 8
+  mag: 150000
+  lens_mode: 0
+  probe_mode: 0
+  screen_pos: 1
+
+---
+- secs: 81
+  nanos: 25269788
+- c1: 2.0037487599206349
+  c2: 3.999998759920635
+  c3: 0.855
+  obj: 12.277953296703297
+  i1: 3.1680687194749699
+  i2: 4.932967032967033
+  i3: 1.5576068376068378
+  p1: 3.02026862026862
+  p2: 5.372405372405372
+  cond_ap: 1
+  cond_ap_x: 4288
+  cond_ap_y: 176548
+  cond_ap_speed: 4
+  stem_ap: 0
+  stem_ap_x: -882
+  stem_ap_y: 3104
+  stem_ap_speed: 4
+  obj_ap: 0
+  obj_ap_x: -3659
+  obj_ap_y: 2675
+  obj_ap_speed: 4
+  sa_ap: 0
+  sa_ap_x: 1193
+  sa_ap_y: -6778
+  sa_ap_speed: 4
+  gh:
+    - 442
+    - -1144
+  ghx:
+    - 0
+    - 0
+  ghy:
+    - 0
+    - 0
+  gt:
+    - 261
+    - 672
+  gtx:
+    - 602
+    - 208
+  gty:
+    - 559
+    - 1009
+  ga:
+    - 2047
+    - 1000
+  cs3:
+    - -2
+    - -11
+  cs3x:
+    - -231
+    - -720
+  cs3y:
+    - 70
+    - -158
+  cs:
+    - 2
+    - 12
+  csx:
+    - 194
+    - -492
+  csy:
+    - 464
+    - -346
+  bh:
+    - -278928
+    - -89285
+  bhu:
+    - 0
+    - 0
+  bhx:
+    - 331
+    - 573
+  bhy:
+    - 369
+    - -865
+  bt:
+    - 9
+    - 27
+  btu:
+    - 2047
+    - 2047
+  btx:
+    - 1996
+    - -153
+  bty:
+    - 2047
+    - -225
+  os:
+    - -23
+    - -37
+  osx:
+    - -598
+    - -1487
+  osy:
+    - -2047
+    - 952
+  osp:
+    - 72
+    - -38
+  isf:
+    - 0
+    - 0
+  isfx:
+    - 0
+    - 0
+  isfy:
+    - 0
+    - 0
+  is:
+    - 0
+    - 0
+  ia:
+    - -19
+    - -200
+  pa:
+    - 0
+    - 0
+  bpc_pos: 0
+  bpc_x: 250000
+  bpc_y: 0
+  bpc_rot: 0
+  bpc_xy_speed: 20
+  bpc_rot_speed: 60
+  bpc_voltage: 0
+  bpc_power: 0
+  bp1_pos: 0
+  bp1_x: 226425
+  bp1_y: -525
+  bp1_rot: -10953
+  bp1_xy_speed: 30
+  bp1_rot_speed: 50
+  bp1_voltage: 0
+  bp1_power: 0
+  bp2_pos: 0
+  bp2_x: 255233
+  bp2_y: 10625
+  bp2_rot: 10492
+  bp2_xy_speed: 30
+  bp2_rot_speed: 50
+  bp2_voltage: 0
+  bp2_power: 0
+  frim_version: 207
+  acc_voltage: 3000
+  extractor_voltage: 46
+  control_voltage: 0
+  emission_curent: 8
+  mag: 150000
+  lens_mode: 0
+  probe_mode: 0
+  screen_pos: 1
+
+---
+- secs: 81
+  nanos: 192350313
+- c1: 2.003808283730159
+  c2: 3.999998759920635
+  c3: 0.855
+  obj: 12.277953296703297
+  i1: 3.1680687194749699
+  i2: 4.932967032967033
+  i3: 1.5576068376068378
+  p1: 3.02026862026862
+  p2: 5.372405372405372
+  cond_ap: 1
+  cond_ap_x: 4288
+  cond_ap_y: 176548
+  cond_ap_speed: 4
+  stem_ap: 0
+  stem_ap_x: -882
+  stem_ap_y: 3104
+  stem_ap_speed: 4
+  obj_ap: 0
+  obj_ap_x: -3659
+  obj_ap_y: 2675
+  obj_ap_speed: 4
+  sa_ap: 0
+  sa_ap_x: 1193
+  sa_ap_y: -6778
+  sa_ap_speed: 4
+  gh:
+    - 442
+    - -1144
+  ghx:
+    - 0
+    - 0
+  ghy:
+    - 0
+    - 0
+  gt:
+    - 261
+    - 672
+  gtx:
+    - 602
+    - 208
+  gty:
+    - 559
+    - 1009
+  ga:
+    - 2047
+    - 1000
+  cs3:
+    - -2
+    - -11
+  cs3x:
+    - -231
+    - -720
+  cs3y:
+    - 70
+    - -158
+  cs:
+    - 2
+    - 12
+  csx:
+    - 194
+    - -492
+  csy:
+    - 464
+    - -346
+  bh:
+    - -278928
+    - -89285
+  bhu:
+    - 0
+    - 0
+  bhx:
+    - 331
+    - 573
+  bhy:
+    - 369
+    - -865
+  bt:
+    - 9
+    - 27
+  btu:
+    - 2047
+    - 2047
+  btx:
+    - 1996
+    - -153
+  bty:
+    - 2047
+    - -225
+  os:
+    - -23
+    - -37
+  osx:
+    - -598
+    - -1487
+  osy:
+    - -2047
+    - 952
+  osp:
+    - 72
+    - -38
+  isf:
+    - 0
+    - 0
+  isfx:
+    - 0
+    - 0
+  isfy:
+    - 0
+    - 0
+  is:
+    - 0
+    - 0
+  ia:
+    - -19
+    - -200
+  pa:
+    - 0
+    - 0
+  bpc_pos: 0
+  bpc_x: 250000
+  bpc_y: 0
+  bpc_rot: 0
+  bpc_xy_speed: 20
+  bpc_rot_speed: 60
+  bpc_voltage: 0
+  bpc_power: 0
+  bp1_pos: 0
+  bp1_x: 226425
+  bp1_y: -525
+  bp1_rot: -10953
+  bp1_xy_speed: 30
+  bp1_rot_speed: 50
+  bp1_voltage: 0
+  bp1_power: 0
+  bp2_pos: 0
+  bp2_x: 255233
+  bp2_y: 10625
+  bp2_rot: 10492
+  bp2_xy_speed: 30
+  bp2_rot_speed: 50
+  bp2_voltage: 0
+  bp2_power: 0
+  frim_version: 207
+  acc_voltage: 3000
+  extractor_voltage: 46
+  control_voltage: 0
+  emission_curent: 8
+  mag: 150000
+  lens_mode: 0
+  probe_mode: 0
+  screen_pos: 1
+
+---
+- secs: 81
+  nanos: 261837584
+- c1: 2.0038380456349209
+  c2: 3.999998759920635
+  c3: 0.855
+  obj: 12.277953296703297
+  i1: 3.1680687194749699
+  i2: 4.932967032967033
+  i3: 1.5576068376068378
+  p1: 3.02026862026862
+  p2: 5.372405372405372
+  cond_ap: 1
+  cond_ap_x: 4288
+  cond_ap_y: 176548
+  cond_ap_speed: 4
+  stem_ap: 0
+  stem_ap_x: -882
+  stem_ap_y: 3104
+  stem_ap_speed: 4
+  obj_ap: 0
+  obj_ap_x: -3659
+  obj_ap_y: 2675
+  obj_ap_speed: 4
+  sa_ap: 0
+  sa_ap_x: 1193
+  sa_ap_y: -6778
+  sa_ap_speed: 4
+  gh:
+    - 442
+    - -1144
+  ghx:
+    - 0
+    - 0
+  ghy:
+    - 0
+    - 0
+  gt:
+    - 261
+    - 672
+  gtx:
+    - 602
+    - 208
+  gty:
+    - 559
+    - 1009
+  ga:
+    - 2047
+    - 1000
+  cs3:
+    - -2
+    - -11
+  cs3x:
+    - -231
+    - -720
+  cs3y:
+    - 70
+    - -158
+  cs:
+    - 2
+    - 12
+  csx:
+    - 194
+    - -492
+  csy:
+    - 464
+    - -346
+  bh:
+    - -278928
+    - -89285
+  bhu:
+    - 0
+    - 0
+  bhx:
+    - 331
+    - 573
+  bhy:
+    - 369
+    - -865
+  bt:
+    - 9
+    - 27
+  btu:
+    - 2047
+    - 2047
+  btx:
+    - 1996
+    - -153
+  bty:
+    - 2047
+    - -225
+  os:
+    - -23
+    - -37
+  osx:
+    - -598
+    - -1487
+  osy:
+    - -2047
+    - 952
+  osp:
+    - 72
+    - -38
+  isf:
+    - 0
+    - 0
+  isfx:
+    - 0
+    - 0
+  isfy:
+    - 0
+    - 0
+  is:
+    - 0
+    - 0
+  ia:
+    - -19
+    - -200
+  pa:
+    - 0
+    - 0
+  bpc_pos: 0
+  bpc_x: 250000
+  bpc_y: 0
+  bpc_rot: 0
+  bpc_xy_speed: 20
+  bpc_rot_speed: 60
+  bpc_voltage: 0
+  bpc_power: 0
+  bp1_pos: 0
+  bp1_x: 226425
+  bp1_y: -525
+  bp1_rot: -10953
+  bp1_xy_speed: 30
+  bp1_rot_speed: 50
+  bp1_voltage: 0
+  bp1_power: 0
+  bp2_pos: 0
+  bp2_x: 255233
+  bp2_y: 10625
+  bp2_rot: 10492
+  bp2_xy_speed: 30
+  bp2_rot_speed: 50
+  bp2_voltage: 0
+  bp2_power: 0
+  frim_version: 207
+  acc_voltage: 3000
+  extractor_voltage: 46
+  control_voltage: 0
+  emission_curent: 8
+  mag: 150000
+  lens_mode: 0
+  probe_mode: 0
+  screen_pos: 1
+
+---
+- secs: 81
+  nanos: 551310215
+- c1: 2.0038678075396829
+  c2: 3.999998759920635
+  c3: 0.855
+  obj: 12.277953296703297
+  i1: 3.1680687194749699
+  i2: 4.932967032967033
+  i3: 1.5576068376068378
+  p1: 3.02026862026862
+  p2: 5.372405372405372
+  cond_ap: 1
+  cond_ap_x: 4288
+  cond_ap_y: 176548
+  cond_ap_speed: 4
+  stem_ap: 0
+  stem_ap_x: -882
+  stem_ap_y: 3104
+  stem_ap_speed: 4
+  obj_ap: 0
+  obj_ap_x: -3659
+  obj_ap_y: 2675
+  obj_ap_speed: 4
+  sa_ap: 0
+  sa_ap_x: 1193
+  sa_ap_y: -6778
+  sa_ap_speed: 4
+  gh:
+    - 442
+    - -1144
+  ghx:
+    - 0
+    - 0
+  ghy:
+    - 0
+    - 0
+  gt:
+    - 261
+    - 672
+  gtx:
+    - 602
+    - 208
+  gty:
+    - 559
+    - 1009
+  ga:
+    - 2047
+    - 1000
+  cs3:
+    - -2
+    - -11
+  cs3x:
+    - -231
+    - -720
+  cs3y:
+    - 70
+    - -158
+  cs:
+    - 2
+    - 12
+  csx:
+    - 194
+    - -492
+  csy:
+    - 464
+    - -346
+  bh:
+    - -278928
+    - -89285
+  bhu:
+    - 0
+    - 0
+  bhx:
+    - 331
+    - 573
+  bhy:
+    - 369
+    - -865
+  bt:
+    - 9
+    - 27
+  btu:
+    - 2047
+    - 2047
+  btx:
+    - 1996
+    - -153
+  bty:
+    - 2047
+    - -225
+  os:
+    - -23
+    - -37
+  osx:
+    - -598
+    - -1487
+  osy:
+    - -2047
+    - 952
+  osp:
+    - 72
+    - -38
+  isf:
+    - 0
+    - 0
+  isfx:
+    - 0
+    - 0
+  isfy:
+    - 0
+    - 0
+  is:
+    - 0
+    - 0
+  ia:
+    - -19
+    - -200
+  pa:
+    - 0
+    - 0
+  bpc_pos: 0
+  bpc_x: 250000
+  bpc_y: 0
+  bpc_rot: 0
+  bpc_xy_speed: 20
+  bpc_rot_speed: 60
+  bpc_voltage: 0
+  bpc_power: 0
+  bp1_pos: 0
+  bp1_x: 226425
+  bp1_y: -525
+  bp1_rot: -10953
+  bp1_xy_speed: 30
+  bp1_rot_speed: 50
+  bp1_voltage: 0
+  bp1_power: 0
+  bp2_pos: 0
+  bp2_x: 255233
+  bp2_y: 10625
+  bp2_rot: 10492
+  bp2_xy_speed: 30
+  bp2_rot_speed: 50
+  bp2_voltage: 0
+  bp2_power: 0
+  frim_version: 207
+  acc_voltage: 3000
+  extractor_voltage: 46
+  control_voltage: 0
+  emission_curent: 8
+  mag: 150000
+  lens_mode: 0
+  probe_mode: 0
+  screen_pos: 1
+

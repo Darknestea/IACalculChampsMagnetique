@@ -22,22 +22,3 @@ if __name__ == "__main__":
 
     if CLEANING_OPERATIONS_TO_PERFORM & PERFORM_SIMULATION:
         clean_simulation_dataset(do_ellipse_parameter_extraction=do_ellipse_parameter_extraction)
-
-
-
-
-# if MODE | MODE_PRETRAINING:
-#     # Do pretraining from Command to field
-#     pass
-# else:
-#     pretrained_model = load_model(ROOT_PATH, PRETRAINED_MODEL_NAME)
-#
-# if MODE | MODE_REAL_TRAINING:
-#     x_train, y_train, x_test, y_test = get_training_data(TRAINING_DATASET)
-#     trained_model = train(pretrained_model, x_train, y_train)
-#     save_model(trained_model, ROOT_PATH)
-#     record_trained_model(trained_model, x_test, y_test)
-#
-# else:
-#     trained_model = load_model(ROOT_PATH, TRAINED_MODEL_NAME)
-

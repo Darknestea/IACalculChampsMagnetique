@@ -7,14 +7,15 @@ from Training.ConfigurationToBeam.Models.simple_sequential import simple_sequent
 from Utils.DataPreprocessing.data_preprocessing import get_cleaned_configuration
 from Utils.constants import MU_USEFUL_PARAMS, REAL_BEAM_SLICES, SIMULATED_BEAM_SLICES, EXPERIMENT_NAME_FIELD, \
     USER_ID_FIELD, SESSION_FIELD, TEST_SIZE_FIELD, RANDOM_STATE_FIELD, SUMMARY_FIELD, \
-    MODEL_NAME_FIELD, HISTORY_FIELD, MODEL_EVALUATION_FIELD, EXPERIMENT_TEST2, IMAGES_SHAPE_FIELD, EXPERIMENT_TEST
+    MODEL_NAME_FIELD, HISTORY_FIELD, MODEL_EVALUATION_FIELD, EXPERIMENT_TEST2, IMAGES_SHAPE_FIELD, EXPERIMENT_TEST, \
+    EXPERIMENT_4_4
 from Utils.model_loader import save_model
 from Utils.record_model_performances import evaluate_model
 from Utils.utils import normalize_by_column, reshape_images, give_name, normalize_image, main_specific_tasks, \
     get_model_summary
 from my_id import MY_ID
 
-IMAGE_WIDTH = 32
+IMAGE_WIDTH = 256
 IMAGE_HEIGHT = IMAGE_WIDTH
 IMAGE_SHAPE = (IMAGE_HEIGHT, IMAGE_WIDTH)
 
@@ -81,4 +82,4 @@ def train(create_model_function, experiment_name, user_id, session, use_real_ima
 
 if __name__ == '__main__':
     main_specific_tasks()
-    train(simple_sequential, EXPERIMENT_TEST, MY_ID, 123, use_real_images=False)
+    train(simple_deconvolution, EXPERIMENT_TEST2, MY_ID, 98, use_real_images=False)
