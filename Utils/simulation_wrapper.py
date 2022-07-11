@@ -59,7 +59,7 @@ def set_accelerator(name, values, microscope_sim):
 
 def set_biprism(biprism, bp_pow, bp_pos, bp_v):
     biprism.inserted = (bp_pow > 0.5) * (bp_pos > 0.5)  # meaning inserted and active
-    biprism.voltage = bp_v / 1000.
+    biprism.voltage = bp_v
 
 
 def set_aperture(aperture, ap_diam_index):

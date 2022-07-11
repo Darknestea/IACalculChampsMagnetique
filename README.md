@@ -31,3 +31,4 @@ Before anything create a _my_id.py_ file containing `MY_ID = "your_id"`, this wi
 
 ### Notes
 Everything done before 27/06/2022 for simulation is invalid because the acceleration current was wrong
+Same before 28/06/2022 for simulated data involving biprism because bp?_v was in milli-volt and not in volt

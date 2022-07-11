@@ -3,6 +3,7 @@ from os.path import exists
 import numpy as np
 import pandas as pd
 import yaml
+from markdown.util import deprecated
 
 from Utils.constants import DUMMY_MICROSCOPE_PARAMETERS_NUMBER, DUMMY_TRAIN_SIZE, \
     DUMMY_TEST_SIZE, MU_REDUCED_PARAMS, \
@@ -10,7 +11,8 @@ from Utils.constants import DUMMY_MICROSCOPE_PARAMETERS_NUMBER, DUMMY_TRAIN_SIZE
     MU_PARAM_YAML_NAMES, MU_SPECIAL_PARAM_YAML_NAMES, MU_PARAM_SPECIAL_YAML_FUNCTIONS, MU_PARAM_NAMES, VERBOSE, \
     VERBOSE_INFO, EXPERIMENT_3, CONFIGURATIONS_TXT, CONFIGURATIONS_CSV, \
     DUMMY_ELLIPSE_PARAMETERS_NUMBER, VERBOSE_ALL, CONFIGURATIONS_YAML, RAW_CONFIGURATIONS_CSV, CURRENT_EXPERIMENT, \
-    USER_ID, RAW_CONFIG, RAW_CONFIG_YAML_ONLY, RAW_CONFIG_CSV_AND_YAML, RAW_CONFIGURATIONS_INCOMPLETE_CSV
+    USER_ID, RAW_CONFIG, RAW_CONFIG_YAML_ONLY, RAW_CONFIG_CSV_AND_YAML, RAW_CONFIGURATIONS_INCOMPLETE_CSV, \
+    MU_PARAM_YAML_FACTORS
 
 
 # Parse a txt file to get a Dataframe
@@ -90,9 +92,10 @@ def update_configuration_yaml(configuration, key, value, yaml_conf):
             print(f"{key} : {value} of type {type(value)}")
         if type(value) == list:
             for i, v in enumerate(value):
-                configuration[index + i] = v
+                configuration[index + i] = to_si(index+i, v)
         else:
-            configuration[index] = value
+            configuration[index] = to_si(index, value)
+
     elif key in MU_SPECIAL_PARAM_YAML_NAMES:
         special_index = MU_SPECIAL_PARAM_YAML_NAMES.index(key)
         real_value, index = MU_PARAM_SPECIAL_YAML_FUNCTIONS[special_index](value, yaml_conf)
@@ -100,6 +103,14 @@ def update_configuration_yaml(configuration, key, value, yaml_conf):
     else:
         if VERBOSE & VERBOSE_INFO:
             print(f"{key} discarded")
+
+
+# Modify value if needed to be in international metric system and equivalent s, m, A, V, kg, hz, m/s etc
+def to_si(index, value):
+    if index not in MU_PARAM_YAML_FACTORS:
+        return value
+    else:
+        return value * MU_PARAM_YAML_FACTORS[index]
 
 
 # Generate the cleaned configurations csv file

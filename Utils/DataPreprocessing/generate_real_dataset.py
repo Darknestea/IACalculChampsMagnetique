@@ -17,6 +17,8 @@ def clean_real_dataset(do_ellipse_parameter_extraction, experiment=CURRENT_EXPER
 
     images = [path for path in glob.iglob(raw_beam_path + '\\*.png', recursive=False)]
 
+    images = sorted(images, key=lambda x: int(x.split('\\')[-1].split('_')[0]))
+
     if len(images) == 0:
         if VERBOSE & VERBOSE_INFO:
             print(f"There is no valid images in the {raw_beam_path} folder")

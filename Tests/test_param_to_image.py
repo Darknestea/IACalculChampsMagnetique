@@ -209,7 +209,7 @@ def test_network(y_is_x_dependant=True):
     x = np.random.random(size * 9).reshape(-1, 9)
     if y_is_x_dependant:
         x2 = np.concatenate([x, x, x, np.zeros((size, 5))], axis=1)
-        y = x2.reshape(size, 1, 32) * x2.reshape(size, 32, 1)
+        y = x2.reshape((size, 1, 32)) * x2.reshape((size, 32, 1))
     else:
         y = np.random.random(size * 32 * 32).reshape(size, 32, 32)
 
@@ -240,6 +240,6 @@ def test_network(y_is_x_dependant=True):
 
 
 if __name__ == '__main__':
-    # test_network(True)
+    test_network(True)
     # load_images(5)
-    test(False)
+    # test(True)

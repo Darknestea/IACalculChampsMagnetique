@@ -42,4 +42,4 @@ def generate_configuration_range_from_file(path, experiment_name=CURRENT_EXPERIM
 if __name__ == '__main__':
     # generate_configuration_range_from_file(RAW_CONFIGURATIONS_CSV(EXPERIMENT_TEST))
     generate_configuration_range_from_file(RAW_PATH(CURRENT_EXPERIMENT) + "configurations_modified.csv")
-    generate_configurations(100)
+    generate_configurations(200)
